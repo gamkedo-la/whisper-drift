@@ -10,6 +10,8 @@ public class PlayerDeath : MonoBehaviour
 	public GameObject toHide2 = null;
 	public PlayerController toDisable = null;
 	public Shooter toDisable2 = null;
+	public TrailRenderer trailRenderer = null;
+
 
 	void Start ()
 	{
@@ -31,6 +33,7 @@ public class PlayerDeath : MonoBehaviour
 
 	public void PlayerDie()
 	{
+		trailRenderer.enabled = false;
 		toHide.SetActive( false );
 		toHide2.SetActive( false );
 		toDisable.enabled = false;
@@ -49,5 +52,7 @@ public class PlayerDeath : MonoBehaviour
 		toDisable.enabled = true;
 		toDisable2.enabled = true;
 		transform.position = respwnPoint.position;
+		trailRenderer.enabled = true;
+		trailRenderer.Clear();
 	}
 }

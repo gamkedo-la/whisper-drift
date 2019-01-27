@@ -984,7 +984,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15370
+  m_Name: pb_Mesh24480
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -19487,6 +19487,7 @@ MonoBehaviour:
   toHide2: {fileID: 376889702}
   toDisable: {fileID: 2087798547}
   toDisable2: {fileID: 1723383433}
+  trailRenderer: {fileID: 426999345}
 --- !u!50 &2087798545
 Rigidbody2D:
   serializedVersion: 4
