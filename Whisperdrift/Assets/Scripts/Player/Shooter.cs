@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.EventSystems;
 
 public class Shooter : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class Shooter : MonoBehaviour
 
 	private void TryToShoot( )
 	{
-		if ( timeToNextShot > 0 || !Input.GetMouseButton( 0 ) )
+		if ( timeToNextShot > 0 || !Input.GetMouseButton( 0 ) || EventSystem.current.IsPointerOverGameObject( ) )
 			return;
 
 		timeToNextShot = shotDelay;

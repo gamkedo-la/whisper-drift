@@ -9,7 +9,7 @@ using UnityEngine;
 public class BuildWebGL : MonoBehaviour
 {
 	static private string zipExe = @"C:\Program Files\7-Zip\7z.exe";
-	static private string destinationFolder = @"C:\!\Unity\Whisperdrift";
+	static private string destinationFolder = @"C:\!\Unity\Whisperdrift Build";
 	static private string destinationFile = @"C:\!\Unity\Whisperdrift.zip";
 	static private string[] levels = new string[]
 	{
