@@ -5,16 +5,12 @@ public class PlayerController : MonoBehaviour
 {
 	[SerializeField] private Engine engine = null;
 	[SerializeField] private float shotForce = 50f;
-	[SerializeField] private float maxVelocity = 3f;
 
 	private Vector2 input;
 	private Rigidbody2D rb;
-	private float currentMaxVel;
 
 	void Start ()
 	{
-		currentMaxVel = maxVelocity;
-
 		rb = GetComponent<Rigidbody2D>( );
 		Assert.IsNotNull( rb );
 		Assert.IsNotNull( engine );

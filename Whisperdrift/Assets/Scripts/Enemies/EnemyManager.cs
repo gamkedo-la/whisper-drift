@@ -4,16 +4,22 @@ using UnityEngine.UI;
 
 public class EnemyManager : MonoBehaviour
 {
-	public GameObject won;
-	public Text label;
-	public GameObject[] enemies;
+	[SerializeField] private GameObject won = null;
+	[SerializeField] private Text label = null;
+	[SerializeField] private GameObject[] enemies = null;
 
 	void Start ()
 	{
 		Assert.IsNotNull( won );
+		Assert.IsNotNull( label );
 	}
 
 	void FixedUpdate ()
+	{
+		CheckGameWon( );
+	}
+
+	private void CheckGameWon( )
 	{
 		int i = 0;
 		foreach ( var e in enemies )
@@ -24,7 +30,7 @@ public class EnemyManager : MonoBehaviour
 
 		label.text = "Enemies left: " + i;
 
-		if (i <= 0)
+		if ( i <= 0 )
 		{
 			won.SetActive( true );
 			Destroy( this );

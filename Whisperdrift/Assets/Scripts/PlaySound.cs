@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Assertions;
 
-[RequireComponent(typeof(AudioSource))]
+[RequireComponent( typeof( AudioSource ) )]
 public class PlaySound : MonoBehaviour
 {
 	[Header("External objects")]
@@ -23,6 +23,11 @@ public class PlaySound : MonoBehaviour
 		Assert.IsNotNull( sounds );
 		Assert.AreNotEqual( sounds.Length, 0, "You have to add at least one sound clip to " + name );
 
+		Play( );
+	}
+
+	private void Play( )
+	{
 		audioSource.clip = sounds[Random.Range( 0, sounds.Length )];
 		audioSource.pitch = Random.Range( minPitch, maxPitch );
 		audioSource.volume = Random.Range( minVolume, maxVolume );

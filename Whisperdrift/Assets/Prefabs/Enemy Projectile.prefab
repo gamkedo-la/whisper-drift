@@ -132,11 +132,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab66399560223f6478f613621ec843b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 1568089292869728, guid: 8d27dff0f261d544e84ea496abdce495, type: 3}
   speed: 10
   lifeTime: 3
-  damage: 10
-  explosion: {fileID: 1568089292869728, guid: 8d27dff0f261d544e84ea496abdce495, type: 3}
-  soundObject: {fileID: 0}
+  damage: 20
 --- !u!1 &1245383390519096
 GameObject:
   m_ObjectHideFlags: 0

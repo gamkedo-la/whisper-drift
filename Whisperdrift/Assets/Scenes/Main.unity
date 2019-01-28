@@ -984,7 +984,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24480
+  m_Name: pb_Mesh14972
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -19483,11 +19483,16 @@ MonoBehaviour:
   respwnPoint: {fileID: 617484882}
   explosion: {fileID: 1201104572475416, guid: c25bec336c4f2834e8f35a33949b0740, type: 3}
   hit: {fileID: 1517626080438482, guid: 4076b5bc92060fa4880b50c64dffb9cf, type: 3}
-  toHide: {fileID: 341971022}
+  toHide:
+  - {fileID: 341971022}
+  - {fileID: 376889702}
   toHide2: {fileID: 376889702}
-  toDisable: {fileID: 2087798547}
+  toDisable:
+  - {fileID: 1723383433}
+  - {fileID: 2087798547}
   toDisable2: {fileID: 1723383433}
   trailRenderer: {fileID: 426999345}
+  restartDelay: 0.5
 --- !u!50 &2087798545
 Rigidbody2D:
   serializedVersion: 4
@@ -19539,7 +19544,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   engine: {fileID: 993404312}
   shotForce: 200
-  maxVelocity: 3
 --- !u!4 &2087798548
 Transform:
   m_ObjectHideFlags: 0

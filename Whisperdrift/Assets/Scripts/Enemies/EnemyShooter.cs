@@ -3,13 +3,13 @@ using UnityEngine.Assertions;
 
 public class EnemyShooter : MonoBehaviour
 {
-	public Transform player = null;
-	public Transform spawnPoint = null;
-	public Transform shootPoint = null;
-	public GameObject flash = null;
-	public GameObject projectile = null;
-	public float shotDelay = 2f;
-	public float shotSpreed = 5f;
+	[SerializeField] private Transform player = null;
+	[SerializeField] private Transform spawnPoint = null;
+	[SerializeField] private Transform shootPoint = null;
+	[SerializeField] private GameObject flash = null;
+	[SerializeField] private GameObject projectile = null;
+	[SerializeField] private float shotDelay = 2f;
+	[SerializeField] private float shotSpreed = 5f;
 
 	private float timeToNextShot = 0;
 
@@ -26,6 +26,12 @@ public class EnemyShooter : MonoBehaviour
 	{
 		timeToNextShot -= Time.deltaTime;
 
+		bool playerFound = FindPlayer( );
+		TryShoot( playerFound, timeToNextShot );
+	}
+
+	private bool FindPlayer( )
+	{
 		Vector2 direction = player.position - transform.position;
 		float angle = Mathf.Atan2( direction.y, direction.x ) * Mathf.Rad2Deg;
 		Quaternion rotation = Quaternion.AngleAxis( angle - 0, Vector3.forward );
@@ -37,21 +43,26 @@ public class EnemyShooter : MonoBehaviour
 		{
 			if ( !hit.collider.CompareTag( "Player" ) )
 			{
-				return;
+				return false;
 			}
 		}
 		else
+			return false;
+
+		return true;
+	}
+
+	private void TryShoot( bool playerFound, float timeLeft )
+	{
+		if ( timeLeft > 0 || !playerFound )
 			return;
 
-		if ( timeToNextShot <= 0 )
-		{
-			timeToNextShot = shotDelay;
+		timeToNextShot = shotDelay;
 
-			Quaternion shootAngle = Quaternion.Euler( 0, 0, Random.Range( -shotSpreed, shotSpreed ) + transform.rotation.eulerAngles.z );
+		Quaternion shootAngle = Quaternion.Euler( 0, 0, Random.Range( -shotSpreed, shotSpreed ) + transform.rotation.eulerAngles.z );
 
-			Instantiate( projectile, spawnPoint.position, shootAngle );
-			var f = Instantiate( flash, shootPoint.position, transform.rotation, shootPoint );
-			Destroy( f, 0.4f );
-		}
+		Instantiate( projectile, spawnPoint.position, shootAngle );
+		var f = Instantiate( flash, shootPoint.position, transform.rotation, shootPoint );
+		Destroy( f, 0.4f );
 	}
 }

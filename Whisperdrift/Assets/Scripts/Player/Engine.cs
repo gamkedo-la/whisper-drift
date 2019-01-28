@@ -3,8 +3,8 @@ using UnityEngine.Assertions;
 
 public class Engine : MonoBehaviour
 {
-	public ParticleSystem particles;
-	public float maxParticles = 50f;
+	[SerializeField] private ParticleSystem particles = null;
+	[SerializeField] private float maxParticles = 50f;
 
 	void Start ()
 	{

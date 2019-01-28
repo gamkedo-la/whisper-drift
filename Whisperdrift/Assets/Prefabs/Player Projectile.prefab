@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 50755361472466448}
   - component: {fileID: 114627908369384836}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: Player Projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,11 +259,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab66399560223f6478f613621ec843b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 1568089292869728, guid: 8d27dff0f261d544e84ea496abdce495, type: 3}
   speed: 10
   lifeTime: 3
-  damage: 10
-  explosion: {fileID: 1568089292869728, guid: 8d27dff0f261d544e84ea496abdce495, type: 3}
-  soundObject: {fileID: 0}
+  damage: 50
 --- !u!1 &4429842027542145775
 GameObject:
   m_ObjectHideFlags: 0
