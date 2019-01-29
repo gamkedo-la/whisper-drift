@@ -46,3 +46,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1425463299
+    locked: 0
+  - name: Props
+    uniqueID: 4198401695
+    locked: 0
+  - name: Platforms
+    uniqueID: 573041003
+    locked: 0
+  - name: Forground
+    uniqueID: 4009739073
+    locked: 0
+  - name: Plane 0
+    uniqueID: 1839723345
+    locked: 0
+  - name: UI
+    uniqueID: 3237446989
+    locked: 0
