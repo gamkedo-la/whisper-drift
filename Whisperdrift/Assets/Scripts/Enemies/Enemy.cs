@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 	[SerializeField] private GameObject parent = null;
 	[SerializeField] private GameObject hpBar = null;
 	[SerializeField] private GameObject deathEffect = null;
+	[SerializeField] private float touchDamage = 20f;
 
 	void Start ()
 	{
@@ -38,6 +39,6 @@ public class Enemy : MonoBehaviour
 		if ( !collision.gameObject.CompareTag( "Player" ) )
 			return;
 
-		Debug.Log( "Player collided with " + name );
+		collision.gameObject.GetComponent<HP>( ).ChangeHP( -touchDamage );
 	}
 }

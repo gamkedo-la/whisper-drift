@@ -11,7 +11,6 @@ public class PlayerDeath : MonoBehaviour
 	[SerializeField] private TrailRenderer trailRenderer = null;
 	[SerializeField] private float restartDelay = 0.5f;
 
-
 	void Start ()
 	{
 		Assert.IsNotNull( respwnPoint );
@@ -20,17 +19,9 @@ public class PlayerDeath : MonoBehaviour
 		Assert.IsNotNull( trailRenderer );
 	}
 
-	private void OnCollisionEnter2D( Collision2D collision )
+	public void Hit( Vector2 hitPosition, float magnitude )
 	{
-		if ( collision.gameObject.CompareTag( "Wall" ) )
-			if ( collision.relativeVelocity.magnitude > 2 )
-			{
-				Instantiate( hit, collision.contacts[0].point, Quaternion.identity );
-				GetComponent<HP>( ).ChangeHP( collision.relativeVelocity.magnitude * -5 );
-			}
-
-		if ( collision.gameObject.CompareTag( "Bad" ) )
-			PlayerDie( );
+		Instantiate( hit, hitPosition, Quaternion.identity );
 	}
 
 	public void PlayerDie()
