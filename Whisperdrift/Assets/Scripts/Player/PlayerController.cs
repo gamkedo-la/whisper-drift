@@ -5,11 +5,14 @@ public class PlayerController : MonoBehaviour
 {
 	[SerializeField] private Engine engine = null;
 	[SerializeField] private float shotForce = 50f;
+	[SerializeField] private float camAdjustmentSpeed = 3f;
+	[SerializeField] private float camThreshold = 0.1f;
+
 	private Camera cam;
 	private Vector2 input;
 	private Rigidbody2D rb;
-	private float camSize=3;
-	const float camAdjustmentSpeed = 3f;
+	private float camSize = 3f;
+
 	const float MIN_CAM_SIZE = 3f;
 	const float MAX_CAM_SIZE = 12f;
 
@@ -35,17 +38,17 @@ public class PlayerController : MonoBehaviour
 		AdjustCamera(5f + rb.velocity.magnitude);
 	}
 
-	private void AdjustCamera(float desiredCamSize) 
-	{
-		if ((desiredCamSize - camSize) > 0.1f) { camSize = camSize + camAdjustmentSpeed * Time.deltaTime; }
-		if ((camSize - desiredCamSize) > 0.1f) { camSize = camSize - camAdjustmentSpeed * Time.deltaTime; }
-		if (camSize < MIN_CAM_SIZE) { camSize = MIN_CAM_SIZE; }
-		if (camSize > MAX_CAM_SIZE) { camSize = MAX_CAM_SIZE; }
-		cam.orthographicSize = camSize;
-	}
-
 	public void MadeShot( Quaternion angle )
 	{
 		rb.AddForce( angle * Vector2.left * shotForce );
+	}
+
+	private void AdjustCamera( float desiredCamSize )
+	{
+		if ((desiredCamSize - camSize) > camThreshold ) { camSize = camSize + camAdjustmentSpeed * Time.deltaTime; }
+		if ((camSize - desiredCamSize) > camThreshold ) { camSize = camSize - camAdjustmentSpeed * Time.deltaTime; }
+		if (camSize < MIN_CAM_SIZE) { camSize = MIN_CAM_SIZE; }
+		if (camSize > MAX_CAM_SIZE) { camSize = MAX_CAM_SIZE; }
+		cam.orthographicSize = camSize;
 	}
 }
