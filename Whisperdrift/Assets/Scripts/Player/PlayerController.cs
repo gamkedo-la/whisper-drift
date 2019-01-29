@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody2D>( );
 		cam = Camera.main;
+
 		Assert.IsNotNull( rb );
 	}
 

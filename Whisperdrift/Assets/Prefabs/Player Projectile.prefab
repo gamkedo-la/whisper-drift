@@ -260,8 +260,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 1568089292869728, guid: 8d27dff0f261d544e84ea496abdce495, type: 3}
+  sprite: {fileID: 212611644740151862}
   speed: 10
   lifeTime: 3
+  maxTravelDistance: 5
   damage: 50
 --- !u!1 &4429842027542145775
 GameObject:
