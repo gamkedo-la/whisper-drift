@@ -8,6 +8,7 @@ public class EnemyShooter : MonoBehaviour
 	[SerializeField] private Transform shootPoint = null;
 	[SerializeField] private GameObject flash = null;
 	[SerializeField] private GameObject projectile = null;
+	[SerializeField] private SpriteRenderer gunSprite = null;
 	[SerializeField] private float shotDelay = 2f;
 	[SerializeField] private float shotSpreed = 5f;
 	[SerializeField] private float shotDistance = 4.5f;
@@ -25,6 +26,7 @@ public class EnemyShooter : MonoBehaviour
 		Assert.IsNotNull( shootPoint );
 		Assert.IsNotNull( flash );
 		Assert.IsNotNull( projectile );
+		Assert.IsNotNull( gunSprite );
 	}
 
 	void Update( )
@@ -61,8 +63,12 @@ public class EnemyShooter : MonoBehaviour
 	private void TargetPlayer( )
 	{
 		if ( Vector2.Distance( player.position, transform.position ) > shotWarningDistance )
+		{
+			gunSprite.enabled = false;
 			return;
+		}
 
+		gunSprite.enabled = true;
 		Vector2 direction = player.position - transform.position;
 		float angle = Mathf.Atan2( direction.y, direction.x ) * Mathf.Rad2Deg;
 		Quaternion rotation = Quaternion.AngleAxis( angle - 0, Vector3.forward );

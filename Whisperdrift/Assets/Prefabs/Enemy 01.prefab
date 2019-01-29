@@ -386,7 +386,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 50
   m_Sprite: {fileID: 21300000, guid: 0bbb3c6aa5d855949b6150f897650123, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.69803923}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1781,6 +1781,7 @@ MonoBehaviour:
   hpBar: {fileID: 8847642912973094474}
   deathEffect: {fileID: 7303289756598319150, guid: f1b34d1c32d7ab945ad115f449a7a450,
     type: 3}
+  touchDamage: 20
 --- !u!1 &8847642913421718536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,6 +1984,7 @@ MonoBehaviour:
   shootPoint: {fileID: 8847642912754304029}
   flash: {fileID: 1027460674763238, guid: 87da0295fda60994bb1425fea11b1493, type: 3}
   projectile: {fileID: 1207269840882070, guid: 19aba65a0ca90b24ba4a5f23b28162bf, type: 3}
+  gunSprite: {fileID: 8847642912754304028}
   shotDelay: 2
   shotSpreed: 5
   shotDistance: 4.5

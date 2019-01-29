@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour
 
 	void Update ()
 	{
-		//AdjustCamera(5f + rb.velocity.magnitude);
+		AdjustCamera(5f + rb.velocity.magnitude);
 	}
 
 	public void MadeShot( Quaternion angle )
