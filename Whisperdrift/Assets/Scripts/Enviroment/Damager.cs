@@ -2,7 +2,7 @@
 
 public class Damager : MonoBehaviour
 {
-	[SerializeField] private string reactToTag = "Player";
+	[SerializeField] private string reactToTag = Tags.Player;
 	[SerializeField] private float hitDamage = 20f;
 	[SerializeField] private float minRelativeVelocity = 0f;
 

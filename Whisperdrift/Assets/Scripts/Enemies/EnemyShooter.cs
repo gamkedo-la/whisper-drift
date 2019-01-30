@@ -49,7 +49,7 @@ public class EnemyShooter : MonoBehaviour
 
 		if ( hit.collider != null )
 		{
-			if ( !hit.collider.CompareTag( "Player" ) )
+			if ( !hit.collider.CompareTag( Tags.Player ) )
 			{
 				return false;
 			}

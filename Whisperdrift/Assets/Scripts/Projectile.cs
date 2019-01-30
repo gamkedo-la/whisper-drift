@@ -33,10 +33,10 @@ public class Projectile : MonoBehaviour
 
 	void OnCollisionEnter2D( Collision2D collision )
 	{
-		if ( collision.gameObject.tag == "Enemy" )
+		if ( collision.gameObject.CompareTag( Tags.Enemy ) )
 			collision.gameObject.GetComponent<HP>( ).ChangeHP( -damage );
 
-		if ( collision.gameObject.tag == "Player" )
+		if ( collision.gameObject.CompareTag( Tags.Player ) )
 			collision.gameObject.GetComponent<HP>( ).ChangeHP( -damage );
 
 		DestroyProjectile( );
