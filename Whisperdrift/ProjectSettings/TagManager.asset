@@ -6,9 +6,9 @@ TagManager:
   tags:
   - Ground
   - Bad
-  - Vertical
   - Wall
   - Enemy
+  - Destructible
   layers:
   - Default
   - TransparentFX

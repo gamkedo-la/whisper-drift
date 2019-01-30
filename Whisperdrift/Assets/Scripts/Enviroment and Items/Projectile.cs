@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
 
 	void OnCollisionEnter2D( Collision2D collision )
 	{
-		if ( collision.gameObject.CompareTag( Tags.Enemy ) )
+		if ( collision.gameObject.CompareTag( Tags.Enemy ) || collision.gameObject.CompareTag( Tags.Destructible ) )
 			collision.gameObject.GetComponent<HP>( ).ChangeHP( -damage );
 
 		if ( collision.gameObject.CompareTag( Tags.Player ) )
@@ -48,7 +48,6 @@ public class Projectile : MonoBehaviour
 
 	private void Move( )
 	{
-		//transform.Translate( Vector2.right * speed * Time.deltaTime );
 		rb.MovePosition( transform.position + transform.right * speed * Time.deltaTime );
 	}
 
