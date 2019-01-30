@@ -192,7 +192,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26922
+  m_Name: pb_Mesh7596
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -20213,6 +20213,7 @@ GameObject:
   - component: {fileID: 1944544071}
   - component: {fileID: 1944544070}
   - component: {fileID: 1944544072}
+  - component: {fileID: 1944544073}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -20394,6 +20395,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de5364a89a9b1b542abd82d31bc25d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1944544073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944544064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 293d119b5541f274da57568a9fbe1df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1956374884
