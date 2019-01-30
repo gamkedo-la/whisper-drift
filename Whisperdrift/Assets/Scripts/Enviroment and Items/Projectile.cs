@@ -11,11 +11,15 @@ public class Projectile : MonoBehaviour
 	[SerializeField] private int damage = 10;
 
 	private Vector2 originPoint;
+	private Rigidbody2D rb;
 
 	void Start( )
 	{
+		rb = GetComponent<Rigidbody2D>( );
+
 		Assert.IsNotNull( explosion );
 		Assert.IsNotNull( sprite );
+		Assert.IsNotNull( rb );
 
 		originPoint = transform.position;
 		Invoke( "DestroyProjectile", lifeTime );
@@ -44,7 +48,8 @@ public class Projectile : MonoBehaviour
 
 	private void Move( )
 	{
-		transform.Translate( Vector2.right * speed * Time.deltaTime );
+		//transform.Translate( Vector2.right * speed * Time.deltaTime );
+		rb.MovePosition( transform.position + transform.right * speed * Time.deltaTime );
 	}
 
 	private void TestDistance( )
