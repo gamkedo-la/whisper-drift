@@ -7,14 +7,16 @@ public class PlayerController : MonoBehaviour
 
 	private Rigidbody2D rb;
 	private ZoomController zoomController;
-	private float speedometer = 0f;
-	private float speedDelta = 0f;
+	//private float speedometer = 0f;
+	//private float speedDelta = 0f;
 
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody2D>( );
 		Assert.IsNotNull( rb );
-		zoomController = GameObject.FindObjectOfType<ZoomController>();
+
+		zoomController = FindObjectOfType<ZoomController>();
+		Assert.IsNotNull( zoomController );
 	}
 
 	void FixedUpdate ()
