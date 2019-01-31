@@ -19,9 +19,9 @@ public class PlayerController : MonoBehaviour
 
 	void FixedUpdate ()
 	{
-		speedDelta = rb.velocity.magnitude - speedometer;
-		zoomController.Zoom(speedDelta);
-		speedometer = speedometer + speedDelta;
+		//speedDelta = rb.velocity.magnitude - speedometer;
+		zoomController.Zoom(rb.velocity.magnitude);
+		//speedometer = speedometer + speedDelta;
 	}
 
 	public void MadeShot( Quaternion angle )

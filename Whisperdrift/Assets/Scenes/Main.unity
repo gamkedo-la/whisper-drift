@@ -23867,10 +23867,10 @@ GameObject:
   - component: {fileID: 1944544066}
   - component: {fileID: 1944544065}
   - component: {fileID: 1944544069}
-  - component: {fileID: 1944544071}
-  - component: {fileID: 1944544070}
   - component: {fileID: 1944544072}
   - component: {fileID: 1944544073}
+  - component: {fileID: 1944544071}
+  - component: {fileID: 1944544070}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -24054,6 +24054,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5364a89a9b1b542abd82d31bc25d3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoomSpeed: 1.5
+  showMaxVision: 0
 --- !u!114 &1944544073
 MonoBehaviour:
   m_ObjectHideFlags: 0

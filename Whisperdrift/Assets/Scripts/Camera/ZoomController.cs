@@ -5,16 +5,16 @@ using UnityEngine;
 public class ZoomController : MonoBehaviour
 {
 	private Camera cam = null;
-	private float zoomLevel = 5f;
-	private float tempZoomLevel = 5f;
-	private const float ZOOMLEVEL_CHANGE_SPEED = 0.5f;
-	private const float MIN_MOVEMENT_FOR_ZOOM_IN = .1f;
-	private const float MIN_MOVEMENT_FOR_ZOOM_OUT = .1f;
+	private float zoomLevel = 4f;
+	private float tempZoomLevel = 4f;
+	[SerializeField] private float zoomSpeed = 0.5f;
+	[SerializeField] private bool showMaxVision = false;
+
 	private const float MIN_ZOOM_LEVEL = 5f;
-	private const float MAX_ZOOM_LEVEL = 14f;
-	private const float ZOOM_FACTOR = 1f;
+	private const float MAX_ZOOM_LEVEL = 12f;
+	private const float ZOOM_FACTOR = 2f;
 
-
+	
 
 	void Start()
     {
@@ -27,24 +27,41 @@ public class ZoomController : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if (zoomLevel + MIN_MOVEMENT_FOR_ZOOM_OUT > tempZoomLevel) 
+		if (zoomLevel > tempZoomLevel) 
 		{
-			tempZoomLevel = tempZoomLevel + (ZOOMLEVEL_CHANGE_SPEED * Time.deltaTime);
-			if (tempZoomLevel > zoomLevel) { tempZoomLevel = zoomLevel; }
-			SetCameraSize(tempZoomLevel);
+			tempZoomLevel = tempZoomLevel + (zoomSpeed * Time.deltaTime);
 		}
-		if (zoomLevel - MIN_MOVEMENT_FOR_ZOOM_IN < tempZoomLevel)
+		else if (tempZoomLevel > zoomLevel)
 		{
-			tempZoomLevel = tempZoomLevel - (ZOOMLEVEL_CHANGE_SPEED * Time.deltaTime);
-			if (tempZoomLevel < zoomLevel) { tempZoomLevel = zoomLevel; }
-			SetCameraSize(tempZoomLevel);
+			tempZoomLevel = tempZoomLevel - (zoomSpeed * Time.deltaTime);
 		}
-
+		tempZoomLevel = Mathf.Clamp(tempZoomLevel, MIN_ZOOM_LEVEL, MAX_ZOOM_LEVEL);
 	}
 
-	public void Zoom (float amount)
+	private void OnDrawGizmos()
 	{
-		zoomLevel = Mathf.Clamp(zoomLevel + (amount * ZOOM_FACTOR), MIN_ZOOM_LEVEL, MAX_ZOOM_LEVEL);
+		if (showMaxVision)
+		{	
+			float drawMaxY = MAX_ZOOM_LEVEL*2;
+			float drawMinY = MIN_ZOOM_LEVEL*2;
+			float drawMaxX = drawMaxY * Camera.main.aspect;
+			float drawMinX = drawMinY * Camera.main.aspect;
+			Gizmos.color = Color.cyan;
+			Gizmos.DrawWireCube(transform.position, new Vector3(drawMaxX, drawMaxY, 0f));
+			Gizmos.color = Color.blue;
+			Gizmos.DrawWireCube(transform.position, new Vector3(drawMinX, drawMinY, 0f));
+			Gizmos.color = Color.white;
+		}
+	}
+
+	public void LateUpdate()
+	{
+		SetCameraSize(tempZoomLevel);
+	}
+
+	public void Zoom (float speed)
+	{
+		zoomLevel = Mathf.Clamp(MIN_ZOOM_LEVEL + (speed * ZOOM_FACTOR), MIN_ZOOM_LEVEL, MAX_ZOOM_LEVEL);
 	}
 
 	private void SetCameraSize(float newSize) 
