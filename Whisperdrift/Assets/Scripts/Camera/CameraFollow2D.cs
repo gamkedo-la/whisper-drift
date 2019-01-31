@@ -9,6 +9,9 @@ public class CameraFollow2D : MonoBehaviour
 
 	void Start( )
 	{
+		if ( !target )
+			target = GameObject.Find("Player").transform;
+
 		Assert.IsNotNull( target );
 	}
 
