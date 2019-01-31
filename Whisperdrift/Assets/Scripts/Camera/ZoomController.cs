@@ -9,6 +9,7 @@ public class ZoomController : MonoBehaviour
 	private float tempZoomLevel = 4f;
 	[SerializeField] private float zoomSpeed = 0.5f;
 	[SerializeField] private bool showMaxVision = false;
+	[SerializeField] private float minSpeedBeforeZoom = 2.0f;
 
 	private const float MIN_ZOOM_LEVEL = 5f;
 	private const float MAX_ZOOM_LEVEL = 12f;
@@ -61,7 +62,7 @@ public class ZoomController : MonoBehaviour
 
 	public void Zoom (float speed)
 	{
-		zoomLevel = Mathf.Clamp(MIN_ZOOM_LEVEL + (speed * ZOOM_FACTOR), MIN_ZOOM_LEVEL, MAX_ZOOM_LEVEL);
+		zoomLevel = Mathf.Clamp(MIN_ZOOM_LEVEL + (speed * ZOOM_FACTOR) - minSpeedBeforeZoom, MIN_ZOOM_LEVEL, MAX_ZOOM_LEVEL);
 	}
 
 	private void SetCameraSize(float newSize) 
