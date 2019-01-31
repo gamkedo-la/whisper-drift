@@ -1,21 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ZoomController : MonoBehaviour
 {
-	private Camera cam = null;
-	private float zoomLevel = 4f;
-	private float tempZoomLevel = 4f;
 	[SerializeField] private float zoomSpeed = 0.5f;
 	[SerializeField] private bool showMaxVision = false;
 	[SerializeField] private float minSpeedBeforeZoom = 2.0f;
 
-	private const float MIN_ZOOM_LEVEL = 5f;
-	private const float MAX_ZOOM_LEVEL = 12f;
-	private const float ZOOM_FACTOR = 2f;
+	private Camera cam = null;
+	private float zoomLevel = 4f;
+	private float tempZoomLevel = 4f;
 
-	
+	private const float MIN_ZOOM_LEVEL = 5f;
+	private const float MAX_ZOOM_LEVEL = 9f;
+	private const float ZOOM_FACTOR = 2f;
 
 	void Start()
     {
@@ -28,7 +25,7 @@ public class ZoomController : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		if (zoomLevel > tempZoomLevel) 
+		if (zoomLevel > tempZoomLevel)
 		{
 			tempZoomLevel = tempZoomLevel + (zoomSpeed * Time.deltaTime);
 		}
@@ -42,7 +39,7 @@ public class ZoomController : MonoBehaviour
 	private void OnDrawGizmos()
 	{
 		if (showMaxVision)
-		{	
+		{
 			float drawMaxY = MAX_ZOOM_LEVEL*2;
 			float drawMinY = MIN_ZOOM_LEVEL*2;
 			float drawMaxX = drawMaxY * Camera.main.aspect;
@@ -65,7 +62,7 @@ public class ZoomController : MonoBehaviour
 		zoomLevel = Mathf.Clamp(MIN_ZOOM_LEVEL + (speed * ZOOM_FACTOR) - minSpeedBeforeZoom, MIN_ZOOM_LEVEL, MAX_ZOOM_LEVEL);
 	}
 
-	private void SetCameraSize(float newSize) 
+	private void SetCameraSize(float newSize)
 	{
 		cam.orthographicSize = newSize;
 	}
