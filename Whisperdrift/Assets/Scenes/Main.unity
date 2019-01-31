@@ -23394,7 +23394,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 1468241796}
   shootPoint: {fileID: 1598604052}
   flash: {fileID: 1027460674763238, guid: 87da0295fda60994bb1425fea11b1493, type: 3}
-  projectile: {fileID: 1962407360529866, guid: e5850245ea2c6394b86e73ae3742c287, type: 3}
+  projectile: {fileID: 1962407360529866, guid: bddfe43d28fa425459def71db5c0b36a, type: 3}
   shotDelay: 0.25
   shotSpreed: 5
 --- !u!1001 &1768112469
