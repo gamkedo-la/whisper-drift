@@ -3,6 +3,7 @@ using UnityEngine.Assertions;
 
 public class RingGate : MonoBehaviour
 {
+	[SerializeField] private GameObject orb = null;
 	[SerializeField] private SpriteRenderer[] activationGraphics = null;
 	[SerializeField] private Material activationMaterial = null;
 
@@ -27,6 +28,9 @@ public class RingGate : MonoBehaviour
 
 		foreach ( var sprite in activationGraphics )
 			sprite.material = activationMaterial;
+
+		if ( orb )
+			Destroy( orb );
 
 		LevelManger.Instance.RingGateActiveted( this );
 	}
