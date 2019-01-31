@@ -7,6 +7,7 @@ public class PlayerDeath : MonoBehaviour
 	[SerializeField] private GameObject explosion = null;
 	[SerializeField] private GameObject hit = null;
 	[SerializeField] private GameObject[] toHide = null;
+	[SerializeField] private GameObject[] toDisableOnReset = null;
 	[SerializeField] private Behaviour[] toDisable = null;
 	[SerializeField] private TrailRenderer trailRenderer = null;
 	[SerializeField] private float restartDelay = 0.5f;
@@ -46,6 +47,9 @@ public class PlayerDeath : MonoBehaviour
 
 		foreach ( var item in toHide )
 			item.SetActive( true );
+
+		foreach ( var item in toDisableOnReset )
+			item.SetActive( false );
 
 		foreach ( var item in toDisable )
 			item.enabled = true;
