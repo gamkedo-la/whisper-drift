@@ -7,8 +7,6 @@ public class PlayerController : MonoBehaviour
 
 	private Rigidbody2D rb;
 	private ZoomController zoomController;
-	//private float speedometer = 0f;
-	//private float speedDelta = 0f;
 
 	void Start ()
 	{
@@ -21,14 +19,11 @@ public class PlayerController : MonoBehaviour
 
 	void FixedUpdate ()
 	{
-		//speedDelta = rb.velocity.magnitude - speedometer;
 		zoomController.Zoom(rb.velocity.magnitude);
-		//speedometer = speedometer + speedDelta;
 	}
 
 	public void MadeShot( Quaternion angle )
 	{
 		rb.AddForce( angle * Vector2.left * shotForce );
 	}
-
 }

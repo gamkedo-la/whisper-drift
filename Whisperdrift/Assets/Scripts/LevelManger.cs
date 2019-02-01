@@ -2,7 +2,11 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+
+[System.Serializable]
+public class UnityEventFloat : UnityEvent<float> { }
 
 public class LevelManger : MonoBehaviour
 {
@@ -11,6 +15,7 @@ public class LevelManger : MonoBehaviour
 	[SerializeField] private TextMeshProUGUI label = null;
 	[SerializeField] private string nextScene = "Main";
 	[SerializeField] private float levelChangeDelay = 1.0f;
+	[SerializeField] private UnityEventFloat onLevelProgress = null;
 
 	private int activeRingGates = 0;
 	private List<RingGate> ringGates;
@@ -54,6 +59,8 @@ public class LevelManger : MonoBehaviour
 			ringGateExit.PowerUp( );
 			label.text = "Exit active";
 		}
+
+		onLevelProgress.Invoke( (float)activeRingGates / ringGates.Count );
 	}
 
 	public void ExitActivated( )
