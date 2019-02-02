@@ -6279,7 +6279,7 @@ MonoBehaviour:
   explosion: {fileID: 1201104572475416, guid: c25bec336c4f2834e8f35a33949b0740, type: 3}
   hit: {fileID: 1517626080438482, guid: 4076b5bc92060fa4880b50c64dffb9cf, type: 3}
   toHide:
-  - {fileID: 0}
+  - {fileID: 6839665190271647247}
   - {fileID: 6839665189794187500}
   - {fileID: 6839665190917059364}
   - {fileID: 6839665190822162526}
