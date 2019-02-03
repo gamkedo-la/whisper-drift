@@ -203,7 +203,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2806
+  m_Name: pb_Mesh-2194
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -22391,7 +22391,7 @@ Transform:
   m_GameObject: {fileID: 1592489223}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4842, y: 0.4842, z: 0.4842}
+  m_LocalScale: {x: 0.35, y: 0.5, z: 0.4842}
   m_Children: []
   m_Father: {fileID: 851102448}
   m_RootOrder: 4
@@ -22434,7 +22434,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 30
   m_Sprite: {fileID: 21300002, guid: e4041c88c4df55f449661ebed2b23428, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 0.9098039, b: 0.22745098, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
