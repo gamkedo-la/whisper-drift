@@ -6,6 +6,8 @@ public class Enemy : MonoBehaviour
 	[SerializeField] private GameObject parent = null;
 	[SerializeField] private GameObject hpBar = null;
 	[SerializeField] private GameObject deathEffect = null;
+	[SerializeField] private GameObject deathEffect2 = null;
+	[SerializeField] private GameObject enemyPart = null;
 	[SerializeField] private float touchDamage = 20f;
 	[SerializeField] private GameObject[] eyes = null;
 	[SerializeField] private float blinkTime = 0.05f;
@@ -17,6 +19,8 @@ public class Enemy : MonoBehaviour
 		Assert.IsNotNull( parent );
 		Assert.IsNotNull( hpBar );
 		Assert.IsNotNull( deathEffect );
+		Assert.IsNotNull( deathEffect2 );
+		Assert.IsNotNull( enemyPart );
 		Assert.IsNotNull( eyes );
 		Assert.AreNotEqual( eyes.Length, 0 );
 
@@ -34,6 +38,15 @@ public class Enemy : MonoBehaviour
 	public void OnDeath()
 	{
 		Instantiate( deathEffect, transform.position, Quaternion.identity );
+		Instantiate( deathEffect2, transform.position, Quaternion.identity );
+
+		for ( int i = 0; i < Random.Range( 3, 5 ); i++ )
+		{
+			GameObject ep = Instantiate( enemyPart, transform.position + (Vector3)Random.insideUnitCircle * 0.2f, Quaternion.identity );
+			ep.GetComponent<Rigidbody2D>( ).velocity = Quaternion.Euler( 0, 0, Random.Range( -60f, 60f ) ) * transform.up * Random.Range( 2f, 4f );
+			ep.transform.localScale = new Vector2( Random.Range( 0.5f, 1f ), Random.Range( 0.5f, 1f ) );
+		}
+
 		Destroy( parent );
 	}
 

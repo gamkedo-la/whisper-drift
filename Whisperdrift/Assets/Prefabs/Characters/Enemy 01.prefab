@@ -1809,7 +1809,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 8847642913097280022}
   hpBar: {fileID: 8847642912973094474}
-  deathEffect: {fileID: 7303289756598319150, guid: f1b34d1c32d7ab945ad115f449a7a450,
+  deathEffect: {fileID: 7111252694777043774, guid: 5859674f1a032c94a9cca1d3aca4ad94,
+    type: 3}
+  deathEffect2: {fileID: 7592066444540692698, guid: 464bb7dc57ccaa3448c725ab13aa1a78,
+    type: 3}
+  enemyPart: {fileID: 8973251641233698188, guid: bda702e602bc120409478bec8eeff7fc,
     type: 3}
   touchDamage: 20
   eyes:
