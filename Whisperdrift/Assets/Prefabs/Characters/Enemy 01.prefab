@@ -1812,6 +1812,12 @@ MonoBehaviour:
   deathEffect: {fileID: 7303289756598319150, guid: f1b34d1c32d7ab945ad115f449a7a450,
     type: 3}
   touchDamage: 20
+  eyes:
+  - {fileID: 8847642912899569913}
+  - {fileID: 8847642912591776501}
+  blinkTime: 0.1
+  blinkDelayMin: 3
+  blinkDelayMax: 5
 --- !u!1 &8847642913421718536
 GameObject:
   m_ObjectHideFlags: 0

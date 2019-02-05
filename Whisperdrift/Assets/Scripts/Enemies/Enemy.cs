@@ -7,19 +7,22 @@ public class Enemy : MonoBehaviour
 	[SerializeField] private GameObject hpBar = null;
 	[SerializeField] private GameObject deathEffect = null;
 	[SerializeField] private float touchDamage = 20f;
+	[SerializeField] private GameObject[] eyes = null;
+	[SerializeField] private float blinkTime = 0.05f;
+	[SerializeField] private float blinkDelayMin = 3f;
+	[SerializeField] private float blinkDelayMax = 5f;
 
 	void Start ()
 	{
 		Assert.IsNotNull( parent );
 		Assert.IsNotNull( hpBar );
 		Assert.IsNotNull( deathEffect );
+		Assert.IsNotNull( eyes );
+		Assert.AreNotEqual( eyes.Length, 0 );
 
 		hpBar.SetActive( false );
-	}
 
-	void Update ()
-	{
-
+		Invoke( "StartBlink", Random.Range( blinkDelayMin, blinkDelayMax ) );
 	}
 
 	public void GotHit( )
@@ -40,5 +43,21 @@ public class Enemy : MonoBehaviour
 			return;
 
 		collision.gameObject.GetComponent<HP>( ).ChangeHP( -touchDamage );
+	}
+
+	private void StartBlink( )
+	{
+		foreach ( var eye in eyes )
+			eye.SetActive( false );
+
+		Invoke( "EndBlink", blinkTime );
+	}
+
+	private void EndBlink( )
+	{
+		foreach ( var eye in eyes )
+			eye.SetActive( true );
+
+		Invoke( "StartBlink", Random.Range( blinkDelayMin, blinkDelayMax ) );
 	}
 }
