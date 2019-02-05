@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
 		{
 			GameObject ep = Instantiate( enemyPart, transform.position + (Vector3)Random.insideUnitCircle * 0.2f, Quaternion.identity );
 			ep.GetComponent<Rigidbody2D>( ).velocity = Quaternion.Euler( 0, 0, Random.Range( -60f, 60f ) ) * transform.up * Random.Range( 2f, 4f );
-			ep.transform.localScale = new Vector2( Random.Range( 0.5f, 1f ), Random.Range( 0.5f, 1f ) );
+			ep.transform.localScale = new Vector3( Random.Range( 0.5f, 1f ), Random.Range( 0.5f, 1f ), 1.0f );
 		}
 
 		Destroy( parent );

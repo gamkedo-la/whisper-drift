@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 114627908369384836}
   m_Layer: 0
   m_Name: Player Projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -265,6 +265,7 @@ MonoBehaviour:
   lifeTime: 3
   maxTravelDistance: 5
   damage: 50
+  enemyProjectile: 0
 --- !u!1 &4429842027542145775
 GameObject:
   m_ObjectHideFlags: 0

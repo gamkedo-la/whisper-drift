@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Destructible
   - Pressure Plate
+  - Projectile
   layers:
   - Default
   - TransparentFX
