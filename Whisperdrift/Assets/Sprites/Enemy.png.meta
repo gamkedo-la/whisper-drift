@@ -29,6 +29,9 @@ TextureImporter:
     21300048: Enemy Left Arm
     21300050: Enemy Eye R
     21300052: Enemy Eye L
+    21300054: Rock
+    21300056: Part 1
+    21300058: Part 2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -408,6 +411,66 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2b91cb935df25db40bd4f9bab6ed46c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 389
+        width: 45
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558c1946e403f5440b8e8840656f1911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Part 1
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 397
+        width: 39
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cd5862781c1774589b3c43dc254a83
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Part 2
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 403
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9bee302ecf4af47acc0ed662dca509
       vertices: []
       indices: 
       edges: []

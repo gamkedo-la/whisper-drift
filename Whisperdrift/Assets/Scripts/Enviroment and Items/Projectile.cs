@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
 	[SerializeField] private float lifeTime = 3f;
 	[SerializeField] private float maxTravelDistance = 6f;
 	[SerializeField] private int damage = 10;
+	[SerializeField] private bool enemyProjectile = false;
 
 	private Vector2 originPoint;
 	private Rigidbody2D rb;
@@ -23,6 +24,9 @@ public class Projectile : MonoBehaviour
 
 		originPoint = transform.position;
 		Invoke( "DestroyProjectile", lifeTime );
+
+		if ( enemyProjectile )
+			sprite.gameObject.transform.rotation = Quaternion.Euler( 0, 0, Random.Range( 0, 360 ) );
 	}
 
 	void Update( )

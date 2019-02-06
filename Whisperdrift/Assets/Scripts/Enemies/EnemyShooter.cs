@@ -9,6 +9,7 @@ public class EnemyShooter : MonoBehaviour
 	[SerializeField] private GameObject flash = null;
 	[SerializeField] private GameObject projectile = null;
 	[SerializeField] private SpriteRenderer gunSprite = null;
+	[SerializeField] private Color gunColor = Color.black;
 	[SerializeField] private float shotDelay = 2f;
 	[SerializeField] private float shotSpreed = 5f;
 	[SerializeField] private float shotDistance = 4.5f;
@@ -27,11 +28,17 @@ public class EnemyShooter : MonoBehaviour
 		Assert.IsNotNull( flash );
 		Assert.IsNotNull( projectile );
 		Assert.IsNotNull( gunSprite );
+
+		gunSprite.color = gunColor;
 	}
 
 	void Update( )
 	{
 		timeToNextShot -= Time.deltaTime;
+		timeToNextShot = timeToNextShot < 0 ? 0 : timeToNextShot;
+
+		gunColor.a = 1 - ( timeToNextShot / shotDelay );
+		gunSprite.color = gunColor;
 
 		TargetPlayer( );
 		bool canShoot = CanShoot( );
@@ -51,11 +58,15 @@ public class EnemyShooter : MonoBehaviour
 		{
 			if ( !hit.collider.CompareTag( Tags.Player ) )
 			{
+				gunSprite.enabled = false;
 				return false;
 			}
 		}
 		else
+		{
+			gunSprite.enabled = false;
 			return false;
+		}
 
 		return true;
 	}
@@ -81,6 +92,7 @@ public class EnemyShooter : MonoBehaviour
 			return;
 
 		timeToNextShot = shotDelay;
+		gunSprite.gameObject.transform.rotation = Quaternion.Euler( 0, 0, Random.Range( 0, 360 ) );
 
 		Quaternion shootAngle = Quaternion.Euler( 0, 0, Random.Range( -shotSpreed, shotSpreed ) + transform.rotation.eulerAngles.z );
 
