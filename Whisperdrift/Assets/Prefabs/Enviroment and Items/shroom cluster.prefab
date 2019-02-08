@@ -44,11 +44,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -114,10 +109,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.3838706
       objectReference: {fileID: 0}
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
@@ -254,11 +254,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -324,10 +319,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.60376024
       objectReference: {fileID: 0}
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
@@ -464,11 +464,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -534,10 +529,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.40782177
       objectReference: {fileID: 0}
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
@@ -674,11 +674,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom
-      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -734,14 +729,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -146.99
       objectReference: {fileID: 0}
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom
+      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7979456712822283715, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_EditMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
@@ -753,6 +748,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7979456712822283715, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_EditMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eed16c530868ab046891e3ffc1914c2d, type: 3}
@@ -769,11 +769,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -839,10 +834,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.60376024
       objectReference: {fileID: 0}
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
@@ -979,11 +979,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1039,10 +1034,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -146.99
       objectReference: {fileID: 0}
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
@@ -1069,11 +1069,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom
-      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1139,10 +1134,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.42457598
       objectReference: {fileID: 0}
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom
+      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
