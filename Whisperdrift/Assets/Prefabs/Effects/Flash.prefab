@@ -191,8 +191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 8300000, guid: 89abf7df984e2cb4d9ce515c36c73f11, type: 3}
-  minPitch: 0.9
-  maxPitch: 1.1
-  minVolume: 0.8
-  maxVolume: 1
+  - {fileID: 8300000, guid: 32cf9d523ea843347916d7df942ae12f, type: 3}
+  minPitch: 1.02
+  maxPitch: 1.28
+  minVolume: 0.65
+  maxVolume: 0.51
