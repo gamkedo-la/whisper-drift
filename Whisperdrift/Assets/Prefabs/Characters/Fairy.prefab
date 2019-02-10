@@ -5063,7 +5063,10 @@ MonoBehaviour:
   mainLight: {fileID: 7592066444162749797}
   mainSprite: {fileID: 7592066443171868898}
   particleSys: {fileID: 6576928661808834721}
-  riseSpeed: 1.5
-  playSpeed: 6
-  fleeSpeed: 10
-  playRadius: 1.5
+  riseSpeed: 3
+  playSpeed: 7
+  fleeSpeed: 15
+  playRadius: 1
+  speedVariation: 0.25
+  riseDirection: {x: 0, y: 1, z: 0}
+  playCount: 7

@@ -17,15 +17,16 @@ public class Fairy : MonoBehaviour
 	[SerializeField] private float fleeSpeed = 12f;
 	[SerializeField] private float playRadius = 2f;
 	[SerializeField] private float speedVariation = 0.25f;
-	private enum behavior { rise, play, flee };
-	private behavior currentBehavior = behavior.rise;
+	[SerializeField] private Vector3 riseDirection = Vector3.up;
+	[SerializeField] private float riseAmount = 4f;
+	private enum Behavior { Rise, Play, Flee };
+	private Behavior currentBehavior = Behavior.Rise;
 	private Vector3 destination;
 	private Vector3 playOrigin;
-	private int playCount = 6;
+	[SerializeField] private int playCount = 9;
 	private float distanceToDestination = Mathf.Infinity;
 	private float speed = 0f;
-	private const float RISE = 4f;
-	private const float DISTANCE_THRESHOLD = 0.4f;
+	private const float DISTANCE_THRESHOLD = 0.05f;
 
 	void Start()
 	{
@@ -44,11 +45,11 @@ public class Fairy : MonoBehaviour
 	void Update()
 	{
 		distanceToDestination = Vector3.Distance(destination, transform.position);
-		if (currentBehavior == behavior.rise && distanceToDestination <= DISTANCE_THRESHOLD) { StartPlaying(); }
-		if (currentBehavior == behavior.play && distanceToDestination <= DISTANCE_THRESHOLD) { PlayNext(); }
+		if (currentBehavior == Behavior.Rise && distanceToDestination <= DISTANCE_THRESHOLD) { StartPlaying(); }
+		if (currentBehavior == Behavior.Play && distanceToDestination <= DISTANCE_THRESHOLD) { PlayNext(); }
 		//if (currentBehavior == behavior.flee && distanceToDestination <= DISTANCE_THRESHOLD) { DisableFairyObject(); }
 
-		transform.position += (destination - transform.position) * speed * Time.deltaTime;
+		transform.position += (destination - transform.position).normalized * speed * Time.deltaTime;
 
 	}
 
@@ -62,13 +63,13 @@ public class Fairy : MonoBehaviour
 
 	private void StartRising()
 	{
-		destination = transform.position + (Vector3.up * RISE);
+		destination = transform.position + (riseDirection * riseAmount);
 		speed = riseSpeed * speedVariation;
 	}
 
 	private void StartPlaying() 
 	{
-		currentBehavior = behavior.play;
+		currentBehavior = Behavior.Play;
 		PlayNext();
 		speed = playSpeed * speedVariation;
 		playOrigin = transform.position;
@@ -76,7 +77,7 @@ public class Fairy : MonoBehaviour
 
 	private void StartFleeing() 
 	{
-		currentBehavior = behavior.flee;
+		currentBehavior = Behavior.Flee;
 		destination = fairyHome.position;
 		speed = fleeSpeed * speedVariation;
 	}

@@ -6969,7 +6969,7 @@ PrefabInstance:
     - target: {fileID: 7592066444540692698, guid: a6235b51dfabd9240bd48a6a86c74877,
         type: 3}
       propertyPath: m_Name
-      value: Fairy (2)
+      value: Test Fairy 2
       objectReference: {fileID: 0}
     - target: {fileID: 7592066444540692673, guid: a6235b51dfabd9240bd48a6a86c74877,
         type: 3}
@@ -6979,7 +6979,7 @@ PrefabInstance:
     - target: {fileID: 7592066444540692673, guid: a6235b51dfabd9240bd48a6a86c74877,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.08
+      value: 3.78
       objectReference: {fileID: 0}
     - target: {fileID: 7592066444540692673, guid: a6235b51dfabd9240bd48a6a86c74877,
         type: 3}
@@ -7025,6 +7025,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946301060704248445, guid: a6235b51dfabd9240bd48a6a86c74877,
+        type: 3}
+      propertyPath: riseDirection.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946301060704248445, guid: a6235b51dfabd9240bd48a6a86c74877,
+        type: 3}
+      propertyPath: riseDirection.y
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6235b51dfabd9240bd48a6a86c74877, type: 3}
@@ -11322,7 +11332,7 @@ PrefabInstance:
     - target: {fileID: 7592066444540692698, guid: a6235b51dfabd9240bd48a6a86c74877,
         type: 3}
       propertyPath: m_Name
-      value: Fairy
+      value: Test Fairy 1
       objectReference: {fileID: 0}
     - target: {fileID: 7592066444540692673, guid: a6235b51dfabd9240bd48a6a86c74877,
         type: 3}
@@ -11332,7 +11342,7 @@ PrefabInstance:
     - target: {fileID: 7592066444540692673, guid: a6235b51dfabd9240bd48a6a86c74877,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.06
+      value: 4.07
       objectReference: {fileID: 0}
     - target: {fileID: 7592066444540692673, guid: a6235b51dfabd9240bd48a6a86c74877,
         type: 3}
@@ -11378,6 +11388,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946301060704248445, guid: a6235b51dfabd9240bd48a6a86c74877,
+        type: 3}
+      propertyPath: riseDirection.x
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946301060704248445, guid: a6235b51dfabd9240bd48a6a86c74877,
+        type: 3}
+      propertyPath: riseDirection.y
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6235b51dfabd9240bd48a6a86c74877, type: 3}
@@ -20971,7 +20991,7 @@ PrefabInstance:
     - target: {fileID: 7592066444540692698, guid: a6235b51dfabd9240bd48a6a86c74877,
         type: 3}
       propertyPath: m_Name
-      value: Fairy (1)
+      value: Test Fairy 3
       objectReference: {fileID: 0}
     - target: {fileID: 7592066444540692673, guid: a6235b51dfabd9240bd48a6a86c74877,
         type: 3}
@@ -20981,7 +21001,7 @@ PrefabInstance:
     - target: {fileID: 7592066444540692673, guid: a6235b51dfabd9240bd48a6a86c74877,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 3.61
       objectReference: {fileID: 0}
     - target: {fileID: 7592066444540692673, guid: a6235b51dfabd9240bd48a6a86c74877,
         type: 3}
