@@ -11,6 +11,8 @@ TagManager:
   - Destructible
   - Pressure Plate
   - Projectile
+  - Fairy
+  - FairyHome
   layers:
   - Default
   - TransparentFX
@@ -24,7 +26,7 @@ TagManager:
   - Player
   - GroundDetector
   - Items
-  - 
+  - Special FX
   - 
   - 
   - 

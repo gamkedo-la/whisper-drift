@@ -10,7 +10,7 @@ public class Fairy : MonoBehaviour
 	[SerializeField] private Light mainLight = null;
 	[SerializeField] private SpriteRenderer mainSprite = null;
 	[SerializeField] private ParticleSystem particles = null;
-	[SerializeField] private Transform fairyHome = null;
+	private Transform fairyHome = null;
 	[SerializeField] private float riseSpeed = 1f;
 	[SerializeField] private float playSpeed = 8f;
 	[SerializeField] private float fleeSpeed = 12f;
@@ -26,14 +26,15 @@ public class Fairy : MonoBehaviour
 
 	void Start()
 	{
-		Assert.IsNotNull(mainLight);
-		Assert.IsNotNull(mainSprite);
-		Assert.IsNotNull(particles);
+		fairyHome = GameObject.FindGameObjectWithTag("FairyHome").GetComponent<Transform>();
 		Assert.IsNotNull(fairyHome);
-
 		transform.SetParent(fairyHome);
 		Score();
 		StartRising();
+
+		Assert.IsNotNull(mainLight);
+		Assert.IsNotNull(mainSprite);
+		Assert.IsNotNull(particles);
 	}
 
 	void Update()
@@ -86,7 +87,7 @@ public class Fairy : MonoBehaviour
 
 	private void DisableFairyObject()
 	{
-		//this.gameObject.SetActive(false);
+		this.gameObject.SetActive(false);
 	}
 
 

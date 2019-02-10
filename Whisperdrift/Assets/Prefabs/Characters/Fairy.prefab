@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7592066443013845477}
   - component: {fileID: 7592066443013845476}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 7592066443045699848}
   - component: {fileID: 7592066443045699849}
   - component: {fileID: 7592066443045699854}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Shadow Cast Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -755,7 +755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7592066443171868899}
   - component: {fileID: 7592066443171868898}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -833,7 +833,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7592066443650406483}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7592066444162749818}
   - component: {fileID: 7592066444162749797}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -936,7 +936,7 @@ GameObject:
   - component: {fileID: 7592066444292715459}
   - component: {fileID: 7592066444292715469}
   - component: {fileID: 7592066444292715458}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Follow Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5632,11 +5632,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7592066444540692673}
-  - component: {fileID: 7592066444540692679}
-  - component: {fileID: 5048958961589866853}
-  m_Layer: 9
-  m_Name: Enemy Release Effect
-  m_TagString: Player
+  - component: {fileID: 1946301060704248445}
+  m_Layer: 12
+  m_Name: Fairy
+  m_TagString: Fairy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5659,23 +5658,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &7592066444540692679
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7592066444540692698}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: e053ad9b16e38e94697792fc025fb3e6, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0012668669, y: -0.00000011920929}
-  m_Size: {x: 0.3939833, y: 0.4018978}
-  m_Direction: 0
---- !u!114 &5048958961589866853
+--- !u!114 &1946301060704248445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5684,14 +5667,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7592066444540692698}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7521468fab806b4fb62da5152e7fb93, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b6d967f1ed6c9b4a842035818e902b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endEffect: {fileID: 5311750082699900806, guid: 77a650cc86da39349bfe7edb15e1c197,
-    type: 3}
   mainLight: {fileID: 7592066444162749797}
   mainSprite: {fileID: 7592066443171868898}
   particles: {fileID: 7592066444292715469}
-  speed: 3
-  effectDuration: 1
-  direction: {x: 0, y: 1}
+  fairyHome: {fileID: 0}
+  riseSpeed: 1
+  playSpeed: 8
+  fleeSpeed: 12
