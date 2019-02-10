@@ -40,7 +40,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4320300884111949611}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -284,8 +284,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.7
-      minScalar: 0.5
+      scalar: 0.35
+      minScalar: 0.25
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -600,7 +600,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 2147483647
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -746,7 +746,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.14
+      value: 0.07
       mode: 0
       spread: 0
       speed:
@@ -918,7 +918,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 40
+      scalar: 30
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4687,7 +4687,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 0.25
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -4776,7 +4776,7 @@ TrailRenderer:
   m_SortingLayerID: -285228223
   m_SortingLayer: 4
   m_SortingOrder: -1
-  m_Time: 0.4
+  m_Time: 0.8
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.3
@@ -4859,7 +4859,7 @@ Transform:
   m_GameObject: {fileID: 7592066443171868896}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 7592066443650406483}
   m_RootOrder: 0
@@ -4987,7 +4987,7 @@ Light:
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1.06
-  m_Range: 17.61
+  m_Range: 5.61
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -5069,4 +5069,5 @@ MonoBehaviour:
   playRadius: 1
   speedVariation: 0.25
   riseDirection: {x: 0, y: 1, z: 0}
+  riseAmount: 4
   playCount: 7

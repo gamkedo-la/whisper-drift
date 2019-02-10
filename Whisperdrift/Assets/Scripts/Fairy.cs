@@ -47,7 +47,7 @@ public class Fairy : MonoBehaviour
 		distanceToDestination = Vector3.Distance(destination, transform.position);
 		if (currentBehavior == Behavior.Rise && distanceToDestination <= DISTANCE_THRESHOLD) { StartPlaying(); }
 		if (currentBehavior == Behavior.Play && distanceToDestination <= DISTANCE_THRESHOLD) { PlayNext(); }
-		//if (currentBehavior == behavior.flee && distanceToDestination <= DISTANCE_THRESHOLD) { DisableFairyObject(); }
+		if (currentBehavior == Behavior.Flee && distanceToDestination <= DISTANCE_THRESHOLD) { DisableFairyObject(); }
 
 		transform.position += (destination - transform.position).normalized * speed * Time.deltaTime;
 
