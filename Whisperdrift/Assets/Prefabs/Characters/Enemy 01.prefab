@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 8847642912779752369}
   - component: {fileID: 8847642912779752368}
   - component: {fileID: 8847642912779752375}
-  m_Layer: 15
+  m_Layer: 5
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,7 +786,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1241,7 +1241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642912973094472}
   - component: {fileID: 8847642912973094473}
-  m_Layer: 15
+  m_Layer: 5
   m_Name: HP Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1811,7 +1811,7 @@ MonoBehaviour:
   hpBar: {fileID: 8847642912973094474}
   deathEffect: {fileID: 7111252694777043774, guid: 5859674f1a032c94a9cca1d3aca4ad94,
     type: 3}
-  deathEffect2: {fileID: 7592066444540692698, guid: 464bb7dc57ccaa3448c725ab13aa1a78,
+  deathEffect2: {fileID: 7592066444540692698, guid: a6235b51dfabd9240bd48a6a86c74877,
     type: 3}
   enemyPart: {fileID: 8973251641233698188, guid: bda702e602bc120409478bec8eeff7fc,
     type: 3}
@@ -1912,7 +1912,7 @@ GameObject:
   - component: {fileID: 8847642913428758816}
   - component: {fileID: 8847642913428758822}
   - component: {fileID: 8847642913428758823}
-  m_Layer: 15
+  m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2200,7 +2200,7 @@ GameObject:
   - component: {fileID: 8847642913601623890}
   - component: {fileID: 8847642913601623888}
   - component: {fileID: 8847642913601623889}
-  m_Layer: 15
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2275,7 +2275,7 @@ GameObject:
   - component: {fileID: 8847642913608298712}
   - component: {fileID: 8847642913608298713}
   - component: {fileID: 8847642913608298714}
-  m_Layer: 15
+  m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2371,7 +2371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8847642913935826511}
-  m_Layer: 15
+  m_Layer: 5
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2407,7 +2407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8847642913972700482}
-  m_Layer: 15
+  m_Layer: 5
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}

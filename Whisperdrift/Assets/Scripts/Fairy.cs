@@ -19,6 +19,9 @@ public class Fairy : MonoBehaviour
 	[SerializeField] private float speedVariation = 0.25f;
 	[SerializeField] private Vector3 riseDirection = Vector3.up;
 	[SerializeField] private float riseAmount = 4f;
+	[SerializeField] private AudioClip freedomSound=null;
+	[SerializeField] private AudioClip playSound=null;
+	[SerializeField] private AudioClip fleeSound=null;
 	private enum Behavior { Rise, Play, Flee };
 	private Behavior currentBehavior = Behavior.Rise;
 	private Vector3 destination;
@@ -27,6 +30,8 @@ public class Fairy : MonoBehaviour
 	private float distanceToDestination = Mathf.Infinity;
 	private float speed = 0f;
 	private const float DISTANCE_THRESHOLD = 0.05f;
+	private float fairyVolume = 1f;
+
 
 	void Start()
 	{
@@ -36,6 +41,14 @@ public class Fairy : MonoBehaviour
 		transform.SetParent(fairyHome);
 		Score();
 		StartRising();
+
+		AudioSource audioSource = this.gameObject.GetComponent<AudioSource>();
+		Assert.IsNotNull(audioSource);
+
+		audioSource.volume = fairyVolume * 0.5f;
+		audioSource.Play();
+		AudioSource.PlayClipAtPoint(freedomSound, transform.position, fairyVolume);
+		AudioSource.PlayClipAtPoint(fleeSound, transform.position, fairyVolume);
 
 		Assert.IsNotNull(mainLight);
 		Assert.IsNotNull(mainSprite);
@@ -78,6 +91,7 @@ public class Fairy : MonoBehaviour
 
 	private void StartFleeing() 
 	{
+		AudioSource.PlayClipAtPoint(fleeSound, transform.position, fairyVolume);
 		currentBehavior = Behavior.Flee;
 		destination = fairyHome.position;
 		speed = fleeSpeed * speedVariation;
@@ -87,6 +101,7 @@ public class Fairy : MonoBehaviour
 	{
 		if (playCount <= 0) { StartFleeing(); return; }
 
+		AudioSource.PlayClipAtPoint(playSound, transform.position, fairyVolume);
 		float rndX = Random.Range(-playRadius, playRadius);
 		float rndY = Random.Range(-playRadius, playRadius);
 		destination = new Vector3(playOrigin.x + rndX, playOrigin.y + rndY, playOrigin.z);

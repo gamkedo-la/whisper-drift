@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83c4ab3dd9d9cc48be31d3e5ed7e3e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endEffect: {fileID: 7592066444540692698, guid: 464bb7dc57ccaa3448c725ab13aa1a78,
+  endEffect: {fileID: 7592066444540692698, guid: a6235b51dfabd9240bd48a6a86c74877,
     type: 3}
   mainLight: {fileID: 7079265331265043666}
   glows:
