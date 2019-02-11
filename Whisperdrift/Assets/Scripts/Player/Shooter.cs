@@ -48,7 +48,7 @@ public class Shooter : MonoBehaviour
 		Quaternion shootAngle = Quaternion.Euler( 0, 0, Random.Range( -shotSpreed, shotSpreed ) + transform.rotation.eulerAngles.z );
 		player.MadeShot( shootAngle );
 
-		Instantiate( projectile, spawnPoint.position, shootAngle );
+		Instantiate( projectile, transform.position, shootAngle );
 		var f = Instantiate( flash, shootPoint.position, transform.rotation, shootPoint );
 		Destroy( f, 0.4f );
 	}

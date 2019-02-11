@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1829957676960341862}
   - component: {fileID: 4459702524587550631}
   - component: {fileID: 9089642829003376179}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Alt Player Projectile 2
   m_TagString: Projectile
   m_Icon: {fileID: 0}
