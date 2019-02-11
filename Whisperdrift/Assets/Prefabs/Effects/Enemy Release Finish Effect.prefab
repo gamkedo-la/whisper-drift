@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3278434611067143246}
   - component: {fileID: 6684241319067314313}
   - component: {fileID: 8097791574025022078}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Enemy Release Finish Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

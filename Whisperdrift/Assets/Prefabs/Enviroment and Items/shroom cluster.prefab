@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2421782166501599918}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: shroom cluster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,6 +44,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -109,15 +114,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.3838706
       objectReference: {fileID: 0}
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
@@ -234,11 +239,6 @@ PrefabInstance:
       propertyPath: m_Faces.Array.data[21].m_TextureGroup
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eed16c530868ab046891e3ffc1914c2d, type: 3}
 --- !u!4 &1587104723146054658 stripped
@@ -254,6 +254,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -319,15 +324,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.60376024
       objectReference: {fileID: 0}
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
@@ -444,11 +449,6 @@ PrefabInstance:
       propertyPath: m_Faces.Array.data[21].m_TextureGroup
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eed16c530868ab046891e3ffc1914c2d, type: 3}
 --- !u!4 &1662826646625531578 stripped
@@ -464,6 +464,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -529,15 +534,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.40782177
       objectReference: {fileID: 0}
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
@@ -654,11 +659,6 @@ PrefabInstance:
       propertyPath: m_Faces.Array.data[21].m_TextureGroup
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eed16c530868ab046891e3ffc1914c2d, type: 3}
 --- !u!4 &2570264186231177728 stripped
@@ -674,6 +674,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom
+      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -729,22 +734,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -146.99
       objectReference: {fileID: 0}
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom
-      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
+    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
+    - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -769,6 +769,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -834,15 +839,15 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.60376024
       objectReference: {fileID: 0}
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
@@ -959,11 +964,6 @@ PrefabInstance:
       propertyPath: m_Faces.Array.data[21].m_TextureGroup
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eed16c530868ab046891e3ffc1914c2d, type: 3}
 --- !u!4 &3950024432024687647 stripped
@@ -979,6 +979,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1034,22 +1039,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -146.99
       objectReference: {fileID: 0}
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
+    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
+    - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1069,6 +1069,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2421782166501599918}
     m_Modifications:
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: shroom
+      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1134,22 +1139,17 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.42457598
       objectReference: {fileID: 0}
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: shroom
-      objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
+    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8406489263454122206, guid: eed16c530868ab046891e3ffc1914c2d,
+    - target: {fileID: 4421204290679557132, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_Mesh
       value: 

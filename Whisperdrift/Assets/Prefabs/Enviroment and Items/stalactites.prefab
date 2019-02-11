@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8000220969542568831}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: stalactites
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,7 +110,7 @@ PrefabInstance:
     - target: {fileID: 4908943028424465414, guid: eb9a22bad594f624085ed9424e161943,
         type: 3}
       propertyPath: m_SelectedEditorRenderState
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 627108287923021104, guid: eb9a22bad594f624085ed9424e161943,
         type: 3}

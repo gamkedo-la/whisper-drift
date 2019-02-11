@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 725529760}
   - component: {fileID: 725529762}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: Bad
   m_TagString: Bad
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 985256799}
   - component: {fileID: 985256798}
   - component: {fileID: 985256800}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: Temp Damager One Hit Kill
   m_TagString: Bad
   m_Icon: {fileID: 0}

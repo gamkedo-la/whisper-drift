@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3404356998113909809}
   - component: {fileID: 1144907781997437229}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: more_curvy_vine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1394775416273961992}
   - component: {fileID: 7131424441251067672}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: more_curvy_vine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4449404236412140802}
   - component: {fileID: 1109705787308774392}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: more_curvy_vine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 4211897969670958958}
   - component: {fileID: 785078613173886952}
   - component: {fileID: 8466718810689803384}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: shroom
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -503,7 +503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3596320305949860173}
   - component: {fileID: 2099345337111618858}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: more_curvy_vine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,7 +586,7 @@ GameObject:
   - component: {fileID: 3609708578579160982}
   - component: {fileID: 2843801267427810785}
   - component: {fileID: 8406489263454122206}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: shadowcaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1520,7 +1520,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8644939543494061503}
   - component: {fileID: 4089416648312343946}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: more_curvy_vine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1599,7 +1599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8117806146216335654}
   - component: {fileID: 2244696050828965366}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: more_curvy_vine
   m_TagString: Untagged
   m_Icon: {fileID: 0}

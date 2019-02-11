@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 260449950}
   - component: {fileID: 260449952}
   - component: {fileID: 260449951}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Top Graphics (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 262325424}
   - component: {fileID: 262325426}
   - component: {fileID: 262325425}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bottom Graphics (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 353612483}
   - component: {fileID: 353612485}
   - component: {fileID: 353612484}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Top Graphics (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 375745717}
   - component: {fileID: 375745718}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 1273244119}
   - component: {fileID: 1273244121}
   - component: {fileID: 1273244120}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bottom Graphics (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2118615194}
   - component: {fileID: 2118615195}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -584,7 +584,7 @@ GameObject:
   - component: {fileID: 6521330144955112046}
   - component: {fileID: 6521330144955112044}
   - component: {fileID: 6521330144955112045}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Top Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,7 +690,7 @@ GameObject:
   - component: {fileID: 6521330146008508403}
   - component: {fileID: 6521330146008508401}
   - component: {fileID: 6521330146008508402}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bottom Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -796,7 +796,7 @@ GameObject:
   - component: {fileID: 6521330146019313822}
   - component: {fileID: 6521330146019313823}
   - component: {fileID: 6521330146019313821}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Ring Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}

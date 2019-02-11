@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 212310971296360216}
   - component: {fileID: 61882214769517824}
   - component: {fileID: 5744867178830006034}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: Temp Damager Normal
   m_TagString: Bad
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -285228223
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3fa8b68a0a352834786e7f465fa33f64, type: 3}
   m_Color: {r: 1, g: 0.6421805, b: 0.25943398, a: 1}
@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 4488322961880556}
   - component: {fileID: 212657838334545536}
   - component: {fileID: 61310537749311824}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: Bad
   m_TagString: Bad
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -285228223
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3fa8b68a0a352834786e7f465fa33f64, type: 3}
   m_Color: {r: 1, g: 0.6421805, b: 0.25943398, a: 1}

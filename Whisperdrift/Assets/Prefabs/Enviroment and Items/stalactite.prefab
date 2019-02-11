@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3694124801786796494}
   - component: {fileID: 4697010411165854821}
   - component: {fileID: 6150620917925408367}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: shadowcaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 4908943028424465414}
   - component: {fileID: 5126527918974470576}
   - component: {fileID: 5868568401782148890}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: stalactite
   m_TagString: Wall
   m_Icon: {fileID: 0}

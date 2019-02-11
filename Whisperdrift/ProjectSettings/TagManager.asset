@@ -13,6 +13,7 @@ TagManager:
   - Projectile
   - Fairy
   - FairyHome
+  - Hazard
   layers:
   - Default
   - TransparentFX
@@ -27,11 +28,11 @@ TagManager:
   - GroundDetector
   - Items
   - Special FX
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player Projectiles
+  - Enemy Projectiles
+  - Enemy
+  - Terrain Feature
+  - Terrain Platform
   - 
   - 
   - 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2043425827049007116}
   - component: {fileID: 8159170018673403029}
   - component: {fileID: 6932825736622510404}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Enemy Death Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

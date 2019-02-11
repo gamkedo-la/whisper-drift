@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8100475412427885389}
   - component: {fileID: 2349773284216119673}
   - component: {fileID: 6120641080072151974}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Particle System Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4709,7 +4709,7 @@ GameObject:
   - component: {fileID: 4339454142782483300}
   - component: {fileID: 4339454142782483298}
   - component: {fileID: 4339454142782483299}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Top Graphics (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4815,7 +4815,7 @@ GameObject:
   - component: {fileID: 4339454142873656599}
   - component: {fileID: 4339454142873656597}
   - component: {fileID: 4339454142873656598}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bottom Graphics (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4921,7 +4921,7 @@ GameObject:
   - component: {fileID: 4339454142875451193}
   - component: {fileID: 4339454142875451143}
   - component: {fileID: 4339454142875451192}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Top Graphics (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5027,7 +5027,7 @@ GameObject:
   - component: {fileID: 4339454144018526320}
   - component: {fileID: 4339454144018526334}
   - component: {fileID: 4339454144018526335}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bottom Graphics (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5133,7 +5133,7 @@ GameObject:
   - component: {fileID: 7401874594676507593}
   - component: {fileID: 7401874594676507595}
   - component: {fileID: 7401874594676507594}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Top Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5239,7 +5239,7 @@ GameObject:
   - component: {fileID: 7401874595725250873}
   - component: {fileID: 7401874595725250872}
   - component: {fileID: 4216723611572715350}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Ring Gate Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5328,7 +5328,7 @@ GameObject:
   - component: {fileID: 7401874595777887828}
   - component: {fileID: 7401874595777887830}
   - component: {fileID: 7401874595777887829}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Bottom Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5434,7 +5434,7 @@ GameObject:
   - component: {fileID: 8413607428489067995}
   - component: {fileID: 5939927379523445477}
   - component: {fileID: 2353781617059873591}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Particle System Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}

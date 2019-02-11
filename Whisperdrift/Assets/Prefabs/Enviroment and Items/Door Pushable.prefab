@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3200374359487777806}
   - component: {fileID: 3200374359487777807}
   - component: {fileID: 3200374359487777795}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 3200374359798016514}
   - component: {fileID: 3200374359798016515}
   - component: {fileID: 3200374359798016519}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3200374360687817318}
   - component: {fileID: 3200374360687817317}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -360,7 +360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3200374360838309348}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Door Pushable
   m_TagString: Untagged
   m_Icon: {fileID: 0}

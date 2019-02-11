@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2959378331472411131}
   - component: {fileID: 2752422225308664984}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642912195235516}
   - component: {fileID: 8847642912195235507}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Horn L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642912299871272}
   - component: {fileID: 8847642912299871279}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Horn R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,7 +247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642912591776500}
   - component: {fileID: 8847642912591776267}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642912602003425}
   - component: {fileID: 8847642912602003424}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8847642912754304029}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642912759864900}
   - component: {fileID: 8847642912759864923}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   - component: {fileID: 8847642912779752369}
   - component: {fileID: 8847642912779752368}
   - component: {fileID: 8847642912779752375}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -588,7 +588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8847642912899165133}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Spawn Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,7 +619,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642912899569912}
   - component: {fileID: 8847642912899569919}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Eye L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 8847642912905106252}
   - component: {fileID: 8847642912905106253}
   - component: {fileID: 8847642912905106254}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Shadow Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1241,7 +1241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642912973094472}
   - component: {fileID: 8847642912973094473}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: HP Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1329,7 +1329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642913090026006}
   - component: {fileID: 8847642913090026005}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Brow L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1408,7 +1408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642913097280021}
   - component: {fileID: 8847642913097280020}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Enemy 01
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1461,7 +1461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642913107649039}
   - component: {fileID: 8847642913107649038}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Horn M
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1540,7 +1540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642913130097781}
   - component: {fileID: 8847642913130097780}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1622,7 +1622,7 @@ GameObject:
   - component: {fileID: 8847642913403589139}
   - component: {fileID: 8847642913403589137}
   - component: {fileID: 8847642913403589138}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Enemy Body
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1832,7 +1832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642913421718543}
   - component: {fileID: 8847642913421718542}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Left Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1912,7 +1912,7 @@ GameObject:
   - component: {fileID: 8847642913428758816}
   - component: {fileID: 8847642913428758822}
   - component: {fileID: 8847642913428758823}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1985,7 +1985,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642913429951978}
   - component: {fileID: 8847642913429951977}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Enemy Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2041,7 +2041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642913522925854}
   - component: {fileID: 8847642913522925853}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Brow R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2120,7 +2120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8847642913525867480}
   - component: {fileID: 8847642913525867487}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Right Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2200,7 +2200,7 @@ GameObject:
   - component: {fileID: 8847642913601623890}
   - component: {fileID: 8847642913601623888}
   - component: {fileID: 8847642913601623889}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2275,7 +2275,7 @@ GameObject:
   - component: {fileID: 8847642913608298712}
   - component: {fileID: 8847642913608298713}
   - component: {fileID: 8847642913608298714}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2371,7 +2371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8847642913935826511}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2407,7 +2407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8847642913972700482}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}

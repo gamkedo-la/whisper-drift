@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 114357451954961432}
   - component: {fileID: 199150647531813230}
   - component: {fileID: 82478754491298002}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hit Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

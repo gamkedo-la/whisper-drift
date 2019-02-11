@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7376747783111898187}
   - component: {fileID: 4621500264848460692}
   - component: {fileID: 5917831265144754317}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 8315111100155951256}
   - component: {fileID: 332125404259917047}
   - component: {fileID: 9214254810750507957}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player Projectile Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}

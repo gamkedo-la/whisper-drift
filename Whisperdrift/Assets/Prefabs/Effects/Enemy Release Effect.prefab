@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7592066443013845477}
   - component: {fileID: 7592066443013845476}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 7592066443045699848}
   - component: {fileID: 7592066443045699849}
   - component: {fileID: 7592066443045699854}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Shadow Cast Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7592066443171868899}
   - component: {fileID: 7592066443171868898}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -833,7 +833,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7592066443650406483}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +866,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7592066444162749818}
   - component: {fileID: 7592066444162749797}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -936,7 +936,7 @@ GameObject:
   - component: {fileID: 7592066444292715459}
   - component: {fileID: 7592066444292715469}
   - component: {fileID: 7592066444292715458}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Follow Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5634,7 +5634,7 @@ GameObject:
   - component: {fileID: 7592066444540692673}
   - component: {fileID: 7592066444540692679}
   - component: {fileID: 5048958961589866853}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Enemy Release Effect
   m_TagString: Player
   m_Icon: {fileID: 0}
