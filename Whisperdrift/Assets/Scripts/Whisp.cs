@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class Fairy : MonoBehaviour
+public class Whisp : MonoBehaviour
 {
 
-	[SerializeField] private static int totalFairiesFree = 0;
-	[SerializeField] private int fairiesFree = 0;
+	[SerializeField] private static int totalWhispsFree = 0;
+	[SerializeField] private int whispsFree = 0;
 	[SerializeField] private Light mainLight = null;
 	[SerializeField] private SpriteRenderer mainSprite = null;
 	[SerializeField] private ParticleSystem particleSys = null;
-	private Transform fairyHome = null;
+	private Transform whispHome = null;
 	[SerializeField] private float riseSpeed = 1f;
 	[SerializeField] private float playSpeed = 8f;
 	[SerializeField] private float fleeSpeed = 12f;
@@ -30,25 +30,25 @@ public class Fairy : MonoBehaviour
 	private float distanceToDestination = Mathf.Infinity;
 	private float speed = 0f;
 	private const float DISTANCE_THRESHOLD = 0.05f;
-	private float fairyVolume = 1f;
+	private float whispVolume = 1f;
 
 
 	void Start()
 	{
 		speedVariation = Random.Range(1f-speedVariation, 1f+speedVariation);
-		fairyHome = GameObject.FindGameObjectWithTag("FairyHome").GetComponent<Transform>();
-		Assert.IsNotNull(fairyHome);
-		transform.SetParent(fairyHome);
+		whispHome = GameObject.FindGameObjectWithTag("FairyHome").GetComponent<Transform>();
+		Assert.IsNotNull(whispHome);
+		transform.SetParent(whispHome);
 		Score();
 		StartRising();
 
 		AudioSource audioSource = this.gameObject.GetComponent<AudioSource>();
 		Assert.IsNotNull(audioSource);
 
-		audioSource.volume = fairyVolume * 0.5f;
+		audioSource.volume = whispVolume * 0.5f;
 		audioSource.Play();
-		AudioSource.PlayClipAtPoint(freedomSound, transform.position, fairyVolume);
-		AudioSource.PlayClipAtPoint(fleeSound, transform.position, fairyVolume);
+		AudioSource.PlayClipAtPoint(freedomSound, transform.position, whispVolume);
+		AudioSource.PlayClipAtPoint(fleeSound, transform.position, whispVolume);
 
 		Assert.IsNotNull(mainLight);
 		Assert.IsNotNull(mainSprite);
@@ -71,8 +71,8 @@ public class Fairy : MonoBehaviour
 
 	private void Score() 
 	{
-		totalFairiesFree += 1;
-		fairiesFree = totalFairiesFree;
+		totalWhispsFree += 1;
+		whispsFree = totalWhispsFree;
 	}
 
 	private void StartRising()
@@ -91,9 +91,9 @@ public class Fairy : MonoBehaviour
 
 	private void StartFleeing() 
 	{
-		AudioSource.PlayClipAtPoint(fleeSound, transform.position, fairyVolume);
+		AudioSource.PlayClipAtPoint(fleeSound, transform.position, whispVolume);
 		currentBehavior = Behavior.Flee;
-		destination = fairyHome.position;
+		destination = whispHome.position;
 		speed = fleeSpeed * speedVariation;
 	}
 
@@ -101,7 +101,7 @@ public class Fairy : MonoBehaviour
 	{
 		if (playCount <= 0) { StartFleeing(); return; }
 
-		AudioSource.PlayClipAtPoint(playSound, transform.position, fairyVolume);
+		AudioSource.PlayClipAtPoint(playSound, transform.position, whispVolume);
 		float rndX = Random.Range(-playRadius, playRadius);
 		float rndY = Random.Range(-playRadius, playRadius);
 		destination = new Vector3(playOrigin.x + rndX, playOrigin.y + rndY, playOrigin.z);

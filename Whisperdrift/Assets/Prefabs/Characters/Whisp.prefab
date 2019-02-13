@@ -5025,7 +5025,7 @@ GameObject:
   - component: {fileID: 1946301060704248445}
   - component: {fileID: 7846824181165400597}
   m_Layer: 12
-  m_Name: Fairy
+  m_Name: Whisp
   m_TagString: Fairy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5060,7 +5060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b6d967f1ed6c9b4a842035818e902b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fairiesFree: 0
+  whispsFree: 0
   mainLight: {fileID: 7592066444162749797}
   mainSprite: {fileID: 7592066443171868898}
   particleSys: {fileID: 6576928661808834721}
