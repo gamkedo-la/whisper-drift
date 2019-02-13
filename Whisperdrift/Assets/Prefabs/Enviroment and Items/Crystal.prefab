@@ -145,9 +145,9 @@ MonoBehaviour:
   - {fileID: 3303382054938154264}
   - {fileID: 3303382054585498230}
   baseColor: {r: 0, g: 0.38431373, b: 1, a: 1}
-  glow: 1.2
-  lightInt: 0.2
-  hp: 3
+  glow: 3
+  lightInt: 0.6
+  hp: 2
   parts:
   - {fileID: 8133385114605483244, guid: 169d3e4df430f484bad76272612dc2f9, type: 3}
   - {fileID: 8341005390312485924, guid: ef628480b7e2fb04d85211bb74bbc60b, type: 3}
