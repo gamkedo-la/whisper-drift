@@ -2,7 +2,7 @@ fileFormatVersion: 2
 guid: 536c7a0a80a862448af7bb2edf89120f
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Level art_0
+    21300000: R_0
     21300002: R_1
     21300004: R_2
     21300006: R_3
@@ -74,7 +74,7 @@ TextureImporter:
     21300138: S_2
     21300140: S_3
     21300142: S_4
-    21300144: Level art_72
+    21300144: S_5
     21300146: G_1
     21300148: G_2
     21300150: G_3
@@ -84,7 +84,7 @@ TextureImporter:
     21300158: G_7
     21300160: G_8
     21300162: G_9
-    21300164: Level art_82
+    21300164: G_9b
     21300166: G_10
     21300168: G_11
     21300170: G_12
@@ -137,7 +137,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 25
+  spritePixelsToUnits: 50
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -198,7 +198,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Level art_0
+      name: R_0
       rect:
         serializedVersion: 2
         x: 16
@@ -1621,10 +1621,10 @@ TextureImporter:
       name: S_4
       rect:
         serializedVersion: 2
-        x: 371
-        y: 1228
-        width: 81
-        height: 185
+        x: 376
+        y: 1263
+        width: 77
+        height: 122
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1638,7 +1638,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level art_72
+      name: S_5
       rect:
         serializedVersion: 2
         x: 508
@@ -1838,7 +1838,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Level art_82
+      name: G_9b
       rect:
         serializedVersion: 2
         x: 1583
