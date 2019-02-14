@@ -7,8 +7,8 @@ public class DarkWhisp : MonoBehaviour
 	private Vector3 waypoint = Vector3.zero;
 	private enum Behavior { Hunting, Wandering};
 	private Behavior behavior = Behavior.Hunting;
-	private const float PATH_DISTANCE = 4f;
-	private const float ARRIVAL_DISTANCE = 0.1f;
+	private const float PATH_DISTANCE = 11f;
+	private const float ARRIVAL_DISTANCE = 2f;
 	private float wayPointDistance = 0f;
 	private float wanderSpeed = 0.2f;
 	private float huntSpeed = 1.2f;
@@ -27,16 +27,24 @@ public class DarkWhisp : MonoBehaviour
 
 	void Spin() 
 	{
-		transform.Rotate(0f, 0f, 0.2f * Time.deltaTime);
+		rb.rotation += 20f;
+	}
+
+	private void OnDrawGizmos()
+	{
+		Gizmos.DrawSphere(waypoint, 0.3f);
 	}
 
 	void Wander() 
 	{
-		if (DistanceTo(waypoint) <= ARRIVAL_DISTANCE)
+		bool pathToWaypointIsBlocked = Physics2D.Raycast(transform.position, (waypoint - transform.position), DistanceTo(waypoint), 15);
+		if (DistanceTo(waypoint) <= ARRIVAL_DISTANCE || pathToWaypointIsBlocked==true)
 		{
 			waypoint = GenerateNewWaypoint();
+			rb.velocity = rb.velocity.normalized * 3f;
+			return;
 		}
-		Vector2 vel = (Vector2)(waypoint - transform.position).normalized * wanderSpeed * 1000f;
+		Vector2 vel = (Vector2)(waypoint - transform.position).normalized * wanderSpeed*10;
 		rb.AddForce(vel, ForceMode2D.Force);
 	}
 
@@ -48,20 +56,11 @@ public class DarkWhisp : MonoBehaviour
 
 	Vector3 GenerateNewWaypoint()
 	{
-		bool waypointIsValid = true;
-		int loopCount = 0;
 		Vector3 waypointGenerated = Vector3.zero;
-		do
-		{
-			loopCount = loopCount + 1;
-			float newX = Random.Range(transform.position.x - PATH_DISTANCE, transform.position.x + PATH_DISTANCE);
-			float newY = Random.Range(transform.position.y - PATH_DISTANCE, transform.position.y + PATH_DISTANCE);
-			waypointGenerated = new Vector3(newX, newY, transform.position.z);
-			if (Physics2D.Raycast(transform.position, (waypointGenerated - transform.position), DistanceTo(waypointGenerated)))
-			{ waypointIsValid = false; } else { waypointIsValid = true; }
-		} while (waypointIsValid==false && loopCount < 10);
-		if (waypointIsValid == true) { return waypointGenerated; }
-		else return transform.position;
+		float newX = Random.Range(transform.position.x - PATH_DISTANCE, transform.position.x + PATH_DISTANCE);
+		float newY = Random.Range(transform.position.y - PATH_DISTANCE, transform.position.y + PATH_DISTANCE);
+		waypointGenerated = new Vector3(newX, newY, transform.position.z);
+		return waypointGenerated;
 	}
 
 }
