@@ -35,11 +35,14 @@ public class ParallaxBackground : MonoBehaviour
 			newBackgroundPos.x += amountX;
 			newBackgroundPos.y += amountY;
 
-			backgrounds[i].transform.position = Vector3.Lerp( backgrounds[i].transform.position, newBackgroundPos, speed * Time.deltaTime );
-			//backgrounds[i].transform.position = newBackgroundPos;
+			backgrounds[i].transform.position = Vector3.Lerp
+			(
+				backgrounds[i].transform.position,
+				newBackgroundPos,
+				speed * Time.deltaTime
+			);
 		}
 
 		oldPos = cam.transform.position;
-
 	}
 }
