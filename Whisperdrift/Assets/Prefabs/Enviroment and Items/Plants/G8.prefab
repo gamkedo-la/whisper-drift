@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1476502334935270465}
   - component: {fileID: 1476502334935270466}
   - component: {fileID: 8591282682822423229}
-  m_Layer: 0
-  m_Name: G_8
+  m_Layer: 16
+  m_Name: G
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dce2600ba9ccb6468ca9a4958e1dd26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 2588970733871029158}
 --- !u!1 &5775418704750910220
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +119,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 924645247058712380}
-  m_Layer: 0
+  - component: {fileID: 2588970733871029158}
+  m_Layer: 16
   m_Name: G8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,3 +142,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2588970733871029158
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5775418704750910220}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 96d8644f8e6691e40bdffc6d08bee9a5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
