@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3351319544243407129
+--- !u!1 &6082531291741737000
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5659381927830260108}
-  - component: {fileID: 5517640131452120061}
-  - component: {fileID: 6294870422918338227}
-  - component: {fileID: 4821391065770014018}
-  - component: {fileID: 8307120420759438155}
+  - component: {fileID: 6082531291741737004}
+  - component: {fileID: 6082531291741737005}
+  - component: {fileID: 6082531291741737006}
+  - component: {fileID: 6082531291741737007}
+  - component: {fileID: 6082531291741736995}
   m_Layer: 16
-  m_Name: Boulder
+  m_Name: S_4
   m_TagString: Destructible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5659381927830260108
+--- !u!4 &6082531291741737004
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3351319544243407129}
+  m_GameObject: {fileID: 6082531291741737000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.23, y: -9.56, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalPosition: {x: -2.3065076, y: 6.1844096, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5517640131452120061
+--- !u!212 &6082531291741737005
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3351319544243407129}
+  m_GameObject: {fileID: 6082531291741737000}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -68,27 +68,27 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -285228223
-  m_SortingLayer: 4
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300026, guid: 536c7a0a80a862448af7bb2edf89120f, type: 3}
-  m_Color: {r: 0.8584906, g: 0.8584906, b: 0.8584906, a: 1}
+  m_SortingLayerID: 573041003
+  m_SortingLayer: 3
+  m_SortingOrder: -10
+  m_Sprite: {fileID: 21300142, guid: 536c7a0a80a862448af7bb2edf89120f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
+  m_Size: {x: 1.54, y: 2.44}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &6294870422918338227
+--- !u!60 &6082531291741737006
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3351319544243407129}
+  m_GameObject: {fileID: 6082531291741737000}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -99,52 +99,53 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7, y: 0.74}
-    newSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 1.54, y: 2.44}
+    newSize: {x: 1.54, y: 2.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.021472657, y: 0.33466473}
-      - {x: -0.105955936, y: 0.28457367}
-      - {x: -0.307094, y: 0.067285806}
-      - {x: -0.3045695, y: 0.01328877}
-      - {x: -0.07933071, y: -0.33214158}
-      - {x: 0.042522974, y: -0.3467151}
-      - {x: 0.33485684, y: -0.27661595}
-      - {x: 0.31971386, y: 0.09856769}
-      - {x: 0.19265991, y: 0.23908749}
-      - {x: 0.04399708, y: 0.3346661}
---- !u!50 &4821391065770014018
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3351319544243407129}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 0.1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &8307120420759438155
+    - - {x: 0.38588476, y: -0.105861664}
+      - {x: 0.449574, y: 0.035239697}
+      - {x: 0.46996748, y: 0.2455616}
+      - {x: 0.69365084, y: 0.63592196}
+      - {x: 0.07516503, y: 0.9270692}
+      - {x: -0.37644672, y: 1.0976315}
+      - {x: -0.4280584, y: 1.0432234}
+      - {x: -0.3917091, y: 0.46644688}
+      - {x: -0.34848595, y: 0.17440748}
+      - {x: -0.20744896, y: -0.12770367}
+      - {x: -0.16246629, y: -0.9436507}
+      - {x: -0.0336504, y: -1.1836505}
+      - {x: 0.04374814, y: -1.0363493}
+      - {x: 0.10967779, y: -0.73852396}
+      - {x: 0.27122426, y: -0.6145768}
+      - {x: 0.38355327, y: -0.44384575}
+--- !u!114 &6082531291741737007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3351319544243407129}
+  m_GameObject: {fileID: 6082531291741737000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868320710a0486941aba1d3c084e642b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 1
+  partsAngle: 180
+  parts:
+  - {fileID: 3351319544243407129, guid: 873caeb2fb9b2aa4bbf75206a159cbd4, type: 3}
+--- !u!114 &6082531291741736995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6082531291741737000}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 363131da1f8fe5f48b136449dcebe638, type: 3}
@@ -152,7 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpBar: {fileID: 0}
   maxHP: 10
-  destroyOnNoHP: 1
+  destroyOnNoHP: 0
   onHealthChange:
     m_PersistentCalls:
       m_Calls: []
