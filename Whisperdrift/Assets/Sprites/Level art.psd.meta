@@ -94,6 +94,8 @@ TextureImporter:
     21300178: G_16
     21300180: G_17
     21300182: G_18
+    21300184: Gate 1
+    21300186: Gate 02
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -2033,6 +2035,46 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: a58a3f0b836db6d428baf59d80951897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate 1
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1350
+        width: 270
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54225095595528d4eb2aa897ac21314f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gate 02
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 1098
+        width: 236
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267f932b1d7057742b524c7d42679a28
       vertices: []
       indices: 
       edges: []

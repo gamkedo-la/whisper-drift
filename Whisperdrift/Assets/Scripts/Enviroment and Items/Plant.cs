@@ -12,11 +12,6 @@ public class Plant : MonoBehaviour
 		Invoke( "StartIdle", Random.Range( 0.1f, 2.0f ) );
 	}
 
-	void Update ()
-	{
-
-	}
-
 	private void OnTriggerEnter2D( Collider2D collision )
 	{
 		if ( !collision.gameObject.CompareTag( Tags.Projectile ) && !collision.gameObject.CompareTag( Tags.Player ) )
