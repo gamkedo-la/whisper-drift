@@ -17,7 +17,7 @@ public class Whisp : MonoBehaviour
 	[SerializeField] private float fleeSpeed = 12f;
 	[SerializeField] private float playRadius = 2f;
 	[SerializeField] private float speedVariation = 0.25f;
-	[SerializeField] private Vector3 riseDirection = Vector3.up;
+	private Vector3 riseDirection = Vector3.up;
 	[SerializeField] private float riseAmount = 4f;
 	[SerializeField] private AudioClip freedomSound=null;
 	[SerializeField] private AudioClip playSound=null;
@@ -35,6 +35,7 @@ public class Whisp : MonoBehaviour
 
 	void Start()
 	{
+		riseDirection = DetermineRiseDirection();
 		speedVariation = Random.Range(1f-speedVariation, 1f+speedVariation);
 		whispHome = GameObject.FindGameObjectWithTag("FairyHome").GetComponent<Transform>();
 		Assert.IsNotNull(whispHome);
@@ -61,18 +62,28 @@ public class Whisp : MonoBehaviour
 		if (currentBehavior == Behavior.Flee && distanceToDestination <= DISTANCE_THRESHOLD) { DisableFairyObject(); }
 		if (currentBehavior == Behavior.Rise && distanceToDestination <= DISTANCE_THRESHOLD) { StartPlaying(); }
 		if (currentBehavior == Behavior.Play && distanceToDestination <= DISTANCE_THRESHOLD) { PlayNext(); }
-		
 
 		transform.position += (destination - transform.position).normalized * speed * Time.deltaTime;
-
 	}
-
-	
 
 	private void Score() 
 	{
 		totalWhispsFree += 1;
 		whispsFree = totalWhispsFree;
+	}
+
+	private Vector2 DetermineRiseDirection() 
+	{
+		Vector2 origin = transform.position;
+		float dist = riseAmount + playRadius;
+
+		RaycastHit2D[] down = Physics2D.CircleCastAll(origin, 0.3f, Vector2.down, dist);
+		RaycastHit2D[] left = Physics2D.CircleCastAll(origin, 0.3f, Vector2.left, dist);
+		RaycastHit2D[] right = Physics2D.CircleCastAll(origin, 0.3f, Vector2.right, dist);
+		if (down.Length>0) { return Vector3.down; }
+		else if (left.Length > 0) { return Vector3.left; }
+		else if (right.Length > 0) { return Vector3.right; }
+		else return Vector3.up;
 	}
 
 	private void StartRising()
