@@ -72,18 +72,18 @@ public class Whisp : MonoBehaviour
 		whispsFree = totalWhispsFree;
 	}
 
-	private Vector2 DetermineRiseDirection() 
+	private Vector3 DetermineRiseDirection() 
 	{
 		Vector2 origin = transform.position;
 		float dist = riseAmount + playRadius;
+		RaycastHit2D rayHitDown = Physics2D.Raycast(origin, Vector2.down, dist, 1<<17);
+		RaycastHit2D rayHitLeft = Physics2D.Raycast(origin, Vector2.left, dist, 1<<17);
+		RaycastHit2D rayHitRight = Physics2D.Raycast(origin, Vector2.right, dist, 1<<17);
 
-		RaycastHit2D[] down = Physics2D.CircleCastAll(origin, 0.3f, Vector2.down, dist);
-		RaycastHit2D[] left = Physics2D.CircleCastAll(origin, 0.3f, Vector2.left, dist);
-		RaycastHit2D[] right = Physics2D.CircleCastAll(origin, 0.3f, Vector2.right, dist);
-		if (down.Length>0) { return Vector3.down; }
-		else if (left.Length > 0) { return Vector3.left; }
-		else if (right.Length > 0) { return Vector3.right; }
-		else return Vector3.up;
+		if (!rayHitDown.collider) { return Vector3.down; }
+		if (!rayHitLeft.collider) { return Vector3.left; }
+		if (!rayHitRight.collider) { return Vector3.right; }
+		return Vector3.up;
 	}
 
 	private void StartRising()
