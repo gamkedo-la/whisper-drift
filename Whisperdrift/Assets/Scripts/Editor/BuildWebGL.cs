@@ -14,6 +14,7 @@ public class BuildWebGL : MonoBehaviour
 	static private string[] levels = new string[]
 	{
 		"Assets/Scenes/Level 01.unity",
+		"Assets/Scenes/Level 02.unity",
 		"Assets/Scenes/Testing.unity",
 	};
 
