@@ -8,9 +8,9 @@ public class DarkWhisp : MonoBehaviour
 	private enum Behavior { Hunting, Wandering};
 	private Behavior behavior = Behavior.Hunting;
 	private const float PATH_DISTANCE = 11f;
-	private const float ARRIVAL_DISTANCE = 2f;
+	private const float ARRIVAL_DISTANCE = 3f;
 	private float wayPointDistance = 0f;
-	private float wanderSpeed = 0.2f;
+	private float wanderSpeed = 0.01f;
 	private float huntSpeed = 1.2f;
 	private Rigidbody2D rb;
 
@@ -37,15 +37,15 @@ public class DarkWhisp : MonoBehaviour
 
 	void Wander() 
 	{
-		bool pathToWaypointIsBlocked = Physics2D.Raycast(transform.position, (waypoint - transform.position), DistanceTo(waypoint), 15);
+		bool pathToWaypointIsBlocked = Physics2D.Raycast(transform.position, (waypoint - transform.position), DistanceTo(waypoint), 1<<17);
 		if (DistanceTo(waypoint) <= ARRIVAL_DISTANCE || pathToWaypointIsBlocked==true)
 		{
 			waypoint = GenerateNewWaypoint();
-			rb.velocity = rb.velocity.normalized * 3f;
+			rb.velocity = rb.velocity.normalized * 2f;
 			return;
 		}
-		Vector2 vel = (Vector2)(waypoint - transform.position).normalized * wanderSpeed*10;
-		rb.AddForce(vel, ForceMode2D.Force);
+		Vector2 vel = (Vector2)(waypoint - transform.position).normalized * wanderSpeed;
+		rb.AddForce(vel, ForceMode2D.Impulse);
 	}
 
 

@@ -5961,6 +5961,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 994521539}
     m_Modifications:
+    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
+        type: 3}
+      propertyPath: m_Name
+      value: Shroom
+      objectReference: {fileID: 0}
     - target: {fileID: 624114072123547605, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6030,11 +6035,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.6077515
-      objectReference: {fileID: 0}
-    - target: {fileID: 6406467049226077741, guid: eed16c530868ab046891e3ffc1914c2d,
-        type: 3}
-      propertyPath: m_Name
-      value: Shroom
       objectReference: {fileID: 0}
     - target: {fileID: 4211897969670958958, guid: eed16c530868ab046891e3ffc1914c2d,
         type: 3}
