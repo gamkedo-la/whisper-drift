@@ -4724,11 +4724,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3232366706200965636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03000021, y: 1.84, z: -0.01}
+  m_LocalPosition: {x: 0.03000021, y: 2.1, z: -0.01}
   m_LocalScale: {x: 0.41298, y: 0.41298, z: 0.41298}
   m_Children: []
   m_Father: {fileID: 7401874595725250873}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5146089724027058157
 SpriteRenderer:
@@ -4876,11 +4876,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3454248644251443668}
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: -0.05000019, y: -1.8399999, z: 0}
+  m_LocalPosition: {x: -0.05000019, y: -2.1, z: 0}
   m_LocalScale: {x: 0.41298, y: 0.41298, z: 0.41298}
   m_Children: []
   m_Father: {fileID: 7401874595725250873}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!212 &5302420331621074453
 SpriteRenderer:
@@ -5028,7 +5028,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5209250189914504009}
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: -0.05, y: -1.84, z: -0.01}
+  m_LocalPosition: {x: -0.05, y: -2.1, z: -0.01}
   m_LocalScale: {x: 0.41298, y: 0.41298, z: 0.41298}
   m_Children: []
   m_Father: {fileID: 7401874595725250873}
@@ -5180,7 +5180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6653094786655234634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 1.84, z: 0}
+  m_LocalPosition: {x: 0.03, y: 2.1, z: 0}
   m_LocalScale: {x: 0.41298, y: 0.41298, z: 0.41298}
   m_Children: []
   m_Father: {fileID: 7401874595725250873}
@@ -5338,8 +5338,8 @@ Transform:
   - {fileID: 8413607428489067995}
   - {fileID: 8100475412427885389}
   - {fileID: 6311188032930437379}
-  - {fileID: 3938339282620317080}
   - {fileID: 8072633076630660970}
+  - {fileID: 3938339282620317080}
   - {fileID: 595554845930447111}
   m_Father: {fileID: 0}
   m_RootOrder: 0
