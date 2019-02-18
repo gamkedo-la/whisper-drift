@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 114417660936589012}
+  - {fileID: 114748273745511574}
+  EditorEvents:
+  - {fileID: 114019062899673532}
+  MasterBanks:
+  - {fileID: 114748273745511574}
+  StringsBanks:
+  - {fileID: 114417660936589012}
+  stringsBankWriteTime: 636860362618001214
+  cacheVersion: 3
+--- !u!114 &114019062899673532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/wind
+  guid: 659dd4b9fb21004ebc2c932bb2c1d6a1
+  Banks:
+  - {fileID: 114748273745511574}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 3200
+--- !u!114 &114417660936589012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\Audio\Temp Sounds\wind\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636860362618001214
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 714
+  Exists: 1
+--- !u!114 &114748273745511574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\stebs\Desktop\whisper-drift\Whisperdrift\Assets\Audio\Temp Sounds\wind\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636860362617951274
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 56768
+  Exists: 1
