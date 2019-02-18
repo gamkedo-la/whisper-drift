@@ -13,9 +13,10 @@ public class PlayerController : MonoBehaviour
 	private Rigidbody2D rb;
 	private ZoomController zoomController;
 	private bool isFrozen = false;
-	private float freezeAvailable;
+	private float freezeAvailable = 0;
 	private bool canFreeze = true;
-	private Vector2 oldVelocity;
+	private Vector2 oldVelocity = Vector2.zero;
+	private Vector3 freezeAccumulatedForce = Vector3.zero;
 
 	void Start( )
 	{
@@ -75,11 +76,19 @@ public class PlayerController : MonoBehaviour
 
 		if ( isFrozen )
 			rb.velocity = Vector2.zero;
+
+		if ( !isFrozen && freezeAccumulatedForce != Vector3.zero )
+		{
+			rb.AddForce( freezeAccumulatedForce );
+			freezeAccumulatedForce = Vector3.zero;
+		}
 	}
 
 	public void MadeShot( Quaternion angle )
 	{
 		if ( !isFrozen )
-			rb.AddForce( angle * Vector2.left * shotForce );
+			rb.AddForce( angle * Vector2.left * shotForce + freezeAccumulatedForce );
+		else
+			freezeAccumulatedForce += angle * Vector2.left * shotForce;
 	}
 }
