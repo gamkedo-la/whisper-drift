@@ -53,16 +53,16 @@ public class PlayerController : MonoBehaviour
 		else if ( freezeAvailable >= freezeMax )
 			canFreeze = true;
 
-		if ( Input.GetMouseButtonDown( 1 ) && canFreeze )
+		if ( ( Input.GetMouseButtonDown( 1 ) || Input.GetKeyDown( KeyCode.Space ) ) && canFreeze )
 			oldVelocity = rb.velocity;
 
-		if ( Input.GetMouseButtonUp( 1 ) && isFrozen )
+		if ( ( Input.GetMouseButtonUp( 1 ) || Input.GetKeyUp( KeyCode.Space ) ) && isFrozen )
 		{
 			canFreeze = false;
 			rb.velocity = oldVelocity;
 		}
 
-		if ( Input.GetMouseButton( 1 ) && canFreeze )
+		if ( ( Input.GetMouseButton( 1 ) || Input.GetKey( KeyCode.Space ) ) && canFreeze )
 			isFrozen = true;
 		else
 			isFrozen = false;
