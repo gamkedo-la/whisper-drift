@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114417660936589012}
-  - {fileID: 114748273745511574}
+  - {fileID: 114640319665106016}
   EditorEvents:
   - {fileID: 114019062899673532}
   MasterBanks:
   - {fileID: 114748273745511574}
+  - {fileID: 114640319665106016}
   StringsBanks:
   - {fileID: 114417660936589012}
-  stringsBankWriteTime: 636860362618001214
+  stringsBankWriteTime: 636860773810075225
   cacheVersion: 3
 --- !u!114 &114019062899673532
 MonoBehaviour:
@@ -38,7 +39,7 @@ MonoBehaviour:
   Path: event:/wind
   guid: 659dd4b9fb21004ebc2c932bb2c1d6a1
   Banks:
-  - {fileID: 114748273745511574}
+  - {fileID: 114640319665106016}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -59,11 +60,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\Temp Sounds\wind\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636860362618001214
+  lastModified: 636860773810075225
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 714
+  Exists: 1
+--- !u!114 &114640319665106016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\!\Unity\Whisperdrift\Whisperdrift\Assets\Audio\Temp Sounds\wind\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636860773810075225
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 56768
   Exists: 1
 --- !u!114 &114748273745511574
 MonoBehaviour:
@@ -84,4 +105,4 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 56768
-  Exists: 1
+  Exists: 0
