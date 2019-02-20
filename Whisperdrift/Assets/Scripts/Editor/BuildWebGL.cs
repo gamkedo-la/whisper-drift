@@ -17,6 +17,7 @@ public class BuildWebGL : MonoBehaviour
 		"Assets/Scenes/Level 02.unity",
 		"Assets/Scenes/Level 03.unity",
 		"Assets/Scenes/Level 04.unity",
+		"Assets/Scenes/Level 05.unity",
 		"Assets/Scenes/Testing.unity",
 	};
 
