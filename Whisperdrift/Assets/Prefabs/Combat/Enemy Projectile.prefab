@@ -89,7 +89,7 @@ MonoBehaviour:
   speed: 10
   lifeTime: 3
   maxTravelDistance: 5
-  damage: 20
+  damage: 34
   enemyProjectile: 1
 --- !u!1 &1245383390519096
 GameObject:

@@ -13,6 +13,7 @@ public class LevelManger : MonoBehaviour
 	public static LevelManger Instance { get; private set; }
 
 	[SerializeField] private TextMeshProUGUI label = null;
+	[SerializeField] private TextMeshProUGUI exit = null;
 	[SerializeField] private string nextScene = "Main";
 	[SerializeField] private float levelChangeDelay = 1.0f;
 	[SerializeField] private UnityEventFloat onLevelProgress = null;
@@ -36,6 +37,7 @@ public class LevelManger : MonoBehaviour
 	void Start( )
 	{
 		Assert.IsNotNull( label );
+		Assert.IsNotNull( exit );
 	}
 
 	public void AddRingGate( RingGate ringGate )
@@ -57,7 +59,8 @@ public class LevelManger : MonoBehaviour
 		if ( activeRingGates == ringGates.Count )
 		{
 			ringGateExit.PowerUp( );
-			label.text = "Exit active";
+			label.gameObject.SetActive( false );
+			exit.gameObject.SetActive( true );
 		}
 
 		onLevelProgress.Invoke( (float)activeRingGates / ringGates.Count );
@@ -70,7 +73,7 @@ public class LevelManger : MonoBehaviour
 
 	private void UpdateLabel( )
 	{
-		label.text = $"Rings active: {activeRingGates}/{ringGates.Count}";
+		label.text = $"Gates checked: {activeRingGates}/{ringGates.Count}";
 	}
 
 	private void ChangeLevel( )
