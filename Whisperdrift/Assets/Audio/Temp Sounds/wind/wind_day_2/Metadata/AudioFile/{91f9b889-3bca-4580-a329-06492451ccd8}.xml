@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{91f9b889-3bca-4580-a329-06492451ccd8}">
+        <property name="assetPath">
+            <value>wind4.WAV</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>4.0330158730158727</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{4a54653e-7583-4151-b99e-1a3f6f3a0f0d}</destination>
+        </relationship>
+    </object>
+</objects>
