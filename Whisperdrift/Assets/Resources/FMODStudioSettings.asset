@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets\Audio\Temp Sounds\wind\wind.fspro
-  SourceProjectPathUnformatted: Assets\Audio\Temp Sounds\wind\wind.fspro
-  SourceBankPathUnformatted: Assets\Audio\Temp Sounds\wind\Build
+  sourceProjectPath: Assets\Audio\Temp Sounds\whisperdrift_fmod\whisperdrift_fmod.fspro
+  SourceProjectPathUnformatted: Assets\Audio\Temp Sounds\whisperdrift_fmod\whisperdrift_fmod.fspro
+  SourceBankPathUnformatted: Assets\Audio\Temp Sounds\whisperdrift_fmod\Build
   AutomaticEventLoading: 1
   AutomaticSampleLoading: 0
   ImportType: 0
@@ -61,6 +61,4 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master Bank
-  - Master Bank
-  Banks:
-  - Master Bank
+  Banks: []

@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 114417660936589012}
-  - {fileID: 114978410750491632}
+  - {fileID: 114484437926960446}
+  - {fileID: 114410818254001308}
   EditorEvents:
-  - {fileID: 114019062899673532}
+  - {fileID: 114952828269571848}
+  - {fileID: 114530277431290768}
   MasterBanks:
-  - {fileID: 114748273745511574}
-  - {fileID: 114640319665106016}
+  - {fileID: 114410818254001308}
   StringsBanks:
-  - {fileID: 114417660936589012}
-  stringsBankWriteTime: 636860362618001214
+  - {fileID: 114484437926960446}
+  stringsBankWriteTime: 636864600380898558
   cacheVersion: 3
 --- !u!114 &114019062899673532
 MonoBehaviour:
@@ -47,6 +47,92 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 3200
+--- !u!114 &114091382574725098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/crystal_shatter
+  guid: d2577c9198e25844ae565b5130466536
+  Banks:
+  - {fileID: 114686124286377160}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 850
+--- !u!114 &114265665236139860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\stebs\Desktop\whisper-drift\Whisperdrift\Assets\Audio\Temp Sounds\crystal_hit\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636864562263208737
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 12474
+  Exists: 1
+--- !u!114 &114304362207149088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/crystal_hit
+  guid: 2abd05dcd32f3e4f8c5b194e262d0d78
+  Banks:
+  - {fileID: 114772231291778372}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1123
+--- !u!114 &114410818254001308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\stebs\Desktop\whisper-drift\Whisperdrift\Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636864600380838738
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 68704
+  Exists: 1
 --- !u!114 &114417660936589012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,6 +152,68 @@ MonoBehaviour:
   - Name: Desktop
     Value: 714
   Exists: 1
+--- !u!114 &114484437926960446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636864600380898558
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 772
+  Exists: 1
+--- !u!114 &114530277431290768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/crystal_hit
+  guid: dfeab6ff22c9a347a530fd4a5dc01e7a
+  Banks:
+  - {fileID: 114410818254001308}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1123
+--- !u!114 &114606100190008902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\stebs\Desktop\whisper-drift\Whisperdrift\Assets\Audio\Temp Sounds\crystal_hit\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636864568301303674
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 53728
+  Exists: 0
 --- !u!114 &114640319665106016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,6 +234,67 @@ MonoBehaviour:
   - Name: Desktop
     Value: 56768
   Exists: 0
+--- !u!114 &114686124286377160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\stebs\Desktop\whisper-drift\Whisperdrift\Assets\Audio\Temp Sounds\crystal_shatter\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636864593420526264
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 27648
+  Exists: 1
+--- !u!114 &114694695877332532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\Audio\Temp Sounds\crystal_hit\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636864568301363510
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 722
+  Exists: 0
+--- !u!114 &114704506755949164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/New Event
+  guid: d2577c9198e25844ae565b5130466536
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 850
 --- !u!114 &114748273745511574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,6 +315,150 @@ MonoBehaviour:
   - Name: Desktop
     Value: 56768
   Exists: 0
+--- !u!114 &114766742351586228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\Audio\Temp Sounds\crystal_shatter\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636864593420586266
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 726
+  Exists: 1
+--- !u!114 &114772231291778372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\stebs\Desktop\whisper-drift\Whisperdrift\Assets\Audio\Temp Sounds\crystal_hit\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636864568301303674
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 53728
+  Exists: 1
+--- !u!114 &114783143524853442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/New Event
+  guid: 2abd05dcd32f3e4f8c5b194e262d0d78
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1123
+--- !u!114 &114804728108375442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\Audio\Temp Sounds\crystal_hit\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636864562263278556
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 672
+  Exists: 1
+--- !u!114 &114893594214089660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: Assets\Audio\Temp Sounds\crystal_hit\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636864568301363510
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 722
+  Exists: 1
+--- !u!114 &114951950806500796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/crystal_hit
+  guid: 2abd05dcd32f3e4f8c5b194e262d0d78
+  Banks: []
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1123
+--- !u!114 &114952828269571848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/crystal_shatter
+  guid: d2577c9198e25844ae565b5130466536
+  Banks:
+  - {fileID: 114410818254001308}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 850
 --- !u!114 &114978410750491632
 MonoBehaviour:
   m_ObjectHideFlags: 0

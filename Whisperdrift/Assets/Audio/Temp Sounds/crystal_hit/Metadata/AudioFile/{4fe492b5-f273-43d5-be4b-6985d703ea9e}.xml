@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{4fe492b5-f273-43d5-be4b-6985d703ea9e}">
+        <property name="assetPath">
+            <value>crystal_hit.mp3</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.4889795918367348</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{057daf92-77fd-4d55-916a-47ac482e99af}</destination>
+        </relationship>
+    </object>
+</objects>
