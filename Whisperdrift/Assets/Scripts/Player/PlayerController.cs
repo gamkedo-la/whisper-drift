@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+	//Practice commit, will remove
+	
 	[SerializeField] private Slider freezeBar = null;
 	[SerializeField] private float shotForce = 50f;
 	[SerializeField] private float freezeDecline = 50f;
