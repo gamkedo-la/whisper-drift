@@ -4,6 +4,7 @@
         <property name="name">
             <value>exit_activate_low_end_pulse</value>
         </property>
+        <property name="note"/>
         <property name="outputFormat">
             <value>1</value>
         </property>
@@ -30,6 +31,9 @@
         </relationship>
         <relationship name="timeline">
             <destination>{f8262879-b009-4925-9688-ad964f6f2fd5}</destination>
+        </relationship>
+        <relationship name="parameters">
+            <destination>{8be09c81-8048-4daa-bb3b-bef67b9c3e05}</destination>
         </relationship>
         <relationship name="banks">
             <destination>{f4260a33-187e-4696-9afc-12f8eb99faf7}</destination>
@@ -69,6 +73,14 @@
     <object class="Timeline" id="{f8262879-b009-4925-9688-ad964f6f2fd5}">
         <relationship name="modules">
             <destination>{73e82d9b-2225-4021-8d80-14247c08a18e}</destination>
+        </relationship>
+        <relationship name="markers">
+            <destination>{75207c10-ffef-49e4-a05a-e66853e79486}</destination>
+        </relationship>
+    </object>
+    <object class="ParameterProxy" id="{8be09c81-8048-4daa-bb3b-bef67b9c3e05}">
+        <relationship name="preset">
+            <destination>{35c83ada-da07-494f-be9a-bac76e90c7eb}</destination>
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{01f366d7-f017-4e87-9a8f-13f6d317df20}">
@@ -114,6 +126,20 @@
         </relationship>
         <relationship name="output">
             <destination>{01f366d7-f017-4e87-9a8f-13f6d317df20}</destination>
+        </relationship>
+    </object>
+    <object class="LoopRegion" id="{75207c10-ffef-49e4-a05a-e66853e79486}">
+        <property name="position">
+            <value>21.990000000000002</value>
+        </property>
+        <property name="length">
+            <value>2.889999999999997</value>
+        </property>
+        <relationship name="timeline">
+            <destination>{f8262879-b009-4925-9688-ad964f6f2fd5}</destination>
+        </relationship>
+        <relationship name="markerTrack">
+            <destination>{b7ba6e65-80de-442e-a668-2b786f59eb22}</destination>
         </relationship>
     </object>
     <object class="MixerBusEffectChain" id="{54fb40fa-caeb-4468-83b2-ba8745110277}">
