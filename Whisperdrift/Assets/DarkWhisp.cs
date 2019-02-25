@@ -1,17 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DarkWhisp : MonoBehaviour
 {
 	private Vector3 waypoint = Vector3.zero;
 	private enum Behavior { Hunting, Wandering};
-	private Behavior behavior = Behavior.Hunting;
+	///private Behavior behavior = Behavior.Hunting;
 	private const float PATH_DISTANCE = 11f;
 	private const float ARRIVAL_DISTANCE = 3f;
-	private float wayPointDistance = 0f;
+	///private float wayPointDistance = 0f;
 	private float wanderSpeed = 0.01f;
-	private float huntSpeed = 1.2f;
+	///private float huntSpeed = 1.2f;
 	private Rigidbody2D rb;
 
 	private void Start()
@@ -25,7 +23,7 @@ public class DarkWhisp : MonoBehaviour
 		Wander();
 	}
 
-	void Spin() 
+	void Spin()
 	{
 		rb.rotation += 20f;
 	}
@@ -35,7 +33,7 @@ public class DarkWhisp : MonoBehaviour
 		Gizmos.DrawSphere(waypoint, 0.3f);
 	}
 
-	void Wander() 
+	void Wander()
 	{
 		bool pathToWaypointIsBlocked = Physics2D.Raycast(transform.position, (waypoint - transform.position), DistanceTo(waypoint), 1<<17);
 		if (DistanceTo(waypoint) <= ARRIVAL_DISTANCE || pathToWaypointIsBlocked==true)
@@ -49,7 +47,7 @@ public class DarkWhisp : MonoBehaviour
 	}
 
 
-	float DistanceTo(Vector3 pointToCheck) 
+	float DistanceTo(Vector3 pointToCheck)
 	{
 		return Vector3.Distance(transform.position, pointToCheck);
 	}

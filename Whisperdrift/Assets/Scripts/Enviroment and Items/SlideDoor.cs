@@ -6,10 +6,10 @@ public class SlideDoor : MonoBehaviour
 	[SerializeField] private Transform door1 = null;
 	[SerializeField] private Transform door2 = null;
 	[Space]
-	[SerializeField] private Vector3 d1o;
-	[SerializeField] private Vector3 d1d;
-	[SerializeField] private Vector3 d2o;
-	[SerializeField] private Vector3 d2d;
+	[SerializeField] private Vector3 d1o = Vector3.zero;
+	[SerializeField] private Vector3 d1d = Vector3.zero;
+	[SerializeField] private Vector3 d2o = Vector3.zero;
+	[SerializeField] private Vector3 d2d = Vector3.zero;
 	[Space]
 	[SerializeField] private float speed = 3;
 

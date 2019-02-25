@@ -20,7 +20,7 @@ public class LevelManger : MonoBehaviour
 
 	private int activeRingGates = 0;
 	private List<RingGate> ringGates;
-	private RingGateExit ringGateExit;
+	private RingGateExit ringGateExit = null;
 
 	private void Awake( )
 	{
@@ -73,7 +73,7 @@ public class LevelManger : MonoBehaviour
 
 	private void UpdateLabel( )
 	{
-		label.text = $"Gates checked: {activeRingGates}/{ringGates.Count}";
+		label.text = $"{activeRingGates}/{ringGates.Count}";
 	}
 
 	private void ChangeLevel( )
