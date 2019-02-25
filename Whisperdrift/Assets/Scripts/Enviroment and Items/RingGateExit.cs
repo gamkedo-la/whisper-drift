@@ -37,7 +37,8 @@ public class RingGateExit : MonoBehaviour
 			return;
 
 		activated = true;
-        RingGateExitActivationLowPulseSound.stop();
+        RingGateExitActivationLowPulseSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        
         LevelManger.Instance.ExitActivated( );
 	}
 
