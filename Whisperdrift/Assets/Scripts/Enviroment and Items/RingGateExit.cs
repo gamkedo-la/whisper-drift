@@ -10,6 +10,15 @@ public class RingGateExit : MonoBehaviour
 	private bool activated = false;
 	private bool poweredUp = false;
 
+    FMOD.Studio.EventInstance RingGateExitActivationLowPulseSound;
+    FMOD.Studio.EventInstance RingGateExitActivationSlidingChordSound;
+
+    void Awake() //FMOD's built in init function to hook up sounds??? I think???
+    {
+        RingGateExitActivationLowPulseSound = FMODUnity.RuntimeManager.CreateInstance("event:/exit_activate_low_end_pulse");
+        RingGateExitActivationSlidingChordSound = FMODUnity.RuntimeManager.CreateInstance("event:/exit_activate_chord_slide");
+    }
+
 	void Start( )
 	{
 		Assert.IsNotNull( activationGraphics );
@@ -28,15 +37,17 @@ public class RingGateExit : MonoBehaviour
 			return;
 
 		activated = true;
-
-		LevelManger.Instance.ExitActivated( );
+        RingGateExitActivationLowPulseSound.stop();
+        LevelManger.Instance.ExitActivated( );
 	}
 
-	public void PowerUp( )
+    public void PowerUp( )
 	{
 		poweredUp = true;
+        RingGateExitActivationLowPulseSound.start();
+        RingGateExitActivationSlidingChordSound.start();
 
-		foreach ( var sprite in activationGraphics )
+        foreach ( var sprite in activationGraphics )
 			sprite.material = activationMaterial;
 
 		foreach ( var go in objectsToActivate )

@@ -68,7 +68,7 @@ public class LevelManger : MonoBehaviour
 
 	public void ExitActivated( )
 	{
-		Invoke( "ChangeLevel", levelChangeDelay );
+        Invoke( "ChangeLevel", levelChangeDelay );
 	}
 
 	private void UpdateLabel( )
