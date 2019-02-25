@@ -4,7 +4,7 @@ using UnityEngine.Assertions;
 public class Crystal : MonoBehaviour
 {
 	[SerializeField] private GameObject endEffect = null;
-	[SerializeField] private Light mainLight = null;
+	//[SerializeField] private Light mainLight = null;
 	[SerializeField] private Renderer[] glows = null;
 	[SerializeField] private Color baseColor = Color.white;
 	[SerializeField] private float glow = 1.0f;
@@ -18,7 +18,7 @@ public class Crystal : MonoBehaviour
 	void Start( )
 	{
 		Assert.IsNotNull( endEffect );
-		Assert.IsNotNull( mainLight );
+		//Assert.IsNotNull( mainLight );
 		Assert.IsNotNull( glows );
 		Assert.IsNotNull( parts );
 
@@ -40,7 +40,7 @@ public class Crystal : MonoBehaviour
 		float emission = glow * multi;
 		Color finalColor = baseColor * emission;
 
-		mainLight.intensity = brightness;
+		//mainLight.intensity = brightness;
 
 		glowMat.SetColor( "_EmissionColor", finalColor );
 		foreach ( var gl in glows )
