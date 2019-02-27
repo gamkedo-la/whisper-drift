@@ -8,8 +8,14 @@ public class RingGate : MonoBehaviour
 	[SerializeField] private Material activationMaterial = null;
 
 	private bool activated = false;
+    FMOD.Studio.EventInstance RingGateParticleSpawnSound;
 
-	void Start ()
+    void Awake() //FMOD's built in init function to hook up sounds??? I think???
+    {
+        RingGateParticleSpawnSound = FMODUnity.RuntimeManager.CreateInstance("event:/particle_spawn_sound");
+    }
+
+    void Start ()
 	{
 		Assert.IsNotNull( activationGraphics );
 		Assert.AreNotEqual( activationGraphics.Length, 0 );
@@ -30,7 +36,8 @@ public class RingGate : MonoBehaviour
 			sprite.material = activationMaterial;
 
 		if ( orb )
-			Destroy( orb );
+            RingGateParticleSpawnSound.start();
+            Destroy( orb );
 
 		LevelManger.Instance.RingGateActiveted( this );
 	}
