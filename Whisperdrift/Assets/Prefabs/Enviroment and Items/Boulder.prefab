@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6294870422918338227}
   - component: {fileID: 4821391065770014018}
   - component: {fileID: 8307120420759438155}
-  - component: {fileID: 7114230403649841402}
+  - component: {fileID: 2938203315642611561}
   - component: {fileID: 7326572573757906190}
   m_Layer: 16
   m_Name: Boulder
@@ -165,7 +165,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &7114230403649841402
+--- !u!114 &2938203315642611561
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,20 +174,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3351319544243407129}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: 231a33772d347db4197ab26bc02aec0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/rock_hit_or_tumble
-  PlayEvent: 9
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  HitEvent: event:/rock_hit_or_tumble
+  MinVelocity: 1
 --- !u!114 &7326572573757906190
 MonoBehaviour:
   m_ObjectHideFlags: 0
