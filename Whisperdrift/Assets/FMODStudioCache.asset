@@ -14,19 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114484437926960446}
-  - {fileID: 114134384707137912}
+  - {fileID: 114643062225269008}
   EditorEvents:
   - {fileID: 114952828269571848}
   - {fileID: 114530277431290768}
   - {fileID: 114649815747244124}
   - {fileID: 114895393057542296}
   - {fileID: 114859331244135426}
+  - {fileID: 114849541487118328}
+  - {fileID: 114949589741325250}
+  - {fileID: 114764306907188042}
   MasterBanks:
   - {fileID: 114410818254001308}
   - {fileID: 114794530094233314}
   StringsBanks:
   - {fileID: 114484437926960446}
-  stringsBankWriteTime: 636866839321898404
+  stringsBankWriteTime: 636868267191349917
   cacheVersion: 3
 --- !u!114 &114019062899673532
 MonoBehaviour:
@@ -235,11 +238,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636866839321898404
+  lastModified: 636868267191349917
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 946
+    Value: 1094
   Exists: 1
 --- !u!114 &114530277431290768
 MonoBehaviour:
@@ -256,7 +259,7 @@ MonoBehaviour:
   Path: event:/crystal_hit
   guid: dfeab6ff22c9a347a530fd4a5dc01e7a
   Banks:
-  - {fileID: 114134384707137912}
+  - {fileID: 114643062225269008}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -304,6 +307,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 56768
   Exists: 0
+--- !u!114 &114643062225269008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\stebs\Desktop\whisper-drift\Whisperdrift\Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636868267191290089
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 559584
+  Exists: 1
 --- !u!114 &114649815747244124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,7 +342,7 @@ MonoBehaviour:
   Path: event:/particle_spawn_sound
   guid: 7cb658e3aedec54d8017799bb9aa5a93
   Banks:
-  - {fileID: 114134384707137912}
+  - {fileID: 114643062225269008}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -408,6 +431,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 56768
   Exists: 0
+--- !u!114 &114764306907188042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/small_rock_explode
+  guid: 7159bfc5f4d6b84fb77b1db585cfcdac
+  Banks:
+  - {fileID: 114643062225269008}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1500
 --- !u!114 &114766742351586228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,6 +574,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 672
   Exists: 1
+--- !u!114 &114849541487118328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/rock_explode
+  guid: 5611eb69e236eb4a9cad806ea705cbb2
+  Banks:
+  - {fileID: 114643062225269008}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 850
 --- !u!114 &114859331244135426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,7 +612,7 @@ MonoBehaviour:
   Path: event:/exit_activate_low_end_pulse
   guid: 922e146aa09d8d4a8679966f744c8db4
   Banks:
-  - {fileID: 114134384707137912}
+  - {fileID: 114643062225269008}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -585,7 +654,7 @@ MonoBehaviour:
   Path: event:/exit_activate_chord_slide
   guid: 3bdd87f550443e4db5eb05bcd25dc74a
   Banks:
-  - {fileID: 114134384707137912}
+  - {fileID: 114643062225269008}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -593,6 +662,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 4101
+--- !u!114 &114949589741325250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/rock_hit_or_tumble
+  guid: 114197eec394a846856f5b800072da36
+  Banks:
+  - {fileID: 114643062225269008}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 600
 --- !u!114 &114951950806500796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -630,7 +722,7 @@ MonoBehaviour:
   Path: event:/crystal_shatter
   guid: d2577c9198e25844ae565b5130466536
   Banks:
-  - {fileID: 114134384707137912}
+  - {fileID: 114643062225269008}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1

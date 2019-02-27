@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{49c0aa65-fe95-425f-99b3-d69410600afc}">
+        <property name="assetPath">
+            <value>balloon_pop_6.mp3</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>3.1085714285714285</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{132dca7e-93a0-449c-91b2-46e3e43a0468}</destination>
+        </relationship>
+    </object>
+</objects>

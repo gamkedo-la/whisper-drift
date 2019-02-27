@@ -761,7 +761,7 @@ GameObject:
   - component: {fileID: 5126527918974470576}
   - component: {fileID: 5868568401782148890}
   m_Layer: 16
-  m_Name: stalactite
+  m_Name: Stalactite
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
