@@ -11,15 +11,16 @@ public class PlayerDeath : MonoBehaviour
 	[SerializeField] private Behaviour[] toDisable = null;
 	[SerializeField] private TrailRenderer trailRenderer = null;
 	[SerializeField] private float restartDelay = 0.5f;
+	[FMODUnity.EventRef, SerializeField] private string playerHitEvent;
 
-    FMOD.Studio.EventInstance PlayerHitSound;
+	private FMOD.Studio.EventInstance playerHitSound;
 
-        void Awake() //FMOD's built in init function to hook up sounds??? I think???
-    {
-        PlayerHitSound = FMODUnity.RuntimeManager.CreateInstance("event:/player_hit");
-    }
+	void Awake( ) //FMOD's built in init function to hook up sounds??? I think???
+	{
+		playerHitSound = FMODUnity.RuntimeManager.CreateInstance( playerHitEvent );
+	}
 
-        void Start ()
+	void Start( )
 	{
 		Assert.IsNotNull( respwnPoint );
 		Assert.IsNotNull( explosion );
@@ -29,11 +30,11 @@ public class PlayerDeath : MonoBehaviour
 
 	public void Hit( Vector2 hitPosition, float magnitude )
 	{
-        PlayerHitSound.start();
-        Instantiate( hit, hitPosition, Quaternion.identity );
+		playerHitSound.start( );
+		Instantiate( hit, hitPosition, Quaternion.identity );
 	}
 
-	public void PlayerDie()
+	public void PlayerDie( )
 	{
 		trailRenderer.enabled = false;
 
@@ -64,6 +65,6 @@ public class PlayerDeath : MonoBehaviour
 
 		transform.position = respwnPoint.position;
 		trailRenderer.enabled = true;
-		trailRenderer.Clear();
+		trailRenderer.Clear( );
 	}
 }
