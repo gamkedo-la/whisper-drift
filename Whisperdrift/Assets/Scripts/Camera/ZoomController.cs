@@ -10,8 +10,8 @@ public class ZoomController : MonoBehaviour
 	private float zoomLevel = 4f;
 	private float tempZoomLevel = 4f;
 
-	private const float MIN_ZOOM_LEVEL = 5f;
-	private const float MAX_ZOOM_LEVEL = 9f;
+	private const float MIN_ZOOM_LEVEL = 7f;
+	private const float MAX_ZOOM_LEVEL = 10f;
 	private const float ZOOM_FACTOR = 2f;
 
 	void Start()
