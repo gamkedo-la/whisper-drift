@@ -24,12 +24,13 @@ MonoBehaviour:
   - {fileID: 114849541487118328}
   - {fileID: 114949589741325250}
   - {fileID: 114764306907188042}
+  - {fileID: 114170700179874298}
   MasterBanks:
   - {fileID: 114410818254001308}
   - {fileID: 114794530094233314}
   StringsBanks:
   - {fileID: 114484437926960446}
-  stringsBankWriteTime: 636868272006851220
+  stringsBankWriteTime: 636868863367016673
   cacheVersion: 3
 --- !u!114 &114019062899673532
 MonoBehaviour:
@@ -97,6 +98,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 444704
   Exists: 1
+--- !u!114 &114170700179874298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/player_hit
+  guid: e14412b8d0882240b93e15b0c12c4d0a
+  Banks:
+  - {fileID: 114691874218637240}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 940
 --- !u!114 &114265665236139860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,11 +282,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636868272006851220
+  lastModified: 636868863367016673
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1094
+    Value: 1146
   Exists: 1
 --- !u!114 &114530277431290768
 MonoBehaviour:
@@ -404,11 +428,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\stebs\Desktop\whisper-drift\Whisperdrift\Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master
     Bank.bank
-  lastModified: 636868272006801383
+  lastModified: 636868863366966797
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 559584
+    Value: 592480
   Exists: 1
 --- !u!114 &114694695877332532
 MonoBehaviour:
