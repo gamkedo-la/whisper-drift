@@ -11,11 +11,11 @@ public class PlayerDeath : MonoBehaviour
 	[SerializeField] private Behaviour[] toDisable = null;
 	[SerializeField] private TrailRenderer trailRenderer = null;
 	[SerializeField] private float restartDelay = 0.5f;
-	[FMODUnity.EventRef, SerializeField] private string playerHitEvent;
+	[FMODUnity.EventRef, SerializeField] private string playerHitEvent = null;
 
 	private FMOD.Studio.EventInstance playerHitSound;
 
-	void Awake( ) //FMOD's built in init function to hook up sounds??? I think???
+	void Awake( )
 	{
 		playerHitSound = FMODUnity.RuntimeManager.CreateInstance( playerHitEvent );
 	}

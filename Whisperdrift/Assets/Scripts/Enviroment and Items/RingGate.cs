@@ -10,7 +10,7 @@ public class RingGate : MonoBehaviour
 	private bool activated = false;
     FMOD.Studio.EventInstance RingGateParticleSpawnSound;
 
-    void Awake() //FMOD's built in init function to hook up sounds??? I think???
+    void Awake()
     {
         RingGateParticleSpawnSound = FMODUnity.RuntimeManager.CreateInstance("event:/particle_spawn_sound");
     }
