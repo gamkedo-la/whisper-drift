@@ -96,6 +96,10 @@ TextureImporter:
     21300182: G_18
     21300184: Gate 1
     21300186: Gate 02
+    21300188: Door
+    21300190: Door Glyph
+    21300192: Pressure Plate
+    21300194: Pressure Plate Glyph
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -2048,7 +2052,7 @@ TextureImporter:
         width: 270
         height: 223
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2068,13 +2072,93 @@ TextureImporter:
         width: 236
         height: 226
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 267f932b1d7057742b524c7d42679a28
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 663
+        width: 107
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a96349f31041f4091029fc633db2d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Door Glyph
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 656
+        width: 100
+        height: 431
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f926d65d1434640b635744229d0582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pressure Plate
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 406
+        width: 248
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999ae57b0468e4947b867210eb870a5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pressure Plate Glyph
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 409
+        width: 290
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b81470a8aa718a4990859d12c32342b
       vertices: []
       indices: 
       edges: []
