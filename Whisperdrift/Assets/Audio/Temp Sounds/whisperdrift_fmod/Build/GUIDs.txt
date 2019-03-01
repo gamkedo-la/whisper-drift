@@ -12,6 +12,7 @@
 {69eb1156-36e2-4aeb-9cad-806ea705cbb2} event:/rock_explode
 {ee974111-94c3-46a8-856f-5b800072da36} event:/rock_hit_or_tumble
 {c5bf5971-d6f4-4fb8-b77b-1db585cfcdac} event:/small_rock_explode
+{342af83d-0c78-4007-89de-81c4fcbed8c8} event:/swinging_door_collision
 {7aab1604-56e6-4283-bdf2-5e95f982bdbb} bus:/
 {346dd227-cd0a-4501-a546-b728e8b58e6f} bus:/Reverb
 {f4260a33-187e-4696-9afc-12f8eb99faf7} bank:/Master Bank
