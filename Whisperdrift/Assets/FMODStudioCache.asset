@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114484437926960446}
-  - {fileID: 114994673410092294}
+  - {fileID: 114606341320968510}
   EditorEvents:
   - {fileID: 114952828269571848}
   - {fileID: 114530277431290768}
@@ -28,12 +28,14 @@ MonoBehaviour:
   - {fileID: 114179277309814850}
   - {fileID: 114011359072275328}
   - {fileID: 114315281287699910}
+  - {fileID: 114459244852462944}
+  - {fileID: 114207014626435848}
   MasterBanks:
   - {fileID: 114410818254001308}
   - {fileID: 114794530094233314}
   StringsBanks:
   - {fileID: 114484437926960446}
-  stringsBankWriteTime: 636869777738700133
+  stringsBankWriteTime: 636870401469293108
   cacheVersion: 3
 --- !u!114 &114011359072275328
 MonoBehaviour:
@@ -50,7 +52,7 @@ MonoBehaviour:
   Path: event:/enemy_aim
   guid: 8ba26a1e0df8cd4891f3802595f8eb76
   Banks:
-  - {fileID: 114994673410092294}
+  - {fileID: 114606341320968510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -162,7 +164,7 @@ MonoBehaviour:
   Path: event:/player_hit
   guid: 923c60f1a7fcfa49afdcd04ceeefbffa
   Banks:
-  - {fileID: 114994673410092294}
+  - {fileID: 114606341320968510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -170,6 +172,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 470
+--- !u!114 &114207014626435848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/enemy_death
+  guid: 55bae196be24b647b61d02d37a47614f
+  Banks:
+  - {fileID: 114606341320968510}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 862
 --- !u!114 &114207343364943534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,7 +273,7 @@ MonoBehaviour:
   Path: event:/enemy_hit
   guid: 69e13cd0b3946b4cad65aa6d11e0e209
   Banks:
-  - {fileID: 114994673410092294}
+  - {fileID: 114606341320968510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -361,6 +386,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 714
   Exists: 1
+--- !u!114 &114459244852462944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/enemy_shot
+  guid: 52ff92a0711208458624a0aca6a469fc
+  Banks:
+  - {fileID: 114606341320968510}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 600
 --- !u!114 &114476135696054496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,11 +445,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636869777738700133
+  lastModified: 636870401469293108
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1292
+    Value: 1362
   Exists: 1
 --- !u!114 &114530277431290768
 MonoBehaviour:
@@ -418,7 +466,7 @@ MonoBehaviour:
   Path: event:/crystal_hit
   guid: dfeab6ff22c9a347a530fd4a5dc01e7a
   Banks:
-  - {fileID: 114994673410092294}
+  - {fileID: 114606341320968510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -441,7 +489,7 @@ MonoBehaviour:
   Path: event:/player_death
   guid: e14412b8d0882240b93e15b0c12c4d0a
   Banks:
-  - {fileID: 114994673410092294}
+  - {fileID: 114606341320968510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -469,6 +517,26 @@ MonoBehaviour:
   - Name: Desktop
     Value: 53728
   Exists: 0
+--- !u!114 &114606341320968510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\!\Unity\Whisperdrift\Whisperdrift\Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636870401469283380
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 817920
+  Exists: 1
 --- !u!114 &114640319665106016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,7 +592,7 @@ MonoBehaviour:
   Path: event:/particle_spawn_sound
   guid: 7cb658e3aedec54d8017799bb9aa5a93
   Banks:
-  - {fileID: 114994673410092294}
+  - {fileID: 114606341320968510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -648,7 +716,7 @@ MonoBehaviour:
   Path: event:/small_rock_explode
   guid: 7159bfc5f4d6b84fb77b1db585cfcdac
   Banks:
-  - {fileID: 114994673410092294}
+  - {fileID: 114606341320968510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -791,7 +859,7 @@ MonoBehaviour:
   Path: event:/rock_explode
   guid: 5611eb69e236eb4a9cad806ea705cbb2
   Banks:
-  - {fileID: 114994673410092294}
+  - {fileID: 114606341320968510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -814,7 +882,7 @@ MonoBehaviour:
   Path: event:/exit_activate_low_end_pulse
   guid: 922e146aa09d8d4a8679966f744c8db4
   Banks:
-  - {fileID: 114994673410092294}
+  - {fileID: 114606341320968510}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -856,7 +924,7 @@ MonoBehaviour:
   Path: event:/exit_activate_chord_slide
   guid: 3bdd87f550443e4db5eb05bcd25dc74a
   Banks:
-  - {fileID: 114994673410092294}
+  - {fileID: 114606341320968510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -879,7 +947,7 @@ MonoBehaviour:
   Path: event:/rock_hit_or_tumble
   guid: 114197eec394a846856f5b800072da36
   Banks:
-  - {fileID: 114994673410092294}
+  - {fileID: 114606341320968510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -924,7 +992,7 @@ MonoBehaviour:
   Path: event:/crystal_shatter
   guid: d2577c9198e25844ae565b5130466536
   Banks:
-  - {fileID: 114994673410092294}
+  - {fileID: 114606341320968510}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
