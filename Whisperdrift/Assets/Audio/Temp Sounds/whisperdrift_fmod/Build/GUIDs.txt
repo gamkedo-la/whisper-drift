@@ -9,6 +9,7 @@
 {e358b67c-deae-4dc5-8017-799bb9aa5a93} event:/particle_spawn_sound
 {b81244e1-88d0-4022-b93e-15b0c12c4d0a} event:/player_death
 {f1603c92-fca7-49fa-afdc-d04ceeefbffa} event:/player_hit
+{f9e900ac-3a02-46f2-b2a6-b95deebfd704} event:/player_shot_hits_wall_or_platform
 {69eb1156-36e2-4aeb-9cad-806ea705cbb2} event:/rock_explode
 {ee974111-94c3-46a8-856f-5b800072da36} event:/rock_hit_or_tumble
 {c5bf5971-d6f4-4fb8-b77b-1db585cfcdac} event:/small_rock_explode
