@@ -5,6 +5,7 @@ public class Projectile : MonoBehaviour
 {
 	[SerializeField] private GameObject explosion = null;
 	[SerializeField] private SpriteRenderer sprite = null;
+	[FMODUnity.EventRef, SerializeField] private string soundEvent;
 	[SerializeField] private float speed = 10f;
 	[SerializeField] private float lifeTime = 3f;
 	[SerializeField] private float maxTravelDistance = 6f;
@@ -13,6 +14,7 @@ public class Projectile : MonoBehaviour
 
 	private Vector2 originPoint;
 	private Rigidbody2D rb;
+	private FMOD.Studio.EventInstance sound;
 
 	void Start( )
 	{
@@ -21,6 +23,8 @@ public class Projectile : MonoBehaviour
 		Assert.IsNotNull( explosion );
 		Assert.IsNotNull( sprite );
 		Assert.IsNotNull( rb );
+
+		sound = FMODUnity.RuntimeManager.CreateInstance( soundEvent ); ;
 
 		originPoint = transform.position;
 		Invoke( "DestroyProjectile", lifeTime );
@@ -42,10 +46,16 @@ public class Projectile : MonoBehaviour
 	void OnCollisionEnter2D( Collision2D collision )
 	{
 		if ( collision.gameObject.CompareTag( Tags.Enemy ) || collision.gameObject.CompareTag( Tags.Destructible ) )
+		{
 			collision.gameObject.GetComponent<HP>( ).ChangeHP( -damage );
+			sound.start( );
+		}
 
 		if ( collision.gameObject.CompareTag( Tags.Player ) )
+		{
 			collision.gameObject.GetComponent<HP>( ).ChangeHP( -damage );
+			sound.start( );
+		}
 
 		DestroyProjectile( );
 	}

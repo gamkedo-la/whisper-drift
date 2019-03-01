@@ -136,6 +136,7 @@ MonoBehaviour:
   explosion: {fileID: 6749879332327791017, guid: 70d628ae9cdedb44ba08be89938a2021,
     type: 3}
   sprite: {fileID: 5352473136761422721}
+  soundEvent: event:/enemy_hit
   speed: 10
   lifeTime: 3
   maxTravelDistance: 5

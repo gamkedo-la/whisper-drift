@@ -86,6 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 1568089292869728, guid: 8d27dff0f261d544e84ea496abdce495, type: 3}
   sprite: {fileID: 2651857286479078792}
+  soundEvent: event:/player_hit
   speed: 10
   lifeTime: 3
   maxTravelDistance: 5
