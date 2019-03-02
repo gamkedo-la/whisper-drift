@@ -20832,7 +20832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2cca18f7e71fdb4fabe69f4e0a89c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Play
+  sceneName: Level 01
   startTime: 0
   clickSound: {fileID: 0}
 --- !u!114 &1187226672
