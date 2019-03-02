@@ -55,6 +55,7 @@ public class Projectile : MonoBehaviour
 		{
 			collision.gameObject.GetComponent<HP>( ).ChangeHP( -damage );
 			sound.start( );
+			ShakeEffect.Instance.DoSmallShake( );
 		}
 
 		DestroyProjectile( );

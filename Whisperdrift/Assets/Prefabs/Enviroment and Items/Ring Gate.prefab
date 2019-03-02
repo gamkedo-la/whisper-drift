@@ -1415,6 +1415,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orb: {fileID: 375745716}
+  orbCatchEffect: {fileID: 4074774948577129559, guid: 138e33e1e812bac4b9d274c616f0f283,
+    type: 3}
   activationGraphics:
   - {fileID: 8505036853500837327}
   - {fileID: 1619331918378015000}

@@ -16,5 +16,6 @@ public class Damager : MonoBehaviour
 
 		collision.gameObject.GetComponent<PlayerDeath>( ).Hit( collision.contacts[0].point, -collision.relativeVelocity.magnitude );
 		collision.gameObject.GetComponent<HP>( ).ChangeHP( -hitDamage );
+		ShakeEffect.Instance.DoSmallShake( );
 	}
 }

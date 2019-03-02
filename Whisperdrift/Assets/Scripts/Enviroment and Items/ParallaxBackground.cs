@@ -14,6 +14,9 @@ public class ParallaxBackground : MonoBehaviour
 
 	void Start ()
 	{
+		if ( cam == null )
+			cam = Camera.main;
+
 		Assert.IsNotNull( cam );
 		Assert.IsNotNull( backgrounds );
 		Assert.AreNotEqual( backgrounds.Length, 0 );

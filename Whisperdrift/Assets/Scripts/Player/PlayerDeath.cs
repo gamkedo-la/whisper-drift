@@ -45,6 +45,7 @@ public class PlayerDeath : MonoBehaviour
 			item.enabled = false;
 
 		Instantiate( explosion, transform.position, Quaternion.identity );
+		ShakeEffect.Instance.DoBigShake( );
 
 		Invoke( "PlayerRestart", restartDelay );
 	}

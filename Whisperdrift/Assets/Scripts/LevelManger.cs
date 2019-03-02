@@ -59,7 +59,7 @@ public class LevelManger : MonoBehaviour
 		if ( activeRingGates == ringGates.Count )
 		{
 			ringGateExit.PowerUp( );
-			label.gameObject.SetActive( false );
+			label.transform.parent.gameObject.SetActive( false );
 			exit.gameObject.SetActive( true );
 		}
 
