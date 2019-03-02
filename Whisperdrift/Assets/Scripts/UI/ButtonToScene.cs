@@ -31,10 +31,12 @@ public class ButtonToScene : MonoBehaviour {
 				aud.PlayOneShot(clickSound);
 			}
 
-   		   	if (sceneName != "Quit")
-    	    	SceneManager.LoadScene(sceneName);
+   		   	if (sceneName == "Quit")
+				Application.Quit();
+			else if (sceneName == "Reset")
+				SceneManager.LoadScene(gameObject.scene.name);
      		else
-      		  	Application.Quit();
+				SceneManager.LoadScene(sceneName);
 			
 			if(startTime) Time.timeScale = 1f;
 		}
