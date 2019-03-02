@@ -7,6 +7,7 @@
 {f587dd3b-4450-4d3e-b5eb-05bcd25dc74a} event:/exit_activate_chord_slide
 {6a142e92-9da0-4a8d-8679-966f744c8db4} event:/exit_activate_low_end_pulse
 {e358b67c-deae-4dc5-8017-799bb9aa5a93} event:/particle_spawn_sound
+{de0c8130-7ed4-423b-9d62-eb2200ae3a3b} event:/player_collides_wall_or_platform
 {b81244e1-88d0-4022-b93e-15b0c12c4d0a} event:/player_death
 {f1603c92-fca7-49fa-afdc-d04ceeefbffa} event:/player_hit
 {f9e900ac-3a02-46f2-b2a6-b95deebfd704} event:/player_shot_hits_wall_or_platform
@@ -14,7 +15,7 @@
 {ee974111-94c3-46a8-856f-5b800072da36} event:/rock_hit_or_tumble
 {c5bf5971-d6f4-4fb8-b77b-1db585cfcdac} event:/small_rock_explode
 {342af83d-0c78-4007-89de-81c4fcbed8c8} event:/swinging_door_collision
-{de0c8130-7ed4-423b-9d62-eb2200ae3a3b} event:/player_collides_wall_or_platform
+{ebdd3180-daff-4710-b984-4d8d6dd10a1e} event:/sliding_door_open_close
 {7aab1604-56e6-4283-bdf2-5e95f982bdbb} bus:/
 {346dd227-cd0a-4501-a546-b728e8b58e6f} bus:/Reverb
 {f4260a33-187e-4696-9afc-12f8eb99faf7} bank:/Master Bank
