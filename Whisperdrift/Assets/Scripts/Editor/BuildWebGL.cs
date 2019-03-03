@@ -13,6 +13,8 @@ public class BuildWebGL : MonoBehaviour
 	static private string destinationFile = @"C:\!\Unity\Whisperdrift.zip";
 	static private string[] levels = new string[]
 	{
+		"Assets/Scenes/Main Menu.unity",
+		"Assets/Scenes/Credits.unity",
 		"Assets/Scenes/Level 01.unity",
 		"Assets/Scenes/Level 02.unity",
 		"Assets/Scenes/Level 03.unity",
