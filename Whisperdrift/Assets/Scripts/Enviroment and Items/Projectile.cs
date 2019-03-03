@@ -4,6 +4,7 @@ using UnityEngine.Assertions;
 public class Projectile : MonoBehaviour
 {
 	[SerializeField] private GameObject explosion = null;
+	[SerializeField] private GameObject explosionOnHit = null;
 	[SerializeField] private SpriteRenderer sprite = null;
 	[FMODUnity.EventRef, SerializeField] private string soundEvent;
 	[SerializeField] private float speed = 10f;
@@ -48,6 +49,7 @@ public class Projectile : MonoBehaviour
 		if ( collision.gameObject.CompareTag( Tags.Enemy ) || collision.gameObject.CompareTag( Tags.Destructible ) )
 		{
 			collision.gameObject.GetComponent<HP>( ).ChangeHP( -damage );
+			Instantiate( explosionOnHit, transform.position, Quaternion.identity );
 			sound.start( );
 		}
 
