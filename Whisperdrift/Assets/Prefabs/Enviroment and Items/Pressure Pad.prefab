@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 646221182}
   - component: {fileID: 646221183}
-  m_Layer: 0
+  m_Layer: 19
   m_Name: Pressure Plate Glyph
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 573041003
   m_SortingLayer: 3
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300194, guid: 536c7a0a80a862448af7bb2edf89120f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1479333022}
   - component: {fileID: 1479333023}
-  m_Layer: 17
+  m_Layer: 19
   m_Name: Push Plate
   m_TagString: Pressure Plate
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 573041003
   m_SortingLayer: 3
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300192, guid: 536c7a0a80a862448af7bb2edf89120f, type: 3}
   m_Color: {r: 0.6792453, g: 0.66322535, b: 0.66322535, a: 1}
   m_FlipX: 0
@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1709955121}
   - component: {fileID: 1709955122}
-  m_Layer: 17
+  m_Layer: 19
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 229245883166418256}
   - component: {fileID: 229245883166418271}
   - component: {fileID: 229245883166418268}
-  m_Layer: 17
+  m_Layer: 19
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 229245883934849748}
   - component: {fileID: 229245883934849749}
   - component: {fileID: 229245883934849771}
-  m_Layer: 17
+  m_Layer: 19
   m_Name: Archon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +533,7 @@ GameObject:
   - component: {fileID: 229245884253058077}
   - component: {fileID: 4083586714415656211}
   - component: {fileID: 8469892499188134653}
-  m_Layer: 16
+  m_Layer: 19
   m_Name: Pressure Pad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 229245885133333579}
   - component: {fileID: 229245885133333576}
   - component: {fileID: 229245885133333577}
-  m_Layer: 17
+  m_Layer: 19
   m_Name: Push Plate
   m_TagString: Pressure Plate
   m_Icon: {fileID: 0}
@@ -698,7 +698,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 573041003
   m_SortingLayer: 3
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 3fa8b68a0a352834786e7f465fa33f64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
