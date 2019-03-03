@@ -5,14 +5,10 @@ using UnityEngine.EventSystems;
 
 public class ResumeButton : MonoBehaviour, IPointerClickHandler
 {
-    void Update()
-    {
-        
-    }
-	
+	public PauseKeyListener pause = null;
+
 	public void OnPointerClick(PointerEventData eventData)
     {
-		Time.timeScale = 1f;
-		transform.parent.gameObject.SetActive(false);
+		pause.Resume( );
     }
 }
