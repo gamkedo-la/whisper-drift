@@ -3,6 +3,7 @@ using UnityEngine.Assertions;
 
 public class PlayerDeath : MonoBehaviour
 {
+	[SerializeField] private GameObject playerSpawn = null;
 	[SerializeField] private Transform respwnPoint = null;
 	[SerializeField] private GameObject explosion = null;
 	[SerializeField] private GameObject hit = null;
@@ -26,6 +27,12 @@ public class PlayerDeath : MonoBehaviour
 		Assert.IsNotNull( explosion );
 		Assert.IsNotNull( hit );
 		Assert.IsNotNull( trailRenderer );
+		Assert.IsNotNull( playerSpawn );
+	}
+
+	void OnEnable( )
+	{
+		Instantiate( playerSpawn, transform.position, Quaternion.identity );
 	}
 
 	public void Hit( Vector2 hitPosition, float magnitude )
@@ -67,5 +74,7 @@ public class PlayerDeath : MonoBehaviour
 		transform.position = respwnPoint.position;
 		trailRenderer.enabled = true;
 		trailRenderer.Clear( );
+
+		Instantiate( playerSpawn, transform.position, Quaternion.identity );
 	}
 }

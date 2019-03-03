@@ -11446,6 +11446,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9b5f1d9f44202b479d3b830bc7d4ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpawn: {fileID: 3811601175495555885, guid: 960d608e3f0037b42ab892ac92008d0f,
+    type: 3}
   respwnPoint: {fileID: 0}
   explosion: {fileID: 1201104572475416, guid: c25bec336c4f2834e8f35a33949b0740, type: 3}
   hit: {fileID: 1517626080438482, guid: 4076b5bc92060fa4880b50c64dffb9cf, type: 3}
