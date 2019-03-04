@@ -61,4 +61,7 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master Bank
-  Banks: []
+  - Master Bank
+  - Master Bank
+  Banks:
+  - Master Bank
