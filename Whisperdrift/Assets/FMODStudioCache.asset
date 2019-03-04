@@ -36,13 +36,14 @@ MonoBehaviour:
   - {fileID: 114990975216147476}
   - {fileID: 114514194178957664}
   - {fileID: 114566887450922072}
+  - {fileID: 114784177893468596}
   MasterBanks:
   - {fileID: 114410818254001308}
   - {fileID: 114794530094233314}
   - {fileID: 114615475023488232}
   StringsBanks:
   - {fileID: 114484437926960446}
-  stringsBankWriteTime: 636871511364945899
+  stringsBankWriteTime: 636872914239711678
   cacheVersion: 3
 --- !u!114 &114011359072275328
 MonoBehaviour:
@@ -276,11 +277,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\!\Unity\Whisperdrift\Whisperdrift\Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master
     Bank.bank
-  lastModified: 636871511364935932
+  lastModified: 636872914239711678
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1177824
+    Value: 1200992
   Exists: 1
 --- !u!114 &114265665236139860
 MonoBehaviour:
@@ -535,11 +536,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636871511364945899
+  lastModified: 636872914239711678
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1694
+    Value: 1732
   Exists: 1
 --- !u!114 &114514194178957664
 MonoBehaviour:
@@ -1004,6 +1005,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1123
+--- !u!114 &114784177893468596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/player_freeze
+  guid: a0b14411fc3ae84ca38a1b491a5552d0
+  Banks:
+  - {fileID: 114224677085853918}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 600
 --- !u!114 &114794530094233314
 MonoBehaviour:
   m_ObjectHideFlags: 0

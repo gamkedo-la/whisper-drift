@@ -599,13 +599,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154644934949711705}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24cac47ad3d88f3408b1cfced6a02d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allowExit: 1
-  allowReset: 1
+  allowExit: 0
+  allowReset: 0
 --- !u!114 &1154644934949711704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: {fileID: 1154644933948742828}
   exit: {fileID: 1154644934623593587}
-  nextScene: Level 02
+  nextScene: Credits
   levelChangeDelay: 0.1
   onLevelProgress:
     m_PersistentCalls:
