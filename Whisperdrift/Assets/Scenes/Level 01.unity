@@ -29333,6 +29333,11 @@ PrefabInstance:
       propertyPath: onLevelProgress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2118368561}
+    - target: {fileID: 1154644934949711704, guid: d0211b7769ff0a2479fb2a82ee037797,
+        type: 3}
+      propertyPath: nextScene
+      value: Level 02
+      objectReference: {fileID: 0}
     - target: {fileID: 1154644933948742828, guid: d0211b7769ff0a2479fb2a82ee037797,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -30303,6 +30308,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: pause
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 995858320}
+    - target: {fileID: 0}
+      propertyPath: shooter
+      value: 
+      objectReference: {fileID: 812141680}
+    - target: {fileID: 3633091257975818324, guid: 8d7eacae04450e5459ecd38486e01ee7,
+        type: 3}
+      propertyPath: m_Name
+      value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 8801253186173153292, guid: 8d7eacae04450e5459ecd38486e01ee7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623498464579231691, guid: 8d7eacae04450e5459ecd38486e01ee7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3423662755196363742, guid: 8d7eacae04450e5459ecd38486e01ee7,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -30408,23 +30440,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: pause
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: playerController
-      value: 
-      objectReference: {fileID: 995858320}
-    - target: {fileID: 0}
-      propertyPath: shooter
-      value: 
-      objectReference: {fileID: 812141680}
-    - target: {fileID: 3633091257975818324, guid: 8d7eacae04450e5459ecd38486e01ee7,
-        type: 3}
-      propertyPath: m_Name
-      value: Main Camera
-      objectReference: {fileID: 0}
     - target: {fileID: 3633091257975818320, guid: 8d7eacae04450e5459ecd38486e01ee7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30485,16 +30500,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 2087798548}
-    - target: {fileID: 4623498464579231691, guid: 8d7eacae04450e5459ecd38486e01ee7,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8801253186173153292, guid: 8d7eacae04450e5459ecd38486e01ee7,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3633091259371802177, guid: 8d7eacae04450e5459ecd38486e01ee7,
         type: 3}
       propertyPath: m_IsActive
