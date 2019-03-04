@@ -15,9 +15,10 @@
 {ee974111-94c3-46a8-856f-5b800072da36} event:/rock_hit_or_tumble
 {ebdd3180-daff-4710-b984-4d8d6dd10a1e} event:/sliding_door_open_close
 {c5bf5971-d6f4-4fb8-b77b-1db585cfcdac} event:/small_rock_explode
+{81adae2c-0c48-4077-a552-3b88b46b5e79} event:/swing_door_close
 {342af83d-0c78-4007-89de-81c4fcbed8c8} event:/swinging_door_collision
 {4503c824-66b2-4618-90b6-e35d8f70909f} event:/swinging_door_open
-{81adae2c-0c48-4077-a552-3b88b46b5e79} event:/swing_door_close
+{1144b1a0-3afc-4ce8-a38a-1b491a5552d0} event:/player_freeze
 {7aab1604-56e6-4283-bdf2-5e95f982bdbb} bus:/
 {346dd227-cd0a-4501-a546-b728e8b58e6f} bus:/Reverb
 {f4260a33-187e-4696-9afc-12f8eb99faf7} bank:/Master Bank
