@@ -13,13 +13,17 @@ public class PlayerDeath : MonoBehaviour
 	[SerializeField] private TrailRenderer trailRenderer = null;
 	[SerializeField] private float restartDelay = 0.5f;
 	[FMODUnity.EventRef, SerializeField] private string playerHitEvent = null;
+	//[FMODUnity.EventRef, SerializeField] private string playerDeathEvent = null;
 
 	private FMOD.Studio.EventInstance playerHitSound;
+	//private FMOD.Studio.EventInstance playerDeathSound;
+
 	private HP hp = null;
 
 	void Awake( )
 	{
 		playerHitSound = FMODUnity.RuntimeManager.CreateInstance( playerHitEvent );
+		//playerDeathSound = FMODUnity.RuntimeManager.CreateInstance( playerDeathEvent );
 	}
 
 	void Start( )
@@ -41,10 +45,14 @@ public class PlayerDeath : MonoBehaviour
 
 	public void Hit( Vector2 hitPosition, float magnitude )
 	{
-		// Stebs: you probably wanted it somewhere around here you can use this below (please delete this comment)
 		Debug.Log( hp.CurrentHP );
 
-		playerHitSound.start( );
+		if (hp.CurrentHP > 0) { 
+			playerHitSound.start();
+		} else { 
+			//playerDeathSound.start();
+		}
+
 		Instantiate( hit, hitPosition, Quaternion.identity );
 	}
 
