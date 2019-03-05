@@ -37,13 +37,14 @@ MonoBehaviour:
   - {fileID: 114514194178957664}
   - {fileID: 114566887450922072}
   - {fileID: 114784177893468596}
+  - {fileID: 114354951638252192}
   MasterBanks:
   - {fileID: 114410818254001308}
   - {fileID: 114794530094233314}
   - {fileID: 114615475023488232}
   StringsBanks:
   - {fileID: 114484437926960446}
-  stringsBankWriteTime: 636873362361339344
+  stringsBankWriteTime: 636873406053577701
   cacheVersion: 3
 --- !u!114 &114011359072275328
 MonoBehaviour:
@@ -455,6 +456,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 559584
   Exists: 1
+--- !u!114 &114354951638252192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/cant_freeze
+  guid: 0589f81c45bd68409e9f2ecc2e74c26d
+  Banks:
+  - {fileID: 114711567535271106}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 862
 --- !u!114 &114387112874823794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,11 +600,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636873362361339344
+  lastModified: 636873406053577701
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1732
+    Value: 1784
   Exists: 1
 --- !u!114 &114514194178957664
 MonoBehaviour:
@@ -935,11 +959,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\stebs\Desktop\whisper-drift\Whisperdrift\Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master
     Bank.bank
-  lastModified: 636873362361319401
+  lastModified: 636873406053517869
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1200448
+    Value: 1245184
   Exists: 1
 --- !u!114 &114748273745511574
 MonoBehaviour:
@@ -1087,7 +1111,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 600
+  Length: 1097
 --- !u!114 &114794530094233314
 MonoBehaviour:
   m_ObjectHideFlags: 0

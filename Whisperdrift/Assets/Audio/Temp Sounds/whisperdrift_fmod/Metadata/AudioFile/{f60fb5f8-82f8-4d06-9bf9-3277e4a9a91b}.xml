@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{f60fb5f8-82f8-4d06-9bf9-3277e4a9a91b}">
+        <property name="assetPath">
+            <value>cant_freeze_3.mp3</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.86204081632653062</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{132dca7e-93a0-449c-91b2-46e3e43a0468}</destination>
+        </relationship>
+    </object>
+</objects>

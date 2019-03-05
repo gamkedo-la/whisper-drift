@@ -18,7 +18,9 @@ public class PlayerController : MonoBehaviour
 	private Vector2 oldVelocity = Vector2.zero;
 	private Vector3 freezeAccumulatedForce = Vector3.zero;
     private FMOD.Studio.EventInstance playerFreezeSound;
+    private FMOD.Studio.EventInstance cantFreezeSound;
     private bool alreadyFrozen;
+    private bool alreadyCantFreeze;
     
 
     void Start( )
@@ -33,12 +35,14 @@ public class PlayerController : MonoBehaviour
 		freezeAvailable = freezeMax;
 
         playerFreezeSound = FMODUnity.RuntimeManager.CreateInstance("event:/player_freeze");
+        cantFreezeSound = FMODUnity.RuntimeManager.CreateInstance("event:/cant_freeze");
 
         alreadyFrozen = false;
+        alreadyCantFreeze = false;
     }
 
-	void Update( )
-	{
+    void Update()
+    {
         if (isFrozen)
         {
             freezeAvailable -= freezeDecline * Time.deltaTime;
@@ -48,41 +52,46 @@ public class PlayerController : MonoBehaviour
             freezeAvailable += freezeRegen * Time.deltaTime;
             alreadyFrozen = false;
         }
+
+
+        freezeAvailable = Mathf.Clamp(freezeAvailable, 0, freezeMax);
+
+        if (freezeAvailable != freezeMax)
+            freezeBar.gameObject.SetActive(true);
+        else
+            freezeBar.gameObject.SetActive(false);
+
+        freezeBar.value = freezeAvailable;
+
+        if (freezeAvailable <= 0)
+        {
+            canFreeze = false;
+            rb.velocity = oldVelocity;
+        }
+        else if (freezeAvailable >= freezeMax)
+            canFreeze = true;
+
+        if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space)) && canFreeze)
+            oldVelocity = rb.velocity;
+
+
+        if ((Input.GetMouseButtonUp(1) || Input.GetKeyUp(KeyCode.Space)) && isFrozen)
+        {
+            canFreeze = false;
+            rb.velocity = oldVelocity;
             
-
-		freezeAvailable = Mathf.Clamp( freezeAvailable, 0, freezeMax );
-
-		if ( freezeAvailable != freezeMax )
-			freezeBar.gameObject.SetActive( true );
-		else
-			freezeBar.gameObject.SetActive( false );
-
-		freezeBar.value = freezeAvailable;
-
-		if ( freezeAvailable <= 0 )
-		{
-			canFreeze = false;
-			rb.velocity = oldVelocity;
-		}
-		else if ( freezeAvailable >= freezeMax )
-			canFreeze = true;
-
-		if ( ( Input.GetMouseButtonDown( 1 ) || Input.GetKeyDown( KeyCode.Space ) ) && canFreeze )
-			oldVelocity = rb.velocity;
-            
-
-		if ( ( Input.GetMouseButtonUp( 1 ) || Input.GetKeyUp( KeyCode.Space ) ) && isFrozen )
-		{
-			canFreeze = false;
-			rb.velocity = oldVelocity;
             //alreadyFrozen = false;
             //Debug.Log(alreadyFrozen);
-		}
+        }
+
+        if ( Input.GetMouseButtonUp(1) || Input.GetKeyUp(KeyCode.Space) ) {
+            alreadyCantFreeze = false;
+        }
 
         if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space)) && canFreeze)
         {
             isFrozen = true;
-            
+
         }
         else
         {
@@ -96,6 +105,11 @@ public class PlayerController : MonoBehaviour
             Debug.Log(alreadyFrozen);
         }
 
+        if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space)) && !canFreeze && !alreadyCantFreeze)
+        {
+            cantFreezeSound.start();
+            alreadyCantFreeze = true;
+        }
     }
 
 	void FixedUpdate( )
