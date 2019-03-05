@@ -4,7 +4,6 @@
         <property name="name">
             <value>exit_activate_low_end_pulse</value>
         </property>
-        <property name="note"/>
         <property name="outputFormat">
             <value>1</value>
         </property>
@@ -85,7 +84,7 @@
     </object>
     <object class="EventMixerMaster" id="{01f366d7-f017-4e87-9a8f-13f6d317df20}">
         <property name="volume">
-            <value>-19</value>
+            <value>-23.5</value>
         </property>
         <relationship name="effectChain">
             <destination>{54fb40fa-caeb-4468-83b2-ba8745110277}</destination>
