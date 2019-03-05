@@ -18,7 +18,10 @@ public class HP : MonoBehaviour
 	[SerializeField] private UnityEvent onHealthChange = null;
 	[SerializeField] private UnityEvent onDeath = null;
 
-	void Start( )
+    private FMOD.Studio.EventInstance playerHitSound;
+    private FMOD.Studio.EventInstance playerDeathSound;
+
+    void Start( )
 	{
 		CurrentHP = maxHP;
 
@@ -27,7 +30,10 @@ public class HP : MonoBehaviour
 			hpBar.maxValue = maxHP;
 			hpBar.value = maxHP;
 		}
-	}
+
+        playerHitSound = FMODUnity.RuntimeManager.CreateInstance("event:/player_hit");
+        playerDeathSound = FMODUnity.RuntimeManager.CreateInstance("event:/player_death");
+    }
 
 	/// <summary>
 	/// Changes current HP. Respects HP restrictions and fires events if necessary.
@@ -36,6 +42,13 @@ public class HP : MonoBehaviour
 	public void ChangeHP( float change )
 	{
 		CurrentHP += change;
+        if (CurrentHP > 0 && CurrentHP != 100)
+        {
+            playerHitSound.start();
+        } else if (CurrentHP <= 0)
+        {
+            playerDeathSound.start();
+        }
 		CurrentHP = CurrentHP > maxHP ? maxHP : CurrentHP;
 		CurrentHP = CurrentHP < 0 ? 0 : CurrentHP;
 

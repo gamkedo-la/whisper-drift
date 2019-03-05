@@ -12,20 +12,10 @@ public class PlayerDeath : MonoBehaviour
 	[SerializeField] private Behaviour[] toDisable = null;
 	[SerializeField] private TrailRenderer trailRenderer = null;
 	[SerializeField] private float restartDelay = 0.5f;
-	[FMODUnity.EventRef, SerializeField] private string playerHitEvent = null;
-	//[FMODUnity.EventRef, SerializeField] private string playerDeathEvent = null;
-
-	private FMOD.Studio.EventInstance playerHitSound;
-	//private FMOD.Studio.EventInstance playerDeathSound;
-
+	
 	private HP hp = null;
 
-	void Awake( )
-	{
-		playerHitSound = FMODUnity.RuntimeManager.CreateInstance( playerHitEvent );
-		//playerDeathSound = FMODUnity.RuntimeManager.CreateInstance( playerDeathEvent );
-	}
-
+	
 	void Start( )
 	{
 		Assert.IsNotNull( respwnPoint );
@@ -45,14 +35,6 @@ public class PlayerDeath : MonoBehaviour
 
 	public void Hit( Vector2 hitPosition, float magnitude )
 	{
-		Debug.Log( hp.CurrentHP );
-
-		if (hp.CurrentHP > 0) { 
-			playerHitSound.start();
-		} else { 
-			//playerDeathSound.start();
-		}
-
 		Instantiate( hit, hitPosition, Quaternion.identity );
 	}
 
