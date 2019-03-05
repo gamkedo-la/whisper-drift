@@ -683,7 +683,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-140270
+  m_Name: pb_Mesh-438514
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -29363,6 +29363,16 @@ PrefabInstance:
       propertyPath: allowReset
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7778814124181609303, guid: d0211b7769ff0a2479fb2a82ee037797,
+        type: 3}
+      propertyPath: onDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 995858318}
+    - target: {fileID: 7778814124181609303, guid: d0211b7769ff0a2479fb2a82ee037797,
+        type: 3}
+      propertyPath: onDone.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0211b7769ff0a2479fb2a82ee037797, type: 3}
 --- !u!1001 &1476502334389518575
@@ -31667,7 +31677,7 @@ PrefabInstance:
     - target: {fileID: 6839665191572876933, guid: afeadb78a8c834041b6a42ea3eca2b4a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6839665191572876958, guid: afeadb78a8c834041b6a42ea3eca2b4a,
         type: 3}

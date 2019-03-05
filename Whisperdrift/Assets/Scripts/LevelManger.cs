@@ -17,6 +17,7 @@ public class LevelManger : MonoBehaviour
 	[SerializeField] private string nextScene = "Main";
 	[SerializeField] private float levelChangeDelay = 1.0f;
 	[SerializeField] private UnityEventFloat onLevelProgress = null;
+	[SerializeField] private UnityEvent onLevelEnd = null;
 
 	private int activeRingGates = 0;
 	private List<RingGate> ringGates;
@@ -68,7 +69,7 @@ public class LevelManger : MonoBehaviour
 
 	public void ExitActivated( )
 	{
-        Invoke( "ChangeLevel", levelChangeDelay );
+        Invoke( "LevelEnd", levelChangeDelay );
 	}
 
 	private void UpdateLabel( )
@@ -76,7 +77,12 @@ public class LevelManger : MonoBehaviour
 		label.text = $"{activeRingGates}/{ringGates.Count}";
 	}
 
-	private void ChangeLevel( )
+	private void LevelEnd( )
+	{
+		onLevelEnd.Invoke( );
+	}
+
+	public void ChangeLevel( )
 	{
 		SceneManager.LoadScene( nextScene );
 	}
