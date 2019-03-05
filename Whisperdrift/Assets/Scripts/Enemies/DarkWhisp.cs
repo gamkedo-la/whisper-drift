@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 public class DarkWhisp : MonoBehaviour
 {
-	[SerializeField] private GameObject spittlePrefab;
-	[SerializeField] private AudioClip spittleSound;
+	[SerializeField] private GameObject spittlePrefab = null;
+	[SerializeField] private AudioClip spittleSound = null;
 	private Vector3 waypoint = Vector3.zero;
 	private const float PATH_DISTANCE = 11f;
 	private const float ARRIVAL_DISTANCE = 1f;
@@ -28,7 +27,7 @@ public class DarkWhisp : MonoBehaviour
 	private Rigidbody2D rb;
 	int layermask = 0;
 	Transform player;
-	
+
 	private void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
@@ -37,7 +36,7 @@ public class DarkWhisp : MonoBehaviour
 		player = FindObjectOfType<PlayerController>().transform;
 	}
 
-	private void SetLayerMask() 
+	private void SetLayerMask()
 	{
 		int layermask1 = 1<<17;
 		int layermask2 = 1<<16;
@@ -55,14 +54,13 @@ public class DarkWhisp : MonoBehaviour
 	{
 		if (attackTimer > 0) { attackTimer = attackTimer - Time.deltaTime; }
 		if (Vector2.Distance((Vector2)transform.position, (Vector2)player.position) < ATTACK_RANGE
-			&& attackTimer <= 0f) 
+			&& attackTimer <= 0f)
 		{
 			Attack();
 		}
 		else { Wander(); }
 	}
 
-	
 	private void OnDrawGizmos()
 	{
 		Gizmos.DrawSphere(waypoint, 0.3f);
@@ -74,7 +72,7 @@ public class DarkWhisp : MonoBehaviour
 		FlyTowardWaypoint();
 	}
 
-	private void DetermineWaypoint() 
+	private void DetermineWaypoint()
 	{
 		bool pathToWaypointIsBlocked = Physics2D.Raycast(transform.position, VectorTo(waypoint), DistanceTo(waypoint), layermask);
 		if (DistanceTo(waypoint) <= ARRIVAL_DISTANCE || pathToWaypointIsBlocked == true)
@@ -122,9 +120,9 @@ public class DarkWhisp : MonoBehaviour
 
 	void MoveForward()
 	{
-		Vector2 thrustDirection = 
-		Vector2 force = thrustDirection * DRIFT_SPEED; 
-		rb.AddForce(force); 
+		Vector2 thrustDirection =
+		Vector2 force = thrustDirection * DRIFT_SPEED;
+		rb.AddForce(force);
 	}*/
 
 	private void FlyTowardWaypoint()
@@ -138,11 +136,11 @@ public class DarkWhisp : MonoBehaviour
 	{
 		if (rb.velocity.sqrMagnitude > MAX_SPEED_SQUARED)
 		{
-			rb.velocity = rb.velocity.normalized * MAX_SPEED; 
+			rb.velocity = rb.velocity.normalized * MAX_SPEED;
 		}
 	}
 
-	float AngleTo(Vector2 pointToCheck) 
+	float AngleTo(Vector2 pointToCheck)
 	{
 		return Vector2.Angle(transform.TransformVector(transform.up), VectorTo(pointToCheck));
 	}
@@ -171,7 +169,7 @@ public class DarkWhisp : MonoBehaviour
 		ResetAttackTimer(6f);
 		List <Vector2> targets = new List<Vector2>();
 
-		for (int i=0;  i<ATTACK_SHOTS; i++) 
+		for (int i=0;  i<ATTACK_SHOTS; i++)
 		{
 			float xRand = Random.Range(-3f, 3f);
 			float yRand = Random.Range(-3f, 3f);
@@ -180,6 +178,7 @@ public class DarkWhisp : MonoBehaviour
 			targets.Add(newLoc);
 			AudioSource.PlayClipAtPoint(spittleSound, (Vector2)transform.position);
 		}
+
 		foreach (Vector2 target in targets)
 		{
 			GameObject spittle = Instantiate(spittlePrefab, transform.position, Quaternion.identity);
@@ -193,5 +192,4 @@ public class DarkWhisp : MonoBehaviour
 	{
 		attackTimer = resetTime;
 	}
-
 }

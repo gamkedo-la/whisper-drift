@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 	[SerializeField] private GameObject explosion = null;
 	[SerializeField] private GameObject explosionOnHit = null;
 	[SerializeField] private SpriteRenderer sprite = null;
-	[FMODUnity.EventRef, SerializeField] private string soundEvent;
+	[FMODUnity.EventRef, SerializeField] private string soundEvent = null;
 	[SerializeField] private float speed = 10f;
 	[SerializeField] private float lifeTime = 3f;
 	[SerializeField] private float maxTravelDistance = 6f;
