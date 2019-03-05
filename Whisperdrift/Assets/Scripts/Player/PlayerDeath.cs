@@ -15,6 +15,7 @@ public class PlayerDeath : MonoBehaviour
 	[FMODUnity.EventRef, SerializeField] private string playerHitEvent = null;
 
 	private FMOD.Studio.EventInstance playerHitSound;
+	private HP hp = null;
 
 	void Awake( )
 	{
@@ -28,6 +29,9 @@ public class PlayerDeath : MonoBehaviour
 		Assert.IsNotNull( hit );
 		Assert.IsNotNull( trailRenderer );
 		Assert.IsNotNull( playerSpawn );
+
+		hp = GetComponent<HP>( );
+		Assert.IsNotNull( hp );
 	}
 
 	void OnEnable( )
@@ -37,6 +41,9 @@ public class PlayerDeath : MonoBehaviour
 
 	public void Hit( Vector2 hitPosition, float magnitude )
 	{
+		// Stebs: you probably wanted it somewhere around here you can use this below (please delete this comment)
+		Debug.Log( hp.CurrentHP );
+
 		playerHitSound.start( );
 		Instantiate( hit, hitPosition, Quaternion.identity );
 	}
@@ -59,7 +66,7 @@ public class PlayerDeath : MonoBehaviour
 
 	private void PlayerRestart( )
 	{
-		GetComponent<HP>( ).ChangeHP( 100 );
+		hp.ChangeHP( 100 );
 		GetComponent<Rigidbody2D>( ).velocity = Vector2.zero;
 
 		foreach ( var item in toHide )
