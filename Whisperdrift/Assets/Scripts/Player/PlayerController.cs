@@ -17,8 +17,11 @@ public class PlayerController : MonoBehaviour
 	private bool canFreeze = true;
 	private Vector2 oldVelocity = Vector2.zero;
 	private Vector3 freezeAccumulatedForce = Vector3.zero;
+    private FMOD.Studio.EventInstance playerFreezeSound;
+    private bool alreadyFrozen;
+    
 
-	void Start( )
+    void Start( )
 	{
 		rb = GetComponent<Rigidbody2D>( );
 		Assert.IsNotNull( rb );
@@ -28,14 +31,24 @@ public class PlayerController : MonoBehaviour
 		Assert.IsNotNull( zoomController );
 
 		freezeAvailable = freezeMax;
-	}
+
+        playerFreezeSound = FMODUnity.RuntimeManager.CreateInstance("event:/player_freeze");
+
+        alreadyFrozen = false;
+    }
 
 	void Update( )
 	{
-		if ( isFrozen )
-			freezeAvailable -= freezeDecline * Time.deltaTime;
-		else
-			freezeAvailable += freezeRegen * Time.deltaTime;
+        if (isFrozen)
+        {
+            freezeAvailable -= freezeDecline * Time.deltaTime;
+        }
+        else
+        {
+            freezeAvailable += freezeRegen * Time.deltaTime;
+            alreadyFrozen = false;
+        }
+            
 
 		freezeAvailable = Mathf.Clamp( freezeAvailable, 0, freezeMax );
 
@@ -56,18 +69,34 @@ public class PlayerController : MonoBehaviour
 
 		if ( ( Input.GetMouseButtonDown( 1 ) || Input.GetKeyDown( KeyCode.Space ) ) && canFreeze )
 			oldVelocity = rb.velocity;
+            
 
 		if ( ( Input.GetMouseButtonUp( 1 ) || Input.GetKeyUp( KeyCode.Space ) ) && isFrozen )
 		{
 			canFreeze = false;
 			rb.velocity = oldVelocity;
+            //alreadyFrozen = false;
+            //Debug.Log(alreadyFrozen);
 		}
 
-		if ( ( Input.GetMouseButton( 1 ) || Input.GetKey( KeyCode.Space ) ) && canFreeze )
-			isFrozen = true;
-		else
-			isFrozen = false;
-	}
+        if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space)) && canFreeze)
+        {
+            isFrozen = true;
+            
+        }
+        else
+        {
+            isFrozen = false;
+        }
+
+        if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space)) && canFreeze && !alreadyFrozen)
+        {
+            playerFreezeSound.start();
+            alreadyFrozen = true;
+            Debug.Log(alreadyFrozen);
+        }
+
+    }
 
 	void FixedUpdate( )
 	{
