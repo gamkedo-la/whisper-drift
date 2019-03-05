@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
 	private Vector3 freezeAccumulatedForce = Vector3.zero;
     private FMOD.Studio.EventInstance playerFreezeSound;
     private FMOD.Studio.EventInstance cantFreezeSound;
+    
     private bool alreadyFrozen;
     private bool alreadyCantFreeze;
     
@@ -80,8 +81,6 @@ public class PlayerController : MonoBehaviour
             canFreeze = false;
             rb.velocity = oldVelocity;
             
-            //alreadyFrozen = false;
-            //Debug.Log(alreadyFrozen);
         }
 
         if ( Input.GetMouseButtonUp(1) || Input.GetKeyUp(KeyCode.Space) ) {
@@ -101,6 +100,7 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space)) && canFreeze && !alreadyFrozen)
         {
             playerFreezeSound.start();
+            
             alreadyFrozen = true;
             Debug.Log(alreadyFrozen);
         }
