@@ -46,11 +46,17 @@ public class Projectile : MonoBehaviour
 
 	void OnCollisionEnter2D( Collision2D collision )
 	{
-		if ( collision.gameObject.CompareTag( Tags.Enemy ) || collision.gameObject.CompareTag( Tags.Destructible ) )
+		if ( collision.gameObject.CompareTag( Tags.Enemy ) )
 		{
 			collision.gameObject.GetComponent<HP>( ).ChangeHP( -damage );
 			Instantiate( explosionOnHit, transform.position, Quaternion.identity );
 			sound.start( );
+		}
+
+		if ( collision.gameObject.CompareTag( Tags.Destructible ) )
+		{
+			collision.gameObject.GetComponent<HP>( ).ChangeHP( -damage );
+			Instantiate( explosionOnHit, transform.position, Quaternion.identity );
 		}
 
 		if ( collision.gameObject.CompareTag( Tags.Player ) )
