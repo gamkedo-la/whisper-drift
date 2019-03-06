@@ -42,10 +42,10 @@ public class HP : MonoBehaviour
 	public void ChangeHP( float change )
 	{
 		CurrentHP += change;
-        if (CurrentHP > 0 && CurrentHP != 100)
+        if (CurrentHP > 0 && CurrentHP != 100 && gameObject.name == "Player")
         {
             playerHitSound.start();
-        } else if (CurrentHP <= 0)
+        } else if (CurrentHP <= 0 && gameObject.name == "Player")
         {
             playerDeathSound.start();
         }
