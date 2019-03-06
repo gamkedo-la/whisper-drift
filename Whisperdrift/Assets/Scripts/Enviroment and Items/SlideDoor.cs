@@ -15,14 +15,21 @@ public class SlideDoor : MonoBehaviour
 
 	private float dir = -1;
 
-	void Start ()
+
+    private FMOD.Studio.EventInstance slidingDoorSound;
+    private bool slidingDoorSoundPlaying;
+
+    void Start ()
 	{
 		Assert.IsNotNull( door1 );
 		Assert.IsNotNull( door2 );
 
 		d1o = door1.transform.localPosition;
 		d2o = door2.transform.localPosition;
-	}
+       
+        slidingDoorSound = FMODUnity.RuntimeManager.CreateInstance("event:/sliding_door_open_close");
+        slidingDoorSoundPlaying = false;
+    }
 
 	void Update ()
 	{
@@ -32,11 +39,37 @@ public class SlideDoor : MonoBehaviour
 		d1p.y = Mathf.Clamp( d1p.y + dir * speed * Time.deltaTime, d1o.y, d1d.y );
 		d2p.y = Mathf.Clamp( d2p.y + -dir * speed * Time.deltaTime, d2d.y, d2o.y );
 
+      
+        
+        
 		door1.transform.localPosition = d1p;
 		door2.transform.localPosition = d2p;
-	}
 
-	public void DoorState ( bool isOpen )
+        Debug.Log(slidingDoorSoundPlaying);
+        Debug.Log(door1.transform.localPosition.y);
+
+        if (door1.transform.localPosition.y > 2.7 && door1.transform.localPosition.y < 6.15 && !slidingDoorSoundPlaying)
+        {
+            //Debug.Log("should play sliding door sound" + convertedDoor1Y);
+            slidingDoorSound.start();
+            slidingDoorSoundPlaying = true;
+        }
+        else if (door1.transform.localPosition.y <= 2.7 && door1.transform.localPosition.y >= 6.15 && slidingDoorSoundPlaying )
+        {
+            //Debug.Log("should stop sliding door sound" + convertedDoor1Y);
+
+            slidingDoorSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            slidingDoorSoundPlaying = false;
+        } /*else if (door1.transform.localPosition.y >= d1d.y)
+        {
+            //Debug.Log("should stop sliding door sound" + convertedDoor1Y);
+
+            slidingDoorSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            slidingDoorSoundPlaying = false;
+        }*/
+    }
+
+    public void DoorState ( bool isOpen )
 	{
 		dir = isOpen ? speed : -speed * 3;
 	}
