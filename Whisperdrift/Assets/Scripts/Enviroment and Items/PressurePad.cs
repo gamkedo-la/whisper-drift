@@ -5,13 +5,13 @@ public class PressurePad : MonoBehaviour
 {
 	[SerializeField] private UnityEvent onPressed = null;
 	[SerializeField] private UnityEvent onReleased = null;
-    private FMOD.Studio.EventInstance slidingDoorSound;
+    //private FMOD.Studio.EventInstance slidingDoorSound;
     private bool alreadyOpening;
 
     private void Awake()
     {
         alreadyOpening = false;
-        slidingDoorSound = FMODUnity.RuntimeManager.CreateInstance("event:/sliding_door_open_close");
+        //slidingDoorSound = FMODUnity.RuntimeManager.CreateInstance("event:/sliding_door_open_close");
     }
 
     private void OnTriggerEnter2D( Collider2D collision )
@@ -22,7 +22,7 @@ public class PressurePad : MonoBehaviour
 		onPressed.Invoke( );
         if (!alreadyOpening)
         {
-            slidingDoorSound.start();
+            //slidingDoorSound.start();
             alreadyOpening = true;
         }
 
@@ -34,7 +34,7 @@ public class PressurePad : MonoBehaviour
 			return;
 
 		onReleased.Invoke( );
-        slidingDoorSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        //slidingDoorSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         alreadyOpening = false;
 	}
 }

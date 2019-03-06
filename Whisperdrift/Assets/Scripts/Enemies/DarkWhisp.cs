@@ -53,7 +53,9 @@ public class DarkWhisp : MonoBehaviour
 	private void FixedUpdate()
 	{
 		if (attackTimer > 0) { attackTimer = attackTimer - Time.deltaTime; }
-		if (Vector2.Distance((Vector2)transform.position, (Vector2)player.position) < ATTACK_RANGE
+		
+		if (player // FIXME it is often null here, but should never be
+			&& Vector2.Distance((Vector2)transform.position, (Vector2)player.position) < ATTACK_RANGE
 			&& attackTimer <= 0f)
 		{
 			Attack();

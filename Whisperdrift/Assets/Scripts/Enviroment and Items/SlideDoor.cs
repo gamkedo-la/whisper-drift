@@ -39,28 +39,28 @@ public class SlideDoor : MonoBehaviour
 		d1p.y = Mathf.Clamp( d1p.y + dir * speed * Time.deltaTime, d1o.y, d1d.y );
 		d2p.y = Mathf.Clamp( d2p.y + -dir * speed * Time.deltaTime, d2d.y, d2o.y );
 
-      
-        
-        
 		door1.transform.localPosition = d1p;
 		door2.transform.localPosition = d2p;
 
-        Debug.Log(slidingDoorSoundPlaying);
-        Debug.Log(door1.transform.localPosition.y);
+        //Debug.Log("slidingDoorSoundPlaying: " + slidingDoorSoundPlaying);
+        //Debug.Log("door y: " + door1.transform.localPosition.y);
 
-        if (door1.transform.localPosition.y > 2.7 && door1.transform.localPosition.y < 6.15 && !slidingDoorSoundPlaying)
+        
+        if ((door1.transform.localPosition.y > 2.7 && door1.transform.localPosition.y < 6.15) && !slidingDoorSoundPlaying)
         {
-            //Debug.Log("should play sliding door sound" + convertedDoor1Y);
+            Debug.Log("should play sliding door sound because door y is " + door1.transform.localPosition.y);
             slidingDoorSound.start();
             slidingDoorSoundPlaying = true;
         }
-        else if (door1.transform.localPosition.y <= 2.7 && door1.transform.localPosition.y >= 6.15 && slidingDoorSoundPlaying )
+        else if ((door1.transform.localPosition.y <= 2.7 || door1.transform.localPosition.y >= 6.15) && slidingDoorSoundPlaying )
         {
-            //Debug.Log("should stop sliding door sound" + convertedDoor1Y);
-
-            slidingDoorSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            Debug.Log("should stop sliding door sound because door y is " + door1.transform.localPosition.y);
+            slidingDoorSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); // no effect?
             slidingDoorSoundPlaying = false;
-        } /*else if (door1.transform.localPosition.y >= d1d.y)
+        }
+
+        
+         /*else if (door1.transform.localPosition.y >= d1d.y)
         {
             //Debug.Log("should stop sliding door sound" + convertedDoor1Y);
 
