@@ -131,7 +131,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endEffect: {fileID: 7592066444540692698, guid: a6235b51dfabd9240bd48a6a86c74877,
     type: 3}
-  mainLight: {fileID: 0}
   glows:
   - {fileID: 3303382056041786967}
   - {fileID: 3303382056318094062}
@@ -1114,9 +1113,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -96565601
+  m_SortingLayer: 2
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 51563a32d3844bb47b8306d5c22dfa94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1403,9 +1402,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -285228223
-  m_SortingLayer: 4
-  m_SortingOrder: 30
+  m_SortingLayerID: -96565601
+  m_SortingLayer: 2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 0bbb3c6aa5d855949b6150f897650123, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
