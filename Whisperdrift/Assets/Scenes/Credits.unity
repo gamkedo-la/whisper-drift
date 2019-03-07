@@ -10990,8 +10990,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.62
+  m_Color: {r: 1, g: 0.9919287, b: 0.6367924, a: 1}
+  m_Intensity: 1.34
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -29334,7 +29334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2430256861969067230}
-  duration: 1
+  speed: 1
   startOnEnable: 0
   fadeToColor: 1
   onDone:
@@ -29415,7 +29415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 6823120863130062315}
-  duration: 1
+  speed: 1
   startOnEnable: 1
   fadeToColor: 0
   onDone:
