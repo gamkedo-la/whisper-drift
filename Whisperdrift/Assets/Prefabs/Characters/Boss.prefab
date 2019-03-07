@@ -1178,7 +1178,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tails: []
-  crystal: {fileID: 7100243149405498671, guid: 25ae830d321bdb84d9879398bb97d59b, type: 3}
   explosion: {fileID: 6384384428275158254, guid: 88126d7cf6f57fc4a9183daf9ea683cc,
     type: 3}
   tail: {fileID: 3150391648670292283, guid: d76a3441441130041abd83beda6dfae4, type: 3}
@@ -2627,6 +2626,7 @@ GameObject:
   - component: {fileID: 6047778214294979423}
   - component: {fileID: 6047778214294979422}
   - component: {fileID: 6047778214294979421}
+  - component: {fileID: 8483129081297278502}
   m_Layer: 15
   m_Name: Boss
   m_TagString: Enemy
@@ -2757,6 +2757,23 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &8483129081297278502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6047778214294979420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a53d9045c6fcf46b8012b6807b2b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallExp: {fileID: 5447721591636416765, guid: a033c5fea5e9fd4458ea07b32a8165bd,
+    type: 3}
+  hp: {fileID: 6047778214294979421}
+  soundEvent: event:/enemy_hit
+  damagePerWhisp: 10
 --- !u!1 &6382501815691195715
 GameObject:
   m_ObjectHideFlags: 0

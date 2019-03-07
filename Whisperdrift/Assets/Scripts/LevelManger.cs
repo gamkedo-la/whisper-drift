@@ -23,6 +23,9 @@ public class LevelManger : MonoBehaviour
 	[SerializeField] private GameObject endEffect = null;
 	[SerializeField] private GameObject crystal = null;
 	[SerializeField] private GameObject crystalEffect = null;
+	[SerializeField] private GameObject rescudeWhisp = null;
+	[SerializeField] private Vector2 center = new Vector2(-3f, 34);
+	[SerializeField] private float radius = 23f;
 	[SerializeField] private bool isBossLevel = false;
 
 	private Vector2 crystalPos;
@@ -60,7 +63,26 @@ public class LevelManger : MonoBehaviour
 			faeriesAvailable += PlayerPrefs.GetInt( "Level 06", 0 );
 
 			Debug.Log( "Faeries available: " + faeriesAvailable );
+
+			for ( int i = 0; i < 60; i++ )
+			{
+				InstNewWhisp( );
+			}
 		}
+	}
+
+	private void InstNewWhisp()
+	{
+		Instantiate( rescudeWhisp, NewDestination( ), Quaternion.identity );
+	}
+
+	private Vector2 NewDestination( )
+	{
+		return new Vector2
+		(
+			Random.Range( center.x - radius, center.x + radius ),
+			Random.Range( center.y - radius, center.y + radius )
+		);
 	}
 
 	public void Faerie( )

@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
 		Assert.IsNotNull( sprite );
 		Assert.IsNotNull( rb );
 
-		sound = FMODUnity.RuntimeManager.CreateInstance( soundEvent ); ;
+		sound = FMODUnity.RuntimeManager.CreateInstance( soundEvent );
 
 		originPoint = transform.position;
 		Invoke( "DestroyProjectile", lifeTime );
