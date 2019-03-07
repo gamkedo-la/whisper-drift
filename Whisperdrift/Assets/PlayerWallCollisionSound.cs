@@ -14,9 +14,9 @@ public class PlayerWallCollisionSound : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.gameObject.CompareTag(Tags.Wall))
-            return;
-
-        PlayerCollidesNonDamagingObjectSound.start();
+        if ( collision.gameObject.layer == 17 || collision.gameObject.CompareTag(Tags.Player) )
+        {
+            PlayerCollidesNonDamagingObjectSound.start();
+        }
     }
 }
