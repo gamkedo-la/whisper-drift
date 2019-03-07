@@ -10,12 +10,10 @@ public class RingGate : MonoBehaviour
 
 	private bool activated = false;
     FMOD.Studio.EventInstance RingGateParticleSpawnSound;
-    FMOD.Studio.EventInstance PlayerHitWallOrPlatformSound;
 
     void Awake()
     {
         RingGateParticleSpawnSound = FMODUnity.RuntimeManager.CreateInstance("event:/particle_spawn_sound");
-        PlayerHitWallOrPlatformSound = FMODUnity.RuntimeManager.CreateInstance("event:/player_collides_wall_or_platform");
     }
 
     void Start ()
@@ -50,8 +48,4 @@ public class RingGate : MonoBehaviour
 		LevelManger.Instance.RingGateActiveted( this );
 	}
 
-    private void OnCollisionEnter2D(Collider2D collision)
-    {
-        PlayerHitWallOrPlatformSound.start();
-    }
 }
