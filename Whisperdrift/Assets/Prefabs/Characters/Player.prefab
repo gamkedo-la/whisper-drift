@@ -11370,7 +11370,7 @@ GameObject:
   - component: {fileID: 6839665191572876953}
   - component: {fileID: 6839665191572876959}
   - component: {fileID: 2710604812265585603}
-  - component: {fileID: 2654751014681697779}
+  - component: {fileID: 1489889291974929721}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -11464,7 +11464,6 @@ MonoBehaviour:
   - {fileID: 6839665191572876953}
   trailRenderer: {fileID: 6839665189911795643}
   restartDelay: 0.1
-  playerHitEvent: event:/player_hit
 --- !u!114 &6839665191572876953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11550,7 +11549,7 @@ MonoBehaviour:
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   glowMin: 1
   glowMax: 3
---- !u!114 &2654751014681697779
+--- !u!114 &1489889291974929721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11559,20 +11558,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6839665191572876933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: fe4c1641c33718e4b8560967797ea154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: 
-  PlayEvent: 9
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
 --- !u!1 &6839665191633272271
 GameObject:
   m_ObjectHideFlags: 0
@@ -11699,6 +11687,7 @@ MonoBehaviour:
     type: 3}
   shotDelay: 0.25
   shotSpreed: 5
+  ignoreUI: 1
 --- !u!1 &6839665191768833598
 GameObject:
   m_ObjectHideFlags: 0
