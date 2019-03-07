@@ -1351,6 +1351,7 @@ GameObject:
   - component: {fileID: 6521330146019313823}
   - component: {fileID: 6521330146019313821}
   - component: {fileID: 6588569153701138987}
+  - component: {fileID: 867379534047611340}
   m_Layer: 16
   m_Name: Ring Gate
   m_TagString: Untagged
@@ -1445,6 +1446,27 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!50 &867379534047611340
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6521330146019313808}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6558198355119664367
 GameObject:
   m_ObjectHideFlags: 0
