@@ -59,6 +59,7 @@ public class Crystal : MonoBehaviour
 			GameObject ep = Instantiate( parts[Random.Range(0, parts.Length)], transform.position + (Vector3)Random.insideUnitCircle * 0.2f, Quaternion.identity );
 			ep.GetComponent<Rigidbody2D>( ).velocity = Quaternion.Euler( 0, 0, Random.Range( -60f, 60f ) ) * transform.up * Random.Range( 3f, 5f );
 			ep.transform.localScale = new Vector3( Random.Range( 0.3f, 0.6f ), Random.Range( 0.3f, 0.6f ), 1.0f );
+			ep.transform.localRotation = Quaternion.Euler( 0, 0, Random.Range( 0, 360f ) );
 		}
 
 		Destroy( gameObject );
