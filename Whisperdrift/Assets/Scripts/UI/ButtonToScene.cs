@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
-public class ButtonToScene : MonoBehaviour
+public class ButtonToScene : MonoBehaviour, IPointerClickHandler
 {
 	public string sceneName = "null";
 	public bool startTime = false;
@@ -17,6 +18,16 @@ public class ButtonToScene : MonoBehaviour
 		if ( aud == null )
 			aud = FindObjectOfType<AudioSource>( );
 	}
+	
+	void ClickEvent()
+	{
+		if ( sceneName == "Quit" )
+			Application.Quit( );
+		else if ( sceneName == "Reset" )
+			SceneManager.LoadScene( gameObject.scene.name );
+		else
+			OnButtonPress.Invoke( );
+	}
 
 	void OnMouseOver( )
 	{
@@ -24,18 +35,17 @@ public class ButtonToScene : MonoBehaviour
 		{
 			if ( aud != null )
 				aud.PlayOneShot( clickSound );
-
-			if ( sceneName == "Quit" )
-				Application.Quit( );
-			else if ( sceneName == "Reset" )
-				SceneManager.LoadScene( gameObject.scene.name );
-			else
-				OnButtonPress.Invoke( );
+			ClickEvent();
 
 			if ( startTime )
 				Time.timeScale = 1f;
 		}
 	}
+	
+	public void OnPointerClick(PointerEventData eventData)
+    {
+		ClickEvent();
+    }
 
 	public void GoToScene( )
 	{
