@@ -18,7 +18,13 @@ public class LevelManger : MonoBehaviour
 	[SerializeField] private float levelChangeDelay = 1.0f;
 	[SerializeField] private UnityEventFloat onLevelProgress = null;
 	[SerializeField] private UnityEvent onLevelEnd = null;
+	[Header("Boss Level")]
+	[SerializeField] private GameObject music = null;
+	[SerializeField] private GameObject endEffect = null;
+	[SerializeField] private GameObject crystal = null;
+	[SerializeField] private GameObject crystalEffect = null;
 
+	private Vector2 crystalPos;
 	private int activeRingGates = 0;
 	private List<RingGate> ringGates;
 	private RingGateExit ringGateExit = null;
@@ -70,6 +76,48 @@ public class LevelManger : MonoBehaviour
 	public void ExitActivated( )
 	{
         Invoke( "LevelEnd", levelChangeDelay );
+	}
+
+	public void ShowCrystal( Vector2 position )
+	{
+		crystalPos = position;
+
+		Invoke( "SpawnCrystalEffect", 2f );
+		Invoke( "SpawnCrystal", 2.5f );
+	}
+
+	public void EndBossLevel( )
+	{
+		Invoke( "PlayEndMusic", 0.2f );
+		Invoke( "SpiritAway", 0.5f );
+		Invoke( "TheEnd", 1f );
+	}
+
+	private void SpawnCrystalEffect()
+	{
+		Instantiate( crystalEffect, crystalPos, Quaternion.identity );
+	}
+
+	private void SpawnCrystal()
+	{
+		Instantiate( crystal, crystalPos, Quaternion.identity );
+	}
+
+	private void PlayEndMusic( )
+	{
+		Instantiate( music, transform.position, Quaternion.identity );
+	}
+
+	private void SpiritAway( )
+	{
+		GameObject player = GameObject.FindGameObjectWithTag( "Player" );
+		Instantiate( endEffect, player.transform.position, Quaternion.identity );
+		Destroy( player );
+	}
+
+	private void TheEnd( )
+	{
+		GameObject.Find( "Screen Transition Out of Level" ).GetComponent<ScreenTransition>( ).StartTransition( );
 	}
 
 	private void UpdateLabel( )

@@ -7,7 +7,6 @@ public class BossTailSpawner : MonoBehaviour
 	public static BossTailSpawner Instance { get; private set; }
 	public List<GameObject> Tails;
 
-	[SerializeField] private GameObject crystal = null;
 	[SerializeField] private GameObject explosion = null;
 	[SerializeField] private GameObject tail = null;
 	[SerializeField] private float spawnDelay = 1f;
@@ -33,7 +32,8 @@ public class BossTailSpawner : MonoBehaviour
 
 	public void Kill( )
 	{
-		Instantiate( crystal, transform.position, Quaternion.identity );
+		LevelManger.Instance.ShowCrystal( transform.position );
+
 		GameObject e = Instantiate( explosion, transform.position, Quaternion.identity );
 		e.transform.localScale = Vector3.one * 2;
 
@@ -41,6 +41,8 @@ public class BossTailSpawner : MonoBehaviour
 		{
 			Tails[i].GetComponent<BossTail>( ).DestroyMe( 0.1f * ( Tails.Count - i ) );
 		}
+
+		FindObjectOfType<MusicEnd>( ).enabled = true;
 	}
 
 	public void GotHit()

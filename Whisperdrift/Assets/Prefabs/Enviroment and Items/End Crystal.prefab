@@ -1110,6 +1110,7 @@ GameObject:
   - component: {fileID: 325854685758768945}
   - component: {fileID: 1234633791235732542}
   - component: {fileID: 4845242006043062515}
+  - component: {fileID: 532436430}
   m_Layer: 16
   m_Name: End Crystal
   m_TagString: Untagged
@@ -1178,6 +1179,25 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 0
   OverrideMaxDistance: 0
+--- !u!114 &532436430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7100243149405498671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75bb7f855f2df5240a39dcd17f555951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endEffect: {fileID: 6384384428275158254, guid: 88126d7cf6f57fc4a9183daf9ea683cc,
+    type: 3}
+  music: {fileID: 3101765130846486627, guid: cd51ed00e2bc23b4985a7547ccc90031, type: 3}
+  parts:
+  - {fileID: 8133385114605483244, guid: 169d3e4df430f484bad76272612dc2f9, type: 3}
+  - {fileID: 8341005390312485924, guid: ef628480b7e2fb04d85211bb74bbc60b, type: 3}
+  - {fileID: 2926497842919063369, guid: bf953b0d7ac674b4e96a1220a1735986, type: 3}
 --- !u!1 &7875970124999222877
 GameObject:
   m_ObjectHideFlags: 0
