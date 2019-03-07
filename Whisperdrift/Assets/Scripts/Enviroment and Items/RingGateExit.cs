@@ -15,12 +15,15 @@ public class RingGateExit : MonoBehaviour
     FMOD.Studio.EventInstance RingGateExitActivationLowPulseSound;
     FMOD.Studio.EventInstance RingGateExitActivationSlidingChordSound;
     FMOD.Studio.EventInstance RingGateParticleSpawnSound;
+    FMOD.Studio.EventInstance PlayerCollidesNonDamagingObjectSound;
+
 
     void Awake()
     {
         RingGateExitActivationLowPulseSound = FMODUnity.RuntimeManager.CreateInstance("event:/exit_activate_low_end_pulse");
         RingGateExitActivationSlidingChordSound = FMODUnity.RuntimeManager.CreateInstance("event:/exit_activate_chord_slide");
         RingGateParticleSpawnSound = FMODUnity.RuntimeManager.CreateInstance("event:/particle_spawn_sound");
+        PlayerCollidesNonDamagingObjectSound = FMODUnity.RuntimeManager.CreateInstance("event:/player_collides_wall_or_platform");
     }
 
 	void Start( )
@@ -44,6 +47,14 @@ public class RingGateExit : MonoBehaviour
         RingGateExitActivationLowPulseSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         LevelManger.Instance.ExitActivated( );
 	}
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag(Tags.Player))
+            return;
+
+        PlayerCollidesNonDamagingObjectSound.start();
+    }
 
     public void PowerUp( )
 	{
