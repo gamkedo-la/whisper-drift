@@ -24,6 +24,7 @@ public class Crystal : MonoBehaviour
 
 		glowMat = glows[0].material;
 		currentHp = hp;
+
 	}
 
 	void OnCollisionEnter2D( Collision2D collision )
@@ -50,6 +51,8 @@ public class Crystal : MonoBehaviour
 	private void Destroy( )
 	{
 		Instantiate( endEffect, transform.position, Quaternion.identity );
+
+		LevelManger.Instance.Faerie( );
 
 		for ( int i = 0; i < Random.Range( 4, 6 ); i++ )
 		{

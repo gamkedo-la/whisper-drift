@@ -3,7 +3,6 @@ using UnityEngine.Assertions;
 
 public class EnemyShooter : MonoBehaviour
 {
-	[SerializeField] private GameObject player = null;
 	[SerializeField] private Transform spawnPoint = null;
 	[SerializeField] private Transform shootPoint = null;
 	[SerializeField] private GameObject flash = null;
@@ -16,11 +15,12 @@ public class EnemyShooter : MonoBehaviour
 	[SerializeField] private float shotWarningDistance = 6f;
 
 	private float timeToNextShot = 0;
+	private GameObject player = null;
 
 	void Start( )
 	{
-		if ( player == null )
-			player = GameObject.Find( "Player" );
+		if ( player == null && PlayerController.Instance != null )
+			player = PlayerController.Instance.gameObject;
 
 		//Assert.IsNotNull( player );
 		Assert.IsNotNull( spawnPoint );
@@ -40,9 +40,9 @@ public class EnemyShooter : MonoBehaviour
 		gunColor.a = 1 - ( timeToNextShot / shotDelay );
 		gunSprite.color = gunColor;
 
-		if ( player == null )
-			player = GameObject.Find( "Player" );
-		if ( player == null )
+		if ( player == null && PlayerController.Instance != null )
+			player = PlayerController.Instance.gameObject;
+		if ( player == null || player.transform == null )
 			return;
 
 		TargetPlayer( );

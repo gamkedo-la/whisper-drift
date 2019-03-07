@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+	public static PlayerController Instance { get; private set; }
+
 	[SerializeField] private Slider freezeBar = null;
 	[SerializeField] private float shotForce = 50f;
 	[SerializeField] private float freezeDecline = 50f;
@@ -23,8 +25,17 @@ public class PlayerController : MonoBehaviour
     private bool alreadyFrozen;
     private bool alreadyCantFreeze;
 
+	private void Awake( )
+	{
+		if ( Instance != null && Instance != this )
+			Destroy( gameObject );
+		else
+			Instance = this;
+	}
 
-    void Start( )
+	private void OnDestroy( ) { if ( this == Instance ) { Instance = null; } }
+
+	void Start( )
 	{
 		rb = GetComponent<Rigidbody2D>( );
 		Assert.IsNotNull( rb );

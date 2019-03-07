@@ -40,6 +40,8 @@ public class Enemy : MonoBehaviour
 		Instantiate( deathEffect, transform.position, Quaternion.identity );
 		Instantiate( deathEffect2, transform.position, Quaternion.identity );
 
+		LevelManger.Instance.Faerie( );
+
 		for ( int i = 0; i < Random.Range( 3, 5 ); i++ )
 		{
 			GameObject ep = Instantiate( enemyPart, transform.position + (Vector3)Random.insideUnitCircle * 0.2f, Quaternion.identity );

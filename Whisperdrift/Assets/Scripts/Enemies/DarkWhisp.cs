@@ -26,14 +26,16 @@ public class DarkWhisp : MonoBehaviour
 	///private float huntSpeed = 1.2f;
 	private Rigidbody2D rb;
 	int layermask = 0;
-	Transform player;
+	GameObject player;
 
 	private void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
 		waypoint = GenerateNewWaypoint();
 		SetLayerMask();
-		player = FindObjectOfType<PlayerController>().transform;
+
+		if ( player == null || player.transform == null )
+			player = FindObjectOfType<PlayerController>( ) ? FindObjectOfType<PlayerController>( ).gameObject : null;
 	}
 
 	private void SetLayerMask()
@@ -52,10 +54,15 @@ public class DarkWhisp : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		if ( player == null || player.transform == null )
+			player = FindObjectOfType<PlayerController>( ) ? FindObjectOfType<PlayerController>( ).gameObject : null;
+		if ( player == null || player.transform == null )
+			return;
+
 		if (attackTimer > 0) { attackTimer = attackTimer - Time.deltaTime; }
-		
-		if (player // FIXME it is often null here, but should never be
-			&& Vector2.Distance((Vector2)transform.position, (Vector2)player.position) < ATTACK_RANGE
+
+		if (player
+			&& Vector2.Distance((Vector2)transform.position, (Vector2)player.transform.position) < ATTACK_RANGE
 			&& attackTimer <= 0f)
 		{
 			Attack();
@@ -175,7 +182,7 @@ public class DarkWhisp : MonoBehaviour
 		{
 			float xRand = Random.Range(-3f, 3f);
 			float yRand = Random.Range(-3f, 3f);
-			Vector2 newLoc = new Vector2(player.position.x + xRand, player.position.y + yRand);
+			Vector2 newLoc = new Vector2(player.transform.position.x + xRand, player.transform.position.y + yRand);
 
 			targets.Add(newLoc);
 			AudioSource.PlayClipAtPoint(spittleSound, (Vector2)transform.position);

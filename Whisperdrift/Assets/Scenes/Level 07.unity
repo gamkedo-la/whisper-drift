@@ -39863,6 +39863,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3101765130846486627, guid: cd51ed00e2bc23b4985a7547ccc90031,
         type: 3}
+    - target: {fileID: 1154644934949711704, guid: d0211b7769ff0a2479fb2a82ee037797,
+        type: 3}
+      propertyPath: isBossLevel
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7778814124181609303, guid: d0211b7769ff0a2479fb2a82ee037797,
         type: 3}
       propertyPath: onDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target

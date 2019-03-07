@@ -23,11 +23,14 @@ public class LevelManger : MonoBehaviour
 	[SerializeField] private GameObject endEffect = null;
 	[SerializeField] private GameObject crystal = null;
 	[SerializeField] private GameObject crystalEffect = null;
+	[SerializeField] private bool isBossLevel = false;
 
 	private Vector2 crystalPos;
 	private int activeRingGates = 0;
 	private List<RingGate> ringGates;
 	private RingGateExit ringGateExit = null;
+	private int faeries = 0;
+	private int faeriesAvailable = 0;
 
 	private void Awake( )
 	{
@@ -45,6 +48,24 @@ public class LevelManger : MonoBehaviour
 	{
 		Assert.IsNotNull( label );
 		Assert.IsNotNull( exit );
+
+		if ( isBossLevel )
+		{
+			faeriesAvailable = 0;
+			faeriesAvailable += PlayerPrefs.GetInt( "Level 01", 0 );
+			faeriesAvailable += PlayerPrefs.GetInt( "Level 02", 0 );
+			faeriesAvailable += PlayerPrefs.GetInt( "Level 03", 0 );
+			faeriesAvailable += PlayerPrefs.GetInt( "Level 04", 0 );
+			faeriesAvailable += PlayerPrefs.GetInt( "Level 05", 0 );
+			faeriesAvailable += PlayerPrefs.GetInt( "Level 06", 0 );
+
+			Debug.Log( "Faeries available: " + faeriesAvailable );
+		}
+	}
+
+	public void Faerie( )
+	{
+		faeries++;
 	}
 
 	public void AddRingGate( RingGate ringGate )
@@ -127,6 +148,11 @@ public class LevelManger : MonoBehaviour
 
 	private void LevelEnd( )
 	{
+		if ( PlayerPrefs.GetInt( gameObject.scene.name ) < faeries )
+		{
+			PlayerPrefs.SetInt( gameObject.scene.name, faeries );
+			Debug.Log( "Saved: " + faeries );
+		}
 		onLevelEnd.Invoke( );
 	}
 
