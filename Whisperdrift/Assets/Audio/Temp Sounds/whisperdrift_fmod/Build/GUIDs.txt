@@ -15,11 +15,12 @@
 {f9e900ac-3a02-46f2-b2a6-b95deebfd704} event:/player_shot_hits_wall_or_platform
 {69eb1156-36e2-4aeb-9cad-806ea705cbb2} event:/rock_explode
 {ee974111-94c3-46a8-856f-5b800072da36} event:/rock_hit_or_tumble
+{e5cd99c0-d382-41da-a3ec-cc7cf32e2c47} event:/sliding_door_open_close
 {c5bf5971-d6f4-4fb8-b77b-1db585cfcdac} event:/small_rock_explode
 {81adae2c-0c48-4077-a552-3b88b46b5e79} event:/swing_door_close
 {342af83d-0c78-4007-89de-81c4fcbed8c8} event:/swinging_door_collision
 {4503c824-66b2-4618-90b6-e35d8f70909f} event:/swinging_door_open
-{e5cd99c0-d382-41da-a3ec-cc7cf32e2c47} event:/sliding_door_open_close
+{de4a61d9-e852-43c5-b97c-143cd9c6df31} event:/New Event
 {7aab1604-56e6-4283-bdf2-5e95f982bdbb} bus:/
 {1463dc73-a603-4575-b1ef-e39495f480f4} bus:/sound_effects
 {346dd227-cd0a-4501-a546-b728e8b58e6f} bus:/Reverb
