@@ -18,13 +18,16 @@ public class ButtonToScene : MonoBehaviour, IPointerClickHandler
 		if ( aud == null )
 			aud = FindObjectOfType<AudioSource>( );
 	}
-	
+
 	void ClickEvent()
 	{
 		if ( sceneName == "Quit" )
 			Application.Quit( );
 		else if ( sceneName == "Reset" )
+		{
+			Time.timeScale = 1f;
 			SceneManager.LoadScene( gameObject.scene.name );
+		}
 		else
 			OnButtonPress.Invoke( );
 	}
@@ -41,7 +44,7 @@ public class ButtonToScene : MonoBehaviour, IPointerClickHandler
 				Time.timeScale = 1f;
 		}
 	}
-	
+
 	public void OnPointerClick(PointerEventData eventData)
     {
 		ClickEvent();
