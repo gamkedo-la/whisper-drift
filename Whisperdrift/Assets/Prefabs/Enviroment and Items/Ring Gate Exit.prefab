@@ -7393,6 +7393,8 @@ GameObject:
   - component: {fileID: 7401874595725250873}
   - component: {fileID: 7401874595725250872}
   - component: {fileID: 4216723611572715350}
+  - component: {fileID: 6364269119872938907}
+  - component: {fileID: 2163038864804510782}
   m_Layer: 16
   m_Name: Ring Gate Exit
   m_TagString: Untagged
@@ -7465,6 +7467,50 @@ MonoBehaviour:
   - {fileID: 8875855575123905221}
   - {fileID: 727411031995741730}
   activationMaterial: {fileID: 2100000, guid: 66db34bcc57593f44b07478d4f3a89f8, type: 2}
+--- !u!114 &6364269119872938907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7401874595725250871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/player_collides_wall_or_platform
+  PlayEvent: 9
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!50 &2163038864804510782
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7401874595725250871}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 1
+  m_Mass: 8.395686
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8875855575123905221
 GameObject:
   m_ObjectHideFlags: 0

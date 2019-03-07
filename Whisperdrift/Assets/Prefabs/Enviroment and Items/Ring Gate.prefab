@@ -1350,6 +1350,7 @@ GameObject:
   - component: {fileID: 6521330146019313822}
   - component: {fileID: 6521330146019313823}
   - component: {fileID: 6521330146019313821}
+  - component: {fileID: 6588569153701138987}
   m_Layer: 16
   m_Name: Ring Gate
   m_TagString: Untagged
@@ -1421,6 +1422,29 @@ MonoBehaviour:
   - {fileID: 8505036853500837327}
   - {fileID: 1619331918378015000}
   activationMaterial: {fileID: 2100000, guid: d9ad68c21b4f14544a4dadaef023b79b, type: 2}
+--- !u!114 &6588569153701138987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6521330146019313808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/player_collides_wall_or_platform
+  PlayEvent: 9
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &6558198355119664367
 GameObject:
   m_ObjectHideFlags: 0
