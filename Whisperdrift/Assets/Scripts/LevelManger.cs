@@ -64,7 +64,7 @@ public class LevelManger : MonoBehaviour
 
 			Debug.Log( "Faeries available: " + faeriesAvailable );
 
-			for ( int i = 0; i < 60; i++ )
+			for ( int i = 0; i < faeriesAvailable; i++ )
 			{
 				InstNewWhisp( );
 			}
