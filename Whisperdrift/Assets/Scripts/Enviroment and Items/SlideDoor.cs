@@ -18,6 +18,8 @@ public class SlideDoor : MonoBehaviour
 
     private FMOD.Studio.EventInstance slidingDoorSound;
     private bool slidingDoorSoundPlaying;
+    private bool Released;
+    FMOD.Studio.EventInstance PressureReleaseSound;
 
     void Start ()
 	{
@@ -29,6 +31,9 @@ public class SlideDoor : MonoBehaviour
        
         slidingDoorSound = FMODUnity.RuntimeManager.CreateInstance("event:/sliding_door_open_close");
         slidingDoorSoundPlaying = false;
+
+        Released = false;
+        PressureReleaseSound = FMODUnity.RuntimeManager.CreateInstance("event:/sliding_door_pressure_release_sound");
     }
 
 	void Update ()
@@ -42,31 +47,27 @@ public class SlideDoor : MonoBehaviour
 		door1.transform.localPosition = d1p;
 		door2.transform.localPosition = d2p;
 
-        //Debug.Log("slidingDoorSoundPlaying: " + slidingDoorSoundPlaying);
-        //Debug.Log("door y: " + door1.transform.localPosition.y);
-
         
         if ((door1.transform.localPosition.y > 2.7 && door1.transform.localPosition.y < 6.15) && !slidingDoorSoundPlaying)
         {
-            Debug.Log("should play sliding door sound because door y is " + door1.transform.localPosition.y);
+            if (!Released)
+            {
+                Released = true;
+                PressureReleaseSound.start();
+            }
             slidingDoorSound.start();
             slidingDoorSoundPlaying = true;
         }
         else if ((door1.transform.localPosition.y <= 2.7 || door1.transform.localPosition.y >= 6.15) && slidingDoorSoundPlaying )
         {
-            Debug.Log("should stop sliding door sound because door y is " + door1.transform.localPosition.y);
+            if (Released)
+            {
+                Released = false;
+            }
             slidingDoorSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); // no effect?
             slidingDoorSoundPlaying = false;
         }
 
-        
-         /*else if (door1.transform.localPosition.y >= d1d.y)
-        {
-            //Debug.Log("should stop sliding door sound" + convertedDoor1Y);
-
-            slidingDoorSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            slidingDoorSoundPlaying = false;
-        }*/
     }
 
     public void DoorState ( bool isOpen )

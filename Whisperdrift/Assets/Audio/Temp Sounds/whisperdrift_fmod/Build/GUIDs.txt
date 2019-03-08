@@ -7,8 +7,8 @@
 {a092ff52-1271-4508-8624-a0aca6a469fc} event:/enemy_shot
 {f587dd3b-4450-4d3e-b5eb-05bcd25dc74a} event:/exit_activate_chord_slide
 {6a142e92-9da0-4a8d-8679-966f744c8db4} event:/exit_activate_low_end_pulse
-{de4a61d9-e852-43c5-b97c-143cd9c6df31} event:/New Event
 {e358b67c-deae-4dc5-8017-799bb9aa5a93} event:/particle_spawn_sound
+{3149c657-c9da-46be-87ba-a98c2005a4bc} event:/player_collides_wall_or_platform
 {b81244e1-88d0-4022-b93e-15b0c12c4d0a} event:/player_death
 {1144b1a0-3afc-4ce8-a38a-1b491a5552d0} event:/player_freeze
 {f1603c92-fca7-49fa-afdc-d04ceeefbffa} event:/player_hit
@@ -20,7 +20,7 @@
 {81adae2c-0c48-4077-a552-3b88b46b5e79} event:/swing_door_close
 {342af83d-0c78-4007-89de-81c4fcbed8c8} event:/swinging_door_collision
 {4503c824-66b2-4618-90b6-e35d8f70909f} event:/swinging_door_open
-{3149c657-c9da-46be-87ba-a98c2005a4bc} event:/player_collides_wall_or_platform
+{70905bed-627c-4e8b-8166-fb99d0f087ad} event:/sliding_door_pressure_release_sound
 {7aab1604-56e6-4283-bdf2-5e95f982bdbb} bus:/
 {1463dc73-a603-4575-b1ef-e39495f480f4} bus:/sound_effects
 {346dd227-cd0a-4501-a546-b728e8b58e6f} bus:/Reverb
