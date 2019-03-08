@@ -30296,7 +30296,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 37d1327379aacd546a64ef3f2512669f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -38641,15 +38641,15 @@ PrefabInstance:
       propertyPath: onDone.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 928528278}
-    - target: {fileID: 895715225783820779, guid: d0211b7769ff0a2479fb2a82ee037797,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6366940111162618524, guid: d0211b7769ff0a2479fb2a82ee037797,
         type: 3}
       propertyPath: speed
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 895715225783820779, guid: d0211b7769ff0a2479fb2a82ee037797,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0211b7769ff0a2479fb2a82ee037797, type: 3}
