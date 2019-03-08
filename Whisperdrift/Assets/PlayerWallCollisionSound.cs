@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerWallCollisionSound : MonoBehaviour
 {
+	[SerializeField] private AnimationCurve hitVolCurve = new AnimationCurve();
 
     FMOD.Studio.EventInstance PlayerCollidesNonDamagingObjectSound;
-    // Start is called before the first frame update
+
     void Awake()
     {
         PlayerCollidesNonDamagingObjectSound = FMODUnity.RuntimeManager.CreateInstance("event:/player_collides_wall_or_platform");
@@ -16,6 +15,12 @@ public class PlayerWallCollisionSound : MonoBehaviour
     {
         if ( collision.gameObject.layer == 17 || collision.gameObject.CompareTag(Tags.Player) )
         {
+			float hitVol = hitVolCurve.Evaluate( collision.relativeVelocity.magnitude );
+
+			// Here we can control the volume
+			Debug.Log( hitVol );
+			PlayerCollidesNonDamagingObjectSound.setVolume( hitVol );
+
             PlayerCollidesNonDamagingObjectSound.start();
         }
     }

@@ -11371,6 +11371,7 @@ GameObject:
   - component: {fileID: 6839665191572876959}
   - component: {fileID: 2710604812265585603}
   - component: {fileID: 1489889291974929721}
+  - component: {fileID: 1042933290921515985}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -11561,6 +11562,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4c1641c33718e4b8560967797ea154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitVolCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.12075907
+      outSlope: 0.12075907
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.08577879
+    - serializedVersion: 3
+      time: 15
+      value: 1
+      inSlope: 0.028698217
+      outSlope: 0.028698217
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.18510157
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1042933290921515985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6839665191572876933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/player_death
+  PlayEvent: 2
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &6839665191633272271
 GameObject:
   m_ObjectHideFlags: 0
