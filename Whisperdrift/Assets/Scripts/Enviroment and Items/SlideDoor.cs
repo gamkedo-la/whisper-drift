@@ -20,6 +20,8 @@ public class SlideDoor : MonoBehaviour
     private bool slidingDoorSoundPlaying;
     private bool Released;
     FMOD.Studio.EventInstance PressureReleaseSound;
+    FMOD.Studio.EventInstance DoorShutSound;
+    private bool DoorShut;
 
     void Start ()
 	{
@@ -34,6 +36,9 @@ public class SlideDoor : MonoBehaviour
 
         Released = false;
         PressureReleaseSound = FMODUnity.RuntimeManager.CreateInstance("event:/sliding_door_pressure_release_sound");
+
+        DoorShutSound = FMODUnity.RuntimeManager.CreateInstance("event:/sliding_door_close");
+        DoorShut = true;
     }
 
 	void Update ()
@@ -52,6 +57,7 @@ public class SlideDoor : MonoBehaviour
         {
             if (!Released)
             {
+                DoorShut = false;
                 Released = true;
                 PressureReleaseSound.start();
             }
@@ -64,8 +70,15 @@ public class SlideDoor : MonoBehaviour
             {
                 Released = false;
             }
+
             slidingDoorSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); // no effect?
             slidingDoorSoundPlaying = false;
+        }
+
+        if (door1.transform.localPosition.y <= 2.7  && !DoorShut)
+        {
+                DoorShutSound.start();
+                DoorShut = true;
         }
 
     }
