@@ -1178,6 +1178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tails: []
+  hp: {fileID: 6047778214294979421}
   explosion: {fileID: 6384384428275158254, guid: 88126d7cf6f57fc4a9183daf9ea683cc,
     type: 3}
   tail: {fileID: 3150391648670292283, guid: d76a3441441130041abd83beda6dfae4, type: 3}
@@ -1190,20 +1191,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 1
-      inSlope: -2.4339087
-      outSlope: -2.4339087
+      inSlope: -1.7626765
+      outSlope: -1.7626765
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.069977425
+      outWeight: 0.08803612
     - serializedVersion: 3
       time: 1
       value: 0.049999237
-      inSlope: -0.23480612
-      outSlope: -0.23480612
+      inSlope: -1.0060174
+      outSlope: -1.0060174
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.12641084
+      inWeight: 0.13544017
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
@@ -2774,6 +2775,11 @@ MonoBehaviour:
   hp: {fileID: 6047778214294979421}
   soundEvent: event:/enemy_hit
   damagePerWhisp: 10
+  onFirstHit:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &6382501815691195715
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class BossTailSpawner : MonoBehaviour
 	public static BossTailSpawner Instance { get; private set; }
 	public List<GameObject> Tails;
 
+	[SerializeField] private HP hp = null;
 	[SerializeField] private GameObject explosion = null;
 	[SerializeField] private GameObject tail = null;
 	[SerializeField] private float spawnDelay = 1f;
@@ -30,6 +31,36 @@ public class BossTailSpawner : MonoBehaviour
 
 	private void OnDestroy( ) { if ( this == Instance ) { Instance = null; } }
 
+	void Start ()
+	{
+		Assert.IsNotNull( hp );
+		Assert.IsNotNull( tail );
+
+		nextSpawnIn = spawnDelay;
+		disapearTimeCurrent = disapearTime;
+		disapearCountCurrent = disapearCount;
+
+		//Debug.Log( "D: " + disapearTimeCurrent + " %: " + disapearCurve.Evaluate( 1f - 1f - hp.CurrentHP / hp.MaxHP ) );
+	}
+
+	void Update ()
+	{
+		nextSpawnIn -= Time.deltaTime;
+
+		if (nextSpawnIn <= 0)
+		{
+			nextSpawnIn = spawnDelay;
+			GameObject f = Instantiate( tail, transform.position, Quaternion.identity );
+			f.GetComponent<BossTail>( ).SetDisapearTime( disapearTimeCurrent );
+		}
+	}
+
+	public void GotHit( )
+	{
+		disapearTimeCurrent = disapearTime * disapearCurve.Evaluate( 1f - hp.CurrentHP / hp.MaxHP );
+		//Debug.Log( "D: " + disapearTimeCurrent + " %: " + disapearCurve.Evaluate( 1f - hp.CurrentHP / hp.MaxHP ));
+	}
+
 	public void Kill( )
 	{
 		LevelManger.Instance.ShowCrystal( transform.position );
@@ -43,32 +74,5 @@ public class BossTailSpawner : MonoBehaviour
 		}
 
 		FindObjectOfType<MusicEnd>( ).enabled = true;
-	}
-
-	public void GotHit()
-	{
-		disapearCountCurrent--;
-		disapearTimeCurrent = disapearTime * disapearCurve.Evaluate( 1f - (float)disapearCountCurrent / disapearCount );
-	}
-
-	void Start ()
-	{
-		Assert.IsNotNull( tail );
-
-		nextSpawnIn = spawnDelay;
-		disapearTimeCurrent = disapearTime;
-		disapearCountCurrent = disapearCount;
-	}
-
-	void Update ()
-	{
-		nextSpawnIn -= Time.deltaTime;
-
-		if (nextSpawnIn <= 0)
-		{
-			nextSpawnIn = spawnDelay;
-			GameObject f = Instantiate( tail, transform.position, Quaternion.identity );
-			f.GetComponent<BossTail>( ).SetDisapearTime( disapearTimeCurrent );
-		}
 	}
 }

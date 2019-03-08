@@ -17,11 +17,8 @@ public class PlayerWallCollisionSound : MonoBehaviour
         {
 			float hitVol = hitVolCurve.Evaluate( collision.relativeVelocity.magnitude );
 
-			// Here we can control the volume
-			Debug.Log( hitVol );
-			PlayerCollidesNonDamagingObjectSound.setVolume( hitVol );
-
-            PlayerCollidesNonDamagingObjectSound.start();
+			PlayerCollidesNonDamagingObjectSound.setVolume( hitVol ); // Here we can control the volume
+			PlayerCollidesNonDamagingObjectSound.start();
         }
     }
 }

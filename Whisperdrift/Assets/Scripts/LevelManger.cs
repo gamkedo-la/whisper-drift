@@ -26,6 +26,7 @@ public class LevelManger : MonoBehaviour
 	[SerializeField] private GameObject rescudeWhisp = null;
 	[SerializeField] private Vector2 center = new Vector2(-3f, 34);
 	[SerializeField] private float radius = 23f;
+	[SerializeField] private float spawnDelay = 60f;
 	[SerializeField] private bool isBossLevel = false;
 
 	private Vector2 crystalPos;
@@ -34,6 +35,7 @@ public class LevelManger : MonoBehaviour
 	private RingGateExit ringGateExit = null;
 	private int faeries = 0;
 	private int faeriesAvailable = 0;
+	private bool startedSpawning = false;
 
 	private void Awake( )
 	{
@@ -63,17 +65,42 @@ public class LevelManger : MonoBehaviour
 			faeriesAvailable += PlayerPrefs.GetInt( "Level 06", 0 );
 
 			Debug.Log( "Faeries available: " + faeriesAvailable );
+		}
+	}
 
-			for ( int i = 0; i < faeriesAvailable; i++ )
-			{
-				InstNewWhisp( );
-			}
+	private void Update( )
+	{
+		if ( isBossLevel && !startedSpawning )
+			spawnDelay -= Time.deltaTime;
+
+		if (!startedSpawning && spawnDelay <= 0)
+		{
+			StartSpawningFaeries( );
+		}
+	}
+
+	public void StartSpawningFaeries()
+	{
+		Invoke( "StartSpawning", 1f );
+	}
+
+	private void StartSpawning()
+	{
+		if ( startedSpawning )
+			return;
+
+		Debug.Log( "Started spawning..." );
+		startedSpawning = true;
+		for ( int i = 0; i < faeriesAvailable; i++ )
+		{
+			Invoke( "InstNewWhisp", 0.05f * i );
 		}
 	}
 
 	private void InstNewWhisp()
 	{
-		Instantiate( rescudeWhisp, NewDestination( ), Quaternion.identity );
+		GameObject f = Instantiate( rescudeWhisp, PlayerController.Instance.transform.position, Quaternion.identity );
+		f.GetComponent<Faerie>( ).SetDestination( NewDestination( ) );
 	}
 
 	private Vector2 NewDestination( )
