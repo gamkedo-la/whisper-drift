@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class DarkWhisp : MonoBehaviour
 {
 	[SerializeField] private GameObject spittlePrefab = null;
-	[SerializeField] private AudioClip spittleSound = null;
+	[SerializeField] private PlaySound spittleASound = null;
 	private Vector3 waypoint = Vector3.zero;
 	private const float PATH_DISTANCE = 11f;
 	private const float ARRIVAL_DISTANCE = 1f;
@@ -18,7 +18,7 @@ public class DarkWhisp : MonoBehaviour
 	private const float ANGLE_HANDLING_AMT = 1f;
 	private const float ROTATION_SPEED = 0.002f;
 	private const float DRIFT_SPEED = 1f;
-	private const float ATTACK_RANGE = 3f;
+	private const float ATTACK_RANGE = 2f;
 	private const float ATTACK_DAMAGE = 1f;
 	private const float ATTACK_SHOTS = 6f;
 	private float attackTimer = 0f;
@@ -185,14 +185,14 @@ public class DarkWhisp : MonoBehaviour
 			Vector2 newLoc = new Vector2(player.transform.position.x + xRand, player.transform.position.y + yRand);
 
 			targets.Add(newLoc);
-			AudioSource.PlayClipAtPoint(spittleSound, (Vector2)transform.position);
+			spittleASound.Play( );
 		}
 
 		foreach (Vector2 target in targets)
 		{
 			GameObject spittle = Instantiate(spittlePrefab, transform.position, Quaternion.identity);
 			spittle.GetComponent<MoveEffect>().SetDestination(target);
-			AudioSource.PlayClipAtPoint(spittleSound, (Vector2)transform.position);
+			spittleASound.Play( );
 		}
 		player.GetComponent<HP>().ChangeHP(-ATTACK_DAMAGE);
 	}
