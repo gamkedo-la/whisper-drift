@@ -40,6 +40,7 @@ MonoBehaviour:
   - {fileID: 114354951638252192}
   - {fileID: 114251875171183506}
   - {fileID: 114678041354433294}
+  - {fileID: 114756022214575232}
   MasterBanks:
   - {fileID: 114410818254001308}
   - {fileID: 114794530094233314}
@@ -47,7 +48,7 @@ MonoBehaviour:
   - {fileID: 114352943130681550}
   StringsBanks:
   - {fileID: 114484437926960446}
-  stringsBankWriteTime: 636875826982441573
+  stringsBankWriteTime: 636875864150305083
   cacheVersion: 3
 --- !u!114 &114011359072275328
 MonoBehaviour:
@@ -726,11 +727,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636875826982441573
+  lastModified: 636875864150305083
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1930
+    Value: 1982
   Exists: 1
 --- !u!114 &114514194178957664
 MonoBehaviour:
@@ -792,11 +793,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\stebs\Desktop\whisper-drift\Whisperdrift\Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master
     Bank.bank
-  lastModified: 636875826982331873
+  lastModified: 636875864150215313
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1254560
+    Value: 1283520
   Exists: 1
 --- !u!114 &114566887450922072
 MonoBehaviour:
@@ -1174,6 +1175,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 56768
   Exists: 0
+--- !u!114 &114756022214575232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/player_spawn_sound
+  guid: 8d64cd656945fa4abab5c67871aba570
+  Banks:
+  - {fileID: 114545769034790844}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2612
 --- !u!114 &114764306907188042
 MonoBehaviour:
   m_ObjectHideFlags: 0
