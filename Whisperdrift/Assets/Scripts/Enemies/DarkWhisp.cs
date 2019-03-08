@@ -19,7 +19,7 @@ public class DarkWhisp : MonoBehaviour
 	private const float ROTATION_SPEED = 0.002f;
 	private const float DRIFT_SPEED = 1f;
 	private const float ATTACK_RANGE = 3f;
-	private const float ATTACK_DAMAGE = 20f;
+	private const float ATTACK_DAMAGE = 1f;
 	private const float ATTACK_SHOTS = 6f;
 	private float attackTimer = 0f;
 	private Vector2 forwardDirection = Vector2.up;
