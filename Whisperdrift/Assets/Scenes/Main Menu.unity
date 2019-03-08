@@ -18805,6 +18805,12 @@ SpriteShapeRenderer:
   m_LocalAABB:
     m_Center: {x: 130.88283, y: -26.292013, z: 0}
     m_Extent: {x: 132.0923, y: 89.06857, z: 0}
+--- !u!1 &798061690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6839665191572876933, guid: afeadb78a8c834041b6a42ea3eca2b4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1915188402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &813419711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35902,7 +35908,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-247070
+  m_Name: pb_Mesh-68876
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -43569,6 +43575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6839665191572876933, guid: afeadb78a8c834041b6a42ea3eca2b4a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6839665191572876958, guid: afeadb78a8c834041b6a42ea3eca2b4a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44696,6 +44707,7 @@ GameObject:
   - component: {fileID: 2011990835}
   - component: {fileID: 2011990836}
   - component: {fileID: 2011990837}
+  - component: {fileID: 2011990838}
   m_Layer: 0
   m_Name: Main Menu
   m_TagString: Untagged
@@ -44816,6 +44828,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8560530c99941f419efffc769c3ed62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2011990838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011990831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b99454038622a5c43840e9912ae303be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toEnable: {fileID: 798061690}
+  delay: 1
 --- !u!4 &2016342336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4196347649193472512, guid: 12bd300604062eb49b55949351546ba4,
