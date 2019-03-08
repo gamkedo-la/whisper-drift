@@ -28,6 +28,7 @@ public class PauseKeyListener : MonoBehaviour
 		shooter.enabled = false;
 		pause.SetActive( true );
 		pauseReminder.SetActive( false );
+		paused = true;
 	}
 
 	public void Resume()
@@ -35,12 +36,7 @@ public class PauseKeyListener : MonoBehaviour
 		Time.timeScale = 1f;
 		shooter.enabled = true;
 		pause.SetActive( false );
-		
-		//OPINION. Once pressed paused, no need to show that anymore.
-		
-		//Uncomment code below to show pause reminder (Esc to Pause)...
-		//...when player enters play mode back from pause menu
-		
-		//pauseReminder.SetActive( true );
+		pauseReminder.SetActive( true );
+		paused = false;
 	}
 }
