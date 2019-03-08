@@ -87,6 +87,9 @@ public class Projectile : MonoBehaviour
 
 	private void DestroyProjectile( )
 	{
+        GameObject trailGO = transform.GetComponentInChildren<ParticleSystem>().gameObject;
+        trailGO.transform.SetParent(null);
+        Destroy(trailGO, 3.0f);
 		Instantiate( explosion, transform.position, Quaternion.identity );
 		Destroy( gameObject );
 	}
