@@ -65,9 +65,6 @@ ExportedObj/
 Assets/ProBuilder*Data/ProBuilderPreferences.asset
 Assets/ProBuilder*Data/ProBuilderPreferences.asset.meta
 
-# Unity3D generated meta files
-*.pidb.meta
-
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
@@ -87,35 +84,11 @@ Whisperdrift/Temp Sounds/whisperdrift_fmod/**.restore
 *.apk
 *.unitypackage
 *.db
-Assets/Textures/Thumbs.db.meta
-Assets/Textures/Terrain/Thumbs.db.meta
-Assets/Sprites/Thumbs.db.meta
 
 Assets/Wwise/Editor/ProjectData/AkWwiseProjectData*
 Assets/FMODStudioCache.asset
-Assets/FMOD/HiddenPassageway/Build/Desktop/PlatformX.bank.meta
 Assets/FMODStudioCache.asset
 Assets/FMODStudioCache.asset
 obj
 /Assets/ProBuilder Data/ProBuilderPreferences.asset
-
-Whisperdrift/Assets/Audio/Temp Sounds/whisperdrift_fmod/Metadata/EffectPreset\.meta
-
-Whisperdrift/Assets/Audio/Temp Sounds/whisperdrift_fmod/Metadata/Group\.meta
-
-Whisperdrift/Assets/Audio/Temp Sounds/whisperdrift_fmod/Metadata/MixerView\.meta
-
-Whisperdrift/Assets/Audio/Temp Sounds/whisperdrift_fmod/Metadata/Snapshot\.meta
-
-Whisperdrift/Assets/Audio/Temp Sounds/whisperdrift_fmod/Metadata/VCA\.meta
-
-Whisperdrift/Assets/Audio/Temp Sounds/whisperdrift_fmod/Plugins\.meta
-
-Whisperdrift/Assets/StreamingAssets/Master Bank\.bank
-
-Whisperdrift/Assets/StreamingAssets/Master Bank\.bank\.meta
-
-Whisperdrift/Assets/StreamingAssets/Master Bank\.strings\.bank
-
-Whisperdrift/Assets/StreamingAssets/Master Bank\.strings\.bank\.meta
 *.fobj
