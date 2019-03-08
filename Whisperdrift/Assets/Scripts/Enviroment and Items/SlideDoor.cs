@@ -71,7 +71,7 @@ public class SlideDoor : MonoBehaviour
                 Released = false;
             }
 
-            slidingDoorSound.stop(FMOD.Studio.STOP_MODE.IMMEDIATE); // no effect?
+            slidingDoorSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); // no effect?
             slidingDoorSoundPlaying = false;
         }
 
