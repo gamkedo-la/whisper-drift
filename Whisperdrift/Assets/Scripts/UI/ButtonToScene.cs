@@ -22,14 +22,20 @@ public class ButtonToScene : MonoBehaviour, IPointerClickHandler
 	void ClickEvent()
 	{
 		if ( sceneName == "Quit" )
+		{
 			Application.Quit( );
+		}
 		else if ( sceneName == "Reset" )
 		{
 			Time.timeScale = 1f;
 			SceneManager.LoadScene( gameObject.scene.name );
 		}
 		else
+		{
+			Time.timeScale = 1f;
 			OnButtonPress.Invoke( );
+			SceneManager.LoadScene( sceneName );
+		}
 	}
 
 	void OnMouseOver( )

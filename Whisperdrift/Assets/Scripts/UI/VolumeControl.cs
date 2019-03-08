@@ -8,7 +8,7 @@ public class VolumeControl : MonoBehaviour
 	[SerializeField] private AudioMixer audioMixer = null;
 	[SerializeField] private Slider volumeSlider = null;
 	[SerializeField] private string exposedPropertyName = "Volume";
-
+	
     FMOD.Studio.Bus SoundEffectsBus;
 
 	void Start( )
