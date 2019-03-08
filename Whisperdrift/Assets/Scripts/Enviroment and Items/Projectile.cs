@@ -3,6 +3,7 @@ using UnityEngine.Assertions;
 
 public class Projectile : MonoBehaviour
 {
+	[SerializeField] private Transform tail = null;
 	[SerializeField] private GameObject explosion = null;
 	[SerializeField] private GameObject explosionOnHit = null;
 	[SerializeField] private SpriteRenderer sprite = null;
@@ -21,6 +22,7 @@ public class Projectile : MonoBehaviour
 	{
 		rb = GetComponent<Rigidbody2D>( );
 
+		Assert.IsNotNull( tail );
 		Assert.IsNotNull( explosion );
 		Assert.IsNotNull( sprite );
 		Assert.IsNotNull( rb );
@@ -87,9 +89,12 @@ public class Projectile : MonoBehaviour
 
 	private void DestroyProjectile( )
 	{
-        GameObject trailGO = transform.GetComponentInChildren<ParticleSystem>().gameObject;
-        trailGO.transform.SetParent(null);
-        Destroy(trailGO, 3.0f);
+		if ( tail )
+		{
+			tail.SetParent( null );
+			Destroy( tail.gameObject, 3.0f );
+		}
+
 		Instantiate( explosion, transform.position, Quaternion.identity );
 		Destroy( gameObject );
 	}
