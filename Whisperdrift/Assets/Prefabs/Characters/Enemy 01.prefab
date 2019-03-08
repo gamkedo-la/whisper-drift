@@ -2501,7 +2501,7 @@ MonoBehaviour:
     type: 3}
   enemyPart: {fileID: 8973251641233698188, guid: bda702e602bc120409478bec8eeff7fc,
     type: 3}
-  touchDamage: 20
+  touchDamage: 1
   eyes:
   - {fileID: 8847642912899569913}
   - {fileID: 8847642912591776501}
@@ -2707,7 +2707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a1aaea342c2d643878409e0a9e4705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   spawnPoint: {fileID: 8847642912899165133}
   shootPoint: {fileID: 8847642912754304029}
   flash: {fileID: 1027460674763238, guid: 87da0295fda60994bb1425fea11b1493, type: 3}

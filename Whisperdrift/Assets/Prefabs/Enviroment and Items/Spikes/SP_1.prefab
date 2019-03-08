@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reactToTag: Player
-  hitDamage: 34
+  hitDamage: 1
   minRelativeVelocity: 0
 --- !u!1 &6195337332308187217
 GameObject:

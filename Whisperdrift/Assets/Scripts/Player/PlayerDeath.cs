@@ -12,10 +12,10 @@ public class PlayerDeath : MonoBehaviour
 	[SerializeField] private Behaviour[] toDisable = null;
 	[SerializeField] private TrailRenderer trailRenderer = null;
 	[SerializeField] private float restartDelay = 0.5f;
-	
+
 	private HP hp = null;
 
-	
+
 	void Start( )
 	{
 		Assert.IsNotNull( respwnPoint );
@@ -56,7 +56,7 @@ public class PlayerDeath : MonoBehaviour
 
 	private void PlayerRestart( )
 	{
-		hp.ChangeHP( 100 );
+		hp.ChangeHP( 3 );
 		GetComponent<Rigidbody2D>( ).velocity = Vector2.zero;
 
 		foreach ( var item in toHide )

@@ -200,5 +200,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reactToTag: Player
-  hitDamage: 100
+  hitDamage: 3
   minRelativeVelocity: 0

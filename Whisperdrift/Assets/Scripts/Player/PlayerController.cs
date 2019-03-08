@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour
 	public static PlayerController Instance { get; private set; }
 
 	[SerializeField] private Slider freezeBar = null;
+	[SerializeField] private Image freezeBarSpr = null;
+	[SerializeField] private Color normalFreeze = Color.blue;
+	[SerializeField] private Color cooldowFreeze = Color.gray;
 	[SerializeField] private float shotForce = 50f;
 	[SerializeField] private float freezeDecline = 50f;
 	[SerializeField] private float freezeRegen = 10f;
@@ -40,6 +43,7 @@ public class PlayerController : MonoBehaviour
 		rb = GetComponent<Rigidbody2D>( );
 		Assert.IsNotNull( rb );
 		Assert.IsNotNull( freezeBar );
+		Assert.IsNotNull( freezeBarSpr );
 
 		zoomController = FindObjectOfType<ZoomController>();
 		Assert.IsNotNull( zoomController );
@@ -58,10 +62,12 @@ public class PlayerController : MonoBehaviour
         if (isFrozen)
         {
             freezeAvailable -= freezeDecline * Time.deltaTime;
+			freezeBarSpr.color = normalFreeze;
         }
         else
         {
             freezeAvailable += freezeRegen * Time.deltaTime;
+			freezeBarSpr.color = cooldowFreeze;
             alreadyFrozen = false;
         }
 
