@@ -4,7 +4,9 @@ using UnityEngine.Assertions;
 public class Enemy : MonoBehaviour
 {
 	[SerializeField] private GameObject parent = null;
-	[SerializeField] private GameObject hpBar = null;
+	[SerializeField] private Renderer[] glowyParts = null;
+	[SerializeField] private Material bigGlow = null;
+	//[SerializeField] private GameObject hpBar = null;
 	[SerializeField] private GameObject deathEffect = null;
 	[SerializeField] private GameObject deathEffect2 = null;
 	[SerializeField] private GameObject enemyPart = null;
@@ -13,26 +15,54 @@ public class Enemy : MonoBehaviour
 	[SerializeField] private float blinkTime = 0.05f;
 	[SerializeField] private float blinkDelayMin = 3f;
 	[SerializeField] private float blinkDelayMax = 5f;
+	[SerializeField] private Color baseColor = Color.white;
+	[SerializeField] private float glow = 6f;
+	[SerializeField] private float glowMin = 1f;
+	[SerializeField] private float pulseSpeed = 1f;
+
+	private bool pulsing = false;
+	private Material glowMat = null;
 
 	void Start ()
 	{
 		Assert.IsNotNull( parent );
-		Assert.IsNotNull( hpBar );
+		Assert.IsNotNull( bigGlow );
+		//Assert.IsNotNull( hpBar );
 		Assert.IsNotNull( deathEffect );
 		Assert.IsNotNull( deathEffect2 );
 		Assert.IsNotNull( enemyPart );
 		Assert.IsNotNull( eyes );
 		Assert.AreNotEqual( eyes.Length, 0 );
 
-		hpBar.SetActive( false );
+		//hpBar.SetActive( false );
 
 		Invoke( "StartBlink", Random.Range( blinkDelayMin, blinkDelayMax ) );
 	}
 
+	void Update( )
+	{
+		if ( pulsing )
+		{
+			float intensity = glowMin + Mathf.PingPong( Time.time * pulseSpeed, 1 ) * ( glow - glowMin );
+			Color finalColor = baseColor * intensity;
+
+			glowMat.SetColor( "_EmissionColor", finalColor );
+			foreach ( var gl in glowyParts )
+				gl.material = glowMat;
+		}
+	}
+
 	public void GotHit( )
 	{
-		if ( !hpBar.activeSelf )
-			hpBar.SetActive( true );
+		//if ( !hpBar.activeSelf )
+		//hpBar.SetActive( true );
+		foreach ( var gp in glowyParts )
+		{
+			gp.material = bigGlow;
+		}
+
+		glowMat = glowyParts[0].material;
+		pulsing = true;
 	}
 
 	public void OnDeath()
