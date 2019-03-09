@@ -2,6 +2,8 @@
 
 public class PlayerWallCollisionSound : MonoBehaviour
 {
+	[SerializeField] private GameObject hitEffect = null;
+	[SerializeField] private float hitEffectMinMag = 8f;
 	[SerializeField] private AnimationCurve hitVolCurve = new AnimationCurve();
 
     FMOD.Studio.EventInstance PlayerCollidesNonDamagingObjectSound;
@@ -19,6 +21,12 @@ public class PlayerWallCollisionSound : MonoBehaviour
 
 			PlayerCollidesNonDamagingObjectSound.setVolume( hitVol ); // Here we can control the volume
 			PlayerCollidesNonDamagingObjectSound.start();
+
+			if ( collision.relativeVelocity.magnitude  >= hitEffectMinMag )
+			{
+				ShakeEffect.Instance.DoVerySmallShake( );
+				Instantiate( hitEffect, transform.position/*collision.contacts[0].point*/, Quaternion.identity );
+			}
         }
     }
 }

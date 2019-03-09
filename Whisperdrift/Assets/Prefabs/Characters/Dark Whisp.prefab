@@ -5378,4 +5378,4 @@ MonoBehaviour:
   maxPitch: 1.2
   minVolume: 0.9
   maxVolume: 1
-  playOnStart: 1
+  playOnStart: 0

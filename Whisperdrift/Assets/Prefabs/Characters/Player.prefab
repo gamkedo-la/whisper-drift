@@ -12097,6 +12097,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4c1641c33718e4b8560967797ea154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffect: {fileID: 7284919296725030177, guid: 685545c2bcd383944b89aadbd871c88f,
+    type: 3}
+  hitEffectMinMag: 8
   hitVolCurve:
     serializedVersion: 2
     m_Curve:

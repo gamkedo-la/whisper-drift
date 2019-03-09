@@ -22,6 +22,11 @@ public class ShakeEffect : MonoBehaviour
 		Assert.IsNotNull( animator );
 	}
 
+	public void DoVerySmallShake( )
+	{
+		animator.SetTrigger( "Very Small Shake" );
+	}
+
 	public void DoSmallShake( )
 	{
 		animator.SetTrigger( "Small Shake" );
