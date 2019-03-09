@@ -70,9 +70,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -285228223
-  m_SortingLayer: 4
-  m_SortingOrder: 0
+  m_SortingLayerID: 573041003
+  m_SortingLayer: 3
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300026, guid: 536c7a0a80a862448af7bb2edf89120f, type: 3}
   m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
   m_FlipX: 0
@@ -179,6 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HitEvent: event:/rock_hit_or_tumble
   MinVelocity: 1
+  on: 0
 --- !u!114 &7326572573757906190
 MonoBehaviour:
   m_ObjectHideFlags: 0

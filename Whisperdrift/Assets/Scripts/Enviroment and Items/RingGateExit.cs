@@ -45,6 +45,7 @@ public class RingGateExit : MonoBehaviour
 
 		activated = true;
         RingGateExitActivationLowPulseSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		Destroy( PlayerController.Instance.gameObject, 0.2f );
         LevelManger.Instance.ExitActivated( );
 	}
 

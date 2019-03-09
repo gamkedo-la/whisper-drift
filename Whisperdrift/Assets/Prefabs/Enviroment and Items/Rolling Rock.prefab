@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 573041003
   m_SortingLayer: 3
-  m_SortingOrder: 10
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300062, guid: 536c7a0a80a862448af7bb2edf89120f, type: 3}
   m_Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
   m_FlipX: 0
@@ -155,3 +155,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HitEvent: event:/rock_hit_or_tumble
   MinVelocity: 1
+  on: 0
