@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 375745717}
   - component: {fileID: 375745718}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2118615194}
   - component: {fileID: 2118615195}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 1850687864949445565}
   - component: {fileID: 3458414025477761128}
   - component: {fileID: 8980780716287798696}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Shadowcaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1197,7 +1197,7 @@ GameObject:
   - component: {fileID: 6521330146008508403}
   - component: {fileID: 6521330146008508401}
   - component: {fileID: 7586966397412410941}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: Bottom Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1351,7 +1351,7 @@ GameObject:
   - component: {fileID: 6521330146019313823}
   - component: {fileID: 6521330146019313821}
   - component: {fileID: 867379534047611340}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: Ring Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1454,7 +1454,7 @@ GameObject:
   - component: {fileID: 7706897756466570164}
   - component: {fileID: 8505036853500837327}
   - component: {fileID: 3426446279009895610}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: Top Motiff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1606,7 +1606,7 @@ GameObject:
   - component: {fileID: 5811098018682669478}
   - component: {fileID: 1619331918378015000}
   - component: {fileID: 2438060406986822944}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: Bottom Motiff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1758,7 +1758,7 @@ GameObject:
   - component: {fileID: 2947726545906429820}
   - component: {fileID: 852213285813738309}
   - component: {fileID: 3937633014119630842}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: Top Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1913,7 +1913,7 @@ GameObject:
   - component: {fileID: 2108770953957066219}
   - component: {fileID: 1201727848654630452}
   - component: {fileID: 8962319401292625656}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Shadowcaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}

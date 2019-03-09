@@ -53,7 +53,8 @@ public class RingGateExit : MonoBehaviour
         if (!collision.gameObject.CompareTag(Tags.Player))
             return;
 
-        PlayerCollidesNonDamagingObjectSound.start();
+		//PlayerCollidesNonDamagingObjectSound.setVolume( 0.5f );
+		//PlayerCollidesNonDamagingObjectSound.start();
     }
 
     public void PowerUp( )
