@@ -12084,7 +12084,7 @@ MonoBehaviour:
   glowMin: 1
   glowMax: 5
   startProgress: 0.1
-  shineTime: 0.1
+  shineTime: 0.2
 --- !u!114 &1489889291974929721
 MonoBehaviour:
   m_ObjectHideFlags: 0
