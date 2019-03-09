@@ -58,6 +58,9 @@ public class Whisp : MonoBehaviour
 
 	void Update()
 	{
+		if ( currentBehavior == Behavior.Flee && PlayerController.Instance )
+			destination = PlayerController.Instance.transform.position;
+
 		distanceToDestination = Vector3.Distance(destination, transform.position);
 		if (currentBehavior == Behavior.Flee && distanceToDestination <= DISTANCE_THRESHOLD) { DisableFairyObject(); }
 		if (currentBehavior == Behavior.Rise && distanceToDestination <= DISTANCE_THRESHOLD) { StartPlaying(); }
@@ -66,13 +69,13 @@ public class Whisp : MonoBehaviour
 		transform.position += (destination - transform.position).normalized * speed * Time.deltaTime;
 	}
 
-	private void Score() 
+	private void Score()
 	{
 		totalWhispsFree += 1;
 		whispsFree = totalWhispsFree;
 	}
 
-	private Vector3 DetermineRiseDirection() 
+	private Vector3 DetermineRiseDirection()
 	{
 		Vector2 origin = transform.position;
 		float dist = riseAmount + playRadius;
@@ -92,7 +95,7 @@ public class Whisp : MonoBehaviour
 		speed = riseSpeed * speedVariation;
 	}
 
-	private void StartPlaying() 
+	private void StartPlaying()
 	{
 		currentBehavior = Behavior.Play;
 		PlayNext();
@@ -100,11 +103,11 @@ public class Whisp : MonoBehaviour
 		playOrigin = transform.position;
 	}
 
-	private void StartFleeing() 
+	private void StartFleeing()
 	{
 		AudioSource.PlayClipAtPoint(fleeSound, transform.position, whispVolume);
 		currentBehavior = Behavior.Flee;
-		destination = whispHome.position;
+		destination = PlayerController.Instance.transform.position; //whispHome.position;
 		speed = fleeSpeed * speedVariation;
 	}
 
@@ -121,7 +124,8 @@ public class Whisp : MonoBehaviour
 
 	private void DisableFairyObject()
 	{
-		this.gameObject.SetActive(false);
+		PlayerController.Instance.GotFaerie( );
+		gameObject.SetActive(false);
 	}
 
 

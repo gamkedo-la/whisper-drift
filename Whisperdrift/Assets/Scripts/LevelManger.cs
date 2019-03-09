@@ -101,6 +101,7 @@ public class LevelManger : MonoBehaviour
 	{
 		GameObject f = Instantiate( rescudeWhisp, PlayerController.Instance.transform.position, Quaternion.identity );
 		f.GetComponent<Faerie>( ).SetDestination( NewDestination( ) );
+		PlayerController.Instance.GotFaerie( );
 	}
 
 	private Vector2 NewDestination( )

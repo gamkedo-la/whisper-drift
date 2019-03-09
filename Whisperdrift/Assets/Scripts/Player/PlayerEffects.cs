@@ -13,6 +13,8 @@ public class PlayerEffects : MonoBehaviour
 	[SerializeField] private Color baseColor = Color.white;
 	[SerializeField] private float glowMin = 1.0f;
 	[SerializeField] private float glowMax = 1.8f;
+	[SerializeField] private float startProgress = 0.1f;
+	[SerializeField] private float shineTime = 0.1f;
 
 	private Material glowMat = null;
 
@@ -26,11 +28,38 @@ public class PlayerEffects : MonoBehaviour
 		glowMat = mainRenderer.material;
 		Assert.IsNotNull( glowMat );
 
-		LevelProgress( 0 );
+		ChangeBrightnes( startProgress );
+	}
+
+	public void GotFearie()
+	{
+		ChangeBrightnes( 1f );
+		CancelInvoke( );
+		Invoke( "EndGotFearieEffect", shineTime );
+	}
+
+	private void EndGotFearieEffect( )
+	{
+		ChangeBrightnes( startProgress );
+	}
+
+	private void ChangeBrightnes( float progress )
+	{
+		float brightnessToAdd = ( brightnessMax - brightnessMin ) * progress;
+		mainLight.intensity = brightnessMin + brightnessToAdd;
+
+		float emission = glowMin + ( ( glowMax - glowMin ) * progress );
+		Color finalColor = baseColor * emission;
+		glowMat.SetColor( "_EmissionColor", finalColor );
+
+		particlesConstant.material = glowMat;
+		particlesFollow.material = glowMat;
 	}
 
 	public void LevelProgress( float progress )
 	{
+		return; // Disabled for now
+
 		float brightnessToAdd = ( brightnessMax - brightnessMin ) * progress;
 		mainLight.intensity = brightnessMin + brightnessToAdd;
 

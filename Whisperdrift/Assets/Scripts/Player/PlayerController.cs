@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
 	[SerializeField] private float freezeDecline = 50f;
 	[SerializeField] private float freezeRegen = 10f;
 	[SerializeField] private float freezeMax = 100f;
+	[SerializeField] private UnityEvent onGotFearie = null;
 
 	private Rigidbody2D rb;
 	private ZoomController zoomController;
@@ -148,5 +150,10 @@ public class PlayerController : MonoBehaviour
 			rb.AddForce( angle * Vector2.left * shotForce + freezeAccumulatedForce );
 		else
 			freezeAccumulatedForce += angle * Vector2.left * shotForce;
+	}
+
+	public void GotFaerie()
+	{
+		onGotFearie.Invoke( );
 	}
 }

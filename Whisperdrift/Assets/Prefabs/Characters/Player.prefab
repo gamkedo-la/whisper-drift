@@ -4885,7 +4885,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cf35b00e507387349ba53038e711f37a, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -11988,6 +11988,22 @@ MonoBehaviour:
   freezeDecline: 50
   freezeRegen: 10
   freezeMax: 100
+  onGotFearie:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2710604812265585603}
+        m_MethodName: GotFearie
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &6839665191572876959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12060,13 +12076,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainLight: {fileID: 6839665190917059386}
   brightnessMin: 0.2
-  brightnessMax: 0.7
+  brightnessMax: 0.9
   mainRenderer: {fileID: 6839665190731044541}
   particlesConstant: {fileID: 6839665191860704669}
   particlesFollow: {fileID: 6839665190825090775}
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   glowMin: 1
-  glowMax: 3
+  glowMax: 5
+  startProgress: 0.1
+  shineTime: 0.1
 --- !u!114 &1489889291974929721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12306,7 +12324,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6839665191860704668
 Transform:
   m_ObjectHideFlags: 0
@@ -12511,7 +12529,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.30980393}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -13207,7 +13225,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
