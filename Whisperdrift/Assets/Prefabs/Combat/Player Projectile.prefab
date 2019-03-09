@@ -140,6 +140,8 @@ MonoBehaviour:
     type: 3}
   sprite: {fileID: 5352473136761422721}
   soundEvent: event:/enemy_hit
+  playerWallEvent: event:/player_shot_hits_wall_or_platform
+  playerWallEventOn: 1
   speed: 10
   lifeTime: 3
   maxTravelDistance: 5
