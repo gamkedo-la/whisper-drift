@@ -71,6 +71,7 @@ public class PlayerDeath : MonoBehaviour
 		transform.position = respwnPoint.position;
 		trailRenderer.enabled = true;
 		trailRenderer.Clear( );
+		GetComponent<PlayerController>( ).ResetMe( );
 
 		Instantiate( playerSpawn, transform.position, Quaternion.identity );
 	}

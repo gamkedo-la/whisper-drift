@@ -109,7 +109,6 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space)) && canFreeze)
         {
             isFrozen = true;
-
         }
         else
         {
@@ -155,5 +154,10 @@ public class PlayerController : MonoBehaviour
 	public void GotFaerie()
 	{
 		onGotFearie.Invoke( );
+	}
+
+	public void ResetMe( )
+	{
+		freezeAvailable = freezeMax;
 	}
 }
