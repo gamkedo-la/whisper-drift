@@ -5963,7 +5963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252452861}
   m_Layer: 0
-  m_Name: Txt
+  m_Name: Main text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5980,13 +5980,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2128305686}
+  - {fileID: 421821250}
   - {fileID: 1726003348}
   m_Father: {fileID: 879522827}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -1940}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &256604196
@@ -10441,6 +10443,166 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 405725155}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &421821249
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 421821250}
+  - component: {fileID: 421821252}
+  - component: {fileID: 421821251}
+  m_Layer: 0
+  m_Name: Tip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &421821250
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421821249}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1.9999776}
+  m_LocalScale: {x: 0.99977136, y: 0.99977136, z: 0.99977136}
+  m_Children: []
+  m_Father: {fileID: 252452861}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 923}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &421821251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421821249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_text: (Please use Up/Down Arrows for manual scrolling)
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 30
+  m_fontSizeBase: 30
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 2
+  m_textAlignment: 4098
+  m_isAlignmentEnumConverted: 1
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: -1
+  m_linkedTextComponent: {fileID: 0}
+  m_isLinkedTextComponent: 0
+  m_isTextTruncated: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreRectMaskCulling: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -678.56604, y: -243.08037, z: -685.1653, w: 254.98627}
+  m_textInfo:
+    textComponent: {fileID: 421821251}
+    characterCount: 48
+    spriteCount: 0
+    spaceCount: 6
+    wordCount: 8
+    linkCount: 0
+    lineCount: 1
+    pageCount: 1
+    materialCount: 1
+  m_havePropertiesChanged: 0
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_isInputParsingRequired: 0
+  m_inputSource: 0
+  m_hasFontAssetChanged: 0
+  m_subTextObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &421821252
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421821249}
+  m_CullTransparentMesh: 0
 --- !u!1001 &425922295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15755,6 +15917,8 @@ GameObject:
   - component: {fileID: 879522826}
   - component: {fileID: 879522825}
   - component: {fileID: 879522824}
+  - component: {fileID: 879522829}
+  - component: {fileID: 879522828}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -15835,7 +15999,6 @@ RectTransform:
   m_Children:
   - {fileID: 252452861}
   - {fileID: 1396295219}
-  - {fileID: 2128305686}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15844,6 +16007,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &879522828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879522823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe139a1bc47f51f4c8d3a0f908154c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creditText: {fileID: 252452861}
+  screenTransition: {fileID: 815609376815611059}
+  animator: {fileID: 879522829}
+  scrollSpeed: 5
+--- !u!95 &879522829
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 879522823}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 17e7f13dff3020d439368483d01395d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &924162841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20167,7 +20365,7 @@ RectTransform:
   m_GameObject: {fileID: 1396295218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 2001138332}
   - {fileID: 2141003403}
@@ -20177,7 +20375,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -194, y: 104}
+  m_AnchoredPosition: {x: -124.109985, y: 75.100006}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1396295220
@@ -20223,7 +20421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8292d59c8444e2249a98f763ca4698bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newScale: {x: 1.2, y: 1.2, z: 1.2}
+  newScale: {x: 0.6, y: 0.6, z: 0.6}
   usingWorldSpaceCanvas: 0
   hoverSound: {fileID: 0}
 --- !u!61 &1396295222
@@ -24293,7 +24491,7 @@ GameObject:
   - component: {fileID: 1726003350}
   - component: {fileID: 1726003349}
   m_Layer: 0
-  m_Name: Txt
+  m_Name: Credits text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24311,11 +24509,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 252452861}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -177}
+  m_AnchoredPosition: {x: 0, y: -329.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1726003349
@@ -24338,32 +24536,46 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: " \u2022 Kornel: Project lead, core gameplay code including player movement
-    and main enemy functionality, boss implementation, environmental damage, ring/gate
-    system, swing door and pressure plate, player visual effects, enemy graphic, hover
-    feature and momentum charging, level design, scene lighting and background environments,
-    dynamic shadow effects, tutorial elements, interactive vegetation, many bug fixes,
-    door art, music integration, cheats, scene transitions,\n \u2022 Stebs: Crystals,
-    spikes, decorative vines, sounds and fmod integration (shot hit, crystal shatter,
+  m_text: "<size=\"40\"><b>Kornel</b>\r</size>\nProject lead, core gameplay code (including
+    player movement and main enemy functionality, boss implementation, environmental
+    damage, orb/gate system, environmental puzzles), level design, dynamic shadow
+    effects, player visual effects, glow/pulsing effects, particle effects (orbs,
+    player spawn, hit effects), enemy graphic and animation, hover feature and momentum
+    charging, scene lighting, background environments ans parallax, tutorial elements,
+    interactive vegetation, many bug fixes, art for some environment object (doors,
+    spikes, pressure plate, etc.) music integration, game cheat codes, scene transitions,
+    screenshake, player UI\r, credits screen animation & controls\n\r\n<size=\"40\"><b>Stebs</b>\r</size>\nCrystals,
+    spikes, decorative vines, sounds and FMOD integration (shot hit, crystal shatter,
     exit opening, spawn, ring activation, level exit, rock explosion, rubble rolling,
     orb collection, player damage, player destruction, enemy aim/hit/defeat, swinging
     door, wall collisions, hover, hover failed, boulder push, pressure plate, plate
-    release), volume control hookup, fmod fixes\n \u2022 Anthony Juarez: Dark whisp
-    enemy (all), collectible fairies implementation, player trail fixes, dynamic camera
-    zoom, additional particle effects, gate orb effects fixes, color and sprite tweaks\n
-    \u2022 Andy King: Parallax background camera, audio for alt. fire and project,
-    shadow background test, freeze bar fixes, volume tuning, webGL testing\n \u2022
-    Bilal A. Cheema: Title menu, pause menu, quality settings control, credits scene,
-    restart feature, font selection and integration\n \u2022 Simon J Hoffiz: Level
-    music, menu music, fairy music, boss music\n \u2022 Vismaya Menon (Quenzel201Aliza):
-    Volcano level background\n \u2022 Vaan Hope Khani: Boss art, projectile trail
-    persistence code\n \u2022 Christer \"McFunkypants\" Kaitila: Mushrooms and stalactites,
-    Mr. Hopps bunny code and art, death sound FMOD integration, door sound bug fix\n
-    \u2022 Jaime Rivas: Wind howl sounds, water drops\n \u2022 Mateo Ferretto: Projectile-platform
-    collisions\n \u2022 Terrence McDonnell: Background and texture scroll script (prototype)\n\nSpecial
-    thanks to Gamkedo Club trainers who helped with this project:\nKaren McMullan
-    (levels), Kartik Kini (UI), and Kyle Anderson (art)\n\nGame created by members
-    worldwide in Gamkedo Club -- for more information visit <link=\"http://gamkedo.com/\"><color=\"blue\">gamkedo.com</color></link>"
+    release, player freeze, sliding doors sound, player collision, shot collision,
+    gate collision, player spawn), volume control hookup, FMOD fixes\r\n\r\n<size=\"40\"><b>Anthony
+    Juarez</b>\r</size>\nDark whisp enemy (all), collectible fairies implementation,
+    player trail effects, dynamic camera zoom, additional particle effects, gate orb
+    effects fixes, physics layers cleanup, color and sprite tweaks\r\n\r\n<size=\"40\"><b>Andy
+    King</b>\r</size>\nParallax background tests, audio for alt. fire and project,
+    shadow background test, freeze bar fixes, volume tuning, WebGL troubleshooting
+    and bug hunting\r\n\r\n<size=\"40\"><b>Bilal A. Cheema</b>\r</size>\nTitle menu,
+    pause menu, quality settings control, credits scene, restart feature, font selection
+    and integration\r\n\r\n<size=\"40\"><b>Simon J Hoffiz</b>\r</size>\nLevel music,
+    menu music, fairy music, boss music, credits music\r\n\r\n<size=\"40\"><b>Vismaya
+    Menon (Quenzel201Aliza)</b>\r</size>\nVolcano level background, boss concept and
+    art, Dark Whisp art, custom cursor\r\n\r\n<size=\"40\"><b>Vaan Hope Khani</b>\r</size>\nBoss
+    concept art, projectile trail persistence code\r\n\r\n<size=\"40\"><b>Christer
+    \"McFunkypants\" Kaitila</b>\r</size>\nMushrooms and stalactites, Mr. Hopps bunny
+    code and art, death sound FMOD integration, door sound bug fix\r\n\r\n<size=\"40\"><b>Chris
+    DeLeon</b>\r</size>\nCredits text, help with cross-platform FMOD support\r\n\r\n<size=\"40\"><b>Jaime
+    Rivas</b>\r</size>\nWind howl and water drops sounds\r\n\r\n<size=\"40\"><b>Mateo
+    Ferretto</b>\r</size>\nProjectile-platform collisions\r\n\r\n<size=\"40\"><b>Terrence
+    McDonnell</b>\r</size>\nBackground and texture scroll script (prototype)\r\n\r\n<size=\"40\"><b>Special
+    thanks to Gamkedo Club trainers who helped with this project:</b>\r</size>\nKaren
+    McMullan (levels), Kartik Kini (UI), Kyle Anderson (art) and Chris DeLeon for
+    continuous support and guidance\r\n\r\n<size=\"40\"><b>Special thanks to friends
+    and family:</b></size>\nfor testing and feedback (pre-pitch prototype and during
+    production)\r\n\r\nGame created by members worldwide in <b>Gamkedo Club</b> --
+    for more information visit <b><color=\"orange\">gamkedo.com</color></b>\n\n<size=\"50\">Thank
+    you for playing our game!</b></size>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24391,14 +24603,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 25.9
+  m_fontSize: 30
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 4097
+  m_textAlignment: 4098
   m_isAlignmentEnumConverted: 1
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -24409,7 +24621,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 1518
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -24429,15 +24641,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -564.58997, y: -634.33673, z: -559.79175, w: -99.48548}
+  m_margin: {x: -678.56604, y: -634.33673, z: -685.1653, w: -99.48548}
   m_textInfo:
     textComponent: {fileID: 1726003349}
-    characterCount: 2063
+    characterCount: 2775
     spriteCount: 0
-    spaceCount: 298
-    wordCount: 278
-    linkCount: 1
-    lineCount: 28
+    spaceCount: 384
+    wordCount: 373
+    linkCount: 0
+    lineCount: 62
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -24977,7 +25189,7 @@ SpriteShapeRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -29307,7 +29519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2128305686
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29315,18 +29527,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128305685}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2005694246}
   - {fileID: 752461408}
-  m_Father: {fileID: 879522827}
-  m_RootOrder: 2
+  m_Father: {fileID: 252452861}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 999}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &2135484684
@@ -29772,7 +29984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 2430256861969067230}
-  speed: 1
+  speed: 1.5
   startOnEnable: 0
   fadeToColor: 1
   onDone:
