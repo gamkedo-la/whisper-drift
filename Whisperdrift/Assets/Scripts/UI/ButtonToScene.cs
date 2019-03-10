@@ -34,7 +34,6 @@ public class ButtonToScene : MonoBehaviour, IPointerClickHandler
 		{
 			Time.timeScale = 1f;
 			OnButtonPress.Invoke( );
-			SceneManager.LoadScene( sceneName );
 		}
 	}
 

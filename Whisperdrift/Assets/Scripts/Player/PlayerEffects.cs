@@ -58,9 +58,9 @@ public class PlayerEffects : MonoBehaviour
 
 	public void LevelProgress( float progress )
 	{
-		return; // Disabled for now
+		// Disabled for now
 
-		float brightnessToAdd = ( brightnessMax - brightnessMin ) * progress;
+		/*float brightnessToAdd = ( brightnessMax - brightnessMin ) * progress;
 		mainLight.intensity = brightnessMin + brightnessToAdd;
 
 		float emission = glowMin + ( ( glowMax - glowMin ) * progress );
@@ -68,6 +68,6 @@ public class PlayerEffects : MonoBehaviour
 		glowMat.SetColor( "_EmissionColor", finalColor );
 
 		particlesConstant.material = glowMat;
-		particlesFollow.material = glowMat;
+		particlesFollow.material = glowMat;*/
 	}
 }
