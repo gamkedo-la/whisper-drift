@@ -143,7 +143,7 @@ MonoBehaviour:
   playerWallEvent: event:/player_shot_hits_wall_or_platform
   playerWallEventOn: 1
   speed: 10
-  lifeTime: 3
+  lifeTime: 3.6
   maxTravelDistance: 5
   damage: 50
   enemyProjectile: 0
