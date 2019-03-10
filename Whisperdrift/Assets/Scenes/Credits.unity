@@ -24513,7 +24513,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -329.4}
+  m_AnchoredPosition: {x: 0, y: -572}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1726003349
@@ -24543,8 +24543,8 @@ MonoBehaviour:
     player spawn, hit effects), enemy graphic and animation, hover feature and momentum
     charging, scene lighting, background environments ans parallax, tutorial elements,
     interactive vegetation, many bug fixes, art for some environment object (doors,
-    spikes, pressure plate, etc.) music integration, game cheat codes, scene transitions,
-    screenshake, player UI\r, credits screen animation & controls\n\r\n<size=\"40\"><b>Stebs</b>\r</size>\nCrystals,
+    spikes, pressure plate, etc.) music integration, game cheat codes, scene transition,
+    screen shake, player UI, credits screen animation & controls\n\r\n<size=\"40\"><b>Stebs</b>\r</size>\nCrystals,
     spikes, decorative vines, sounds and FMOD integration (shot hit, crystal shatter,
     exit opening, spawn, ring activation, level exit, rock explosion, rubble rolling,
     orb collection, player damage, player destruction, enemy aim/hit/defeat, swinging
@@ -24572,10 +24572,11 @@ MonoBehaviour:
     thanks to Gamkedo Club trainers who helped with this project:</b>\r</size>\nKaren
     McMullan (levels), Kartik Kini (UI), Kyle Anderson (art) and Chris DeLeon for
     continuous support and guidance\r\n\r\n<size=\"40\"><b>Special thanks to friends
-    and family:</b></size>\nfor testing and feedback (pre-pitch prototype and during
-    production)\r\n\r\nGame created by members worldwide in <b>Gamkedo Club</b> --
-    for more information visit <b><color=\"orange\">gamkedo.com</color></b>\n\n<size=\"50\">Thank
-    you for playing our game!</b></size>"
+    and family:</b></size>\nThank you for testing and feedback (pre-pitch prototype
+    and during production)\r\n\n<size=\"40\"><b>Fonts used:\r</b></size>\nAmatic by
+    Vernon Adams and Shortime by 1001Fonts\n\n\r\n\n<size=\"40\">Game created by members
+    worldwide in <b>Gamkedo Club</b>.\nFor more information please visit <b><color=\"orange\">gamkedo.com</color></b></size>\n\n\n\n<size=\"120\">Thank
+    you for playing!</b></size>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -24621,7 +24622,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 1518
+  m_firstOverflowCharacterIndex: 1517
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -24644,12 +24645,12 @@ MonoBehaviour:
   m_margin: {x: -678.56604, y: -634.33673, z: -685.1653, w: -99.48548}
   m_textInfo:
     textComponent: {fileID: 1726003349}
-    characterCount: 2775
+    characterCount: 2847
     spriteCount: 0
-    spaceCount: 384
-    wordCount: 373
+    spaceCount: 400
+    wordCount: 384
     linkCount: 0
-    lineCount: 62
+    lineCount: 70
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
