@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{5672cd95-1733-4c65-9609-70ca401d00e8}">
+        <property name="assetPath">
+            <value>boss_death(2).mp3</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>7.1053061224489795</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{132dca7e-93a0-449c-91b2-46e3e43a0468}</destination>
+        </relationship>
+    </object>
+</objects>

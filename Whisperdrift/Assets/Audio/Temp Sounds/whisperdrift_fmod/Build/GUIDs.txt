@@ -1,3 +1,4 @@
+{535cfc4b-b206-46e1-9326-90856fae4223} event:/boss_death
 {07c48c5a-29ab-40cd-a308-88cebb3b2de6} event:/boss_hit
 {1cf88905-bd45-4068-9e9f-2ecc2e74c26d} event:/cant_freeze
 {ffb6eadf-c922-47a3-a530-fd4a5dc01e7a} event:/crystal_hit
