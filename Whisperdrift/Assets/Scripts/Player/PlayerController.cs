@@ -1,14 +1,21 @@
 ﻿using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+	public static PlayerController Instance { get; private set; }
+
 	[SerializeField] private Slider freezeBar = null;
+	[SerializeField] private Image freezeBarSpr = null;
+	[SerializeField] private Color normalFreeze = Color.blue;
+	[SerializeField] private Color cooldowFreeze = Color.gray;
 	[SerializeField] private float shotForce = 50f;
 	[SerializeField] private float freezeDecline = 50f;
 	[SerializeField] private float freezeRegen = 10f;
 	[SerializeField] private float freezeMax = 100f;
+	[SerializeField] private UnityEvent onGotFearie = null;
 
 	private Rigidbody2D rb;
 	private ZoomController zoomController;
@@ -19,16 +26,26 @@ public class PlayerController : MonoBehaviour
 	private Vector3 freezeAccumulatedForce = Vector3.zero;
     private FMOD.Studio.EventInstance playerFreezeSound;
     private FMOD.Studio.EventInstance cantFreezeSound;
-    
+
     private bool alreadyFrozen;
     private bool alreadyCantFreeze;
-    
 
-    void Start( )
+	private void Awake( )
+	{
+		if ( Instance != null && Instance != this )
+			Destroy( gameObject );
+		else
+			Instance = this;
+	}
+
+	private void OnDestroy( ) { if ( this == Instance ) { Instance = null; } }
+
+	void Start( )
 	{
 		rb = GetComponent<Rigidbody2D>( );
 		Assert.IsNotNull( rb );
 		Assert.IsNotNull( freezeBar );
+		Assert.IsNotNull( freezeBarSpr );
 
 		zoomController = FindObjectOfType<ZoomController>();
 		Assert.IsNotNull( zoomController );
@@ -47,10 +64,12 @@ public class PlayerController : MonoBehaviour
         if (isFrozen)
         {
             freezeAvailable -= freezeDecline * Time.deltaTime;
+			freezeBarSpr.color = normalFreeze;
         }
         else
         {
             freezeAvailable += freezeRegen * Time.deltaTime;
+			freezeBarSpr.color = cooldowFreeze;
             alreadyFrozen = false;
         }
 
@@ -80,7 +99,7 @@ public class PlayerController : MonoBehaviour
         {
             canFreeze = false;
             rb.velocity = oldVelocity;
-            
+
         }
 
         if ( Input.GetMouseButtonUp(1) || Input.GetKeyUp(KeyCode.Space) ) {
@@ -90,7 +109,6 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space)) && canFreeze)
         {
             isFrozen = true;
-
         }
         else
         {
@@ -100,9 +118,7 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space)) && canFreeze && !alreadyFrozen)
         {
             playerFreezeSound.start();
-            
             alreadyFrozen = true;
-            Debug.Log(alreadyFrozen);
         }
 
         if ((Input.GetMouseButton(1) || Input.GetKey(KeyCode.Space)) && !canFreeze && !alreadyCantFreeze)
@@ -133,5 +149,15 @@ public class PlayerController : MonoBehaviour
 			rb.AddForce( angle * Vector2.left * shotForce + freezeAccumulatedForce );
 		else
 			freezeAccumulatedForce += angle * Vector2.left * shotForce;
+	}
+
+	public void GotFaerie()
+	{
+		onGotFearie.Invoke( );
+	}
+
+	public void ResetMe( )
+	{
+		freezeAvailable = freezeMax;
 	}
 }

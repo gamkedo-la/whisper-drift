@@ -72,16 +72,16 @@ Assets/ProBuilder*Data/ProBuilderPreferences.asset.meta
 sysinfo.txt
 
 # FMOD
-/Assets/FMODStudioCache.asset
-/Assets/FMODStudioCache.asset.meta
-fmod.log
-fmod_editor.log
+Whisperdrift/Assets/FMODStudioCache.asset
+Whisperdrift/Assets/FMODStudioCache.asset.meta
+Whisperdrift/fmod.log
+Whisperdrift/fmod_editor.log
 
 # FMOD studio (In folder FMOD)
-/FMOD/**.user
-/FMOD/**.unsaved
-/FMOD/**.cache
-/FMOD/**.restore
+Whisperdrift/Temp Sounds/whisperdrift_fmod/**.user
+Whisperdrift/Temp Sounds/whisperdrift_fmod/**.unsaved
+Whisperdrift/Temp Sounds/whisperdrift_fmod/**.cache
+Whisperdrift/Temp Sounds/whisperdrift_fmod/**.restore
 
 # Builds
 *.apk
@@ -118,3 +118,4 @@ Whisperdrift/Assets/StreamingAssets/Master Bank\.bank\.meta
 Whisperdrift/Assets/StreamingAssets/Master Bank\.strings\.bank
 
 Whisperdrift/Assets/StreamingAssets/Master Bank\.strings\.bank\.meta
+*.fobj

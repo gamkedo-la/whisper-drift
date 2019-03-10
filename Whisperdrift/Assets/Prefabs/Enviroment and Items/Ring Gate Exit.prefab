@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8100475412427885389}
   - component: {fileID: 2349773284216119673}
   - component: {fileID: 6120641080072151974}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: Particle System Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4709,7 +4709,7 @@ GameObject:
   - component: {fileID: 8072633076630660970}
   - component: {fileID: 5146089724027058157}
   - component: {fileID: 8082403230200960882}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: Top Motiff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4861,7 +4861,7 @@ GameObject:
   - component: {fileID: 3938339282620317080}
   - component: {fileID: 5302420331621074453}
   - component: {fileID: 3778477598501339763}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: Bottom Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5016,7 +5016,7 @@ GameObject:
   - component: {fileID: 1958965770868188119}
   - component: {fileID: 6699442309982978046}
   - component: {fileID: 4733212530009623950}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Shadowcaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6053,7 +6053,7 @@ GameObject:
   - component: {fileID: 5306808653059953861}
   - component: {fileID: 89958704409025911}
   - component: {fileID: 7571511909283984812}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: Shadowcaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7088,7 +7088,7 @@ GameObject:
   - component: {fileID: 595554845930447111}
   - component: {fileID: 318781828289502869}
   - component: {fileID: 5940670032282633979}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: Bottom Motiff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7240,7 +7240,7 @@ GameObject:
   - component: {fileID: 6311188032930437379}
   - component: {fileID: 1548360744892554747}
   - component: {fileID: 3375116176860274015}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: Top Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7393,7 +7393,8 @@ GameObject:
   - component: {fileID: 7401874595725250873}
   - component: {fileID: 7401874595725250872}
   - component: {fileID: 4216723611572715350}
-  m_Layer: 16
+  - component: {fileID: 2163038864804510782}
+  m_Layer: 17
   m_Name: Ring Gate Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7465,6 +7466,27 @@ MonoBehaviour:
   - {fileID: 8875855575123905221}
   - {fileID: 727411031995741730}
   activationMaterial: {fileID: 2100000, guid: 66db34bcc57593f44b07478d4f3a89f8, type: 2}
+--- !u!50 &2163038864804510782
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7401874595725250871}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 1
+  m_Mass: 8.395686
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &8875855575123905221
 GameObject:
   m_ObjectHideFlags: 0
@@ -7476,7 +7498,7 @@ GameObject:
   - component: {fileID: 8413607428489067995}
   - component: {fileID: 5939927379523445477}
   - component: {fileID: 2353781617059873591}
-  m_Layer: 16
+  m_Layer: 17
   m_Name: Particle System Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}

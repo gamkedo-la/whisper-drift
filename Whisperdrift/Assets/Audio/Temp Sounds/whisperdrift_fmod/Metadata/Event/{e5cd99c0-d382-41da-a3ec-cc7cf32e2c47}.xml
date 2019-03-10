@@ -54,7 +54,7 @@
             <destination>{97285709-8869-4f70-ba31-bb564b7a58d3}</destination>
         </relationship>
         <relationship name="output">
-            <destination>{7aab1604-56e6-4283-bdf2-5e95f982bdbb}</destination>
+            <destination>{1463dc73-a603-4575-b1ef-e39495f480f4}</destination>
         </relationship>
     </object>
     <object class="EventAutomatableProperties" id="{5ea5db20-0931-46fb-8cda-f75ef72b46cd}"/>
@@ -83,8 +83,11 @@
     </object>
     <object class="EventMixerMaster" id="{b6db2c51-c6a1-482b-ada8-a791c7ced188}">
         <property name="volume">
-            <value>-17.5</value>
+            <value>-14.5</value>
         </property>
+        <relationship name="modulators">
+            <destination>{2de258eb-ba64-46f6-b7de-5f01884d76bb}</destination>
+        </relationship>
         <relationship name="effectChain">
             <destination>{26b416db-4809-4bd6-b0a8-26be6fc1b0e2}</destination>
         </relationship>
@@ -151,8 +154,17 @@
             <destination>{b6db2c51-c6a1-482b-ada8-a791c7ced188}</destination>
         </relationship>
     </object>
+    <object class="ADSRModulator" id="{2de258eb-ba64-46f6-b7de-5f01884d76bb}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>volume</value>
+        </property>
+        <property name="initialValue">
+            <value>-80</value>
+        </property>
+    </object>
     <object class="MixerBusEffectChain" id="{26b416db-4809-4bd6-b0a8-26be6fc1b0e2}">
         <relationship name="effects">
+            <destination>{b76a528f-fa64-44b9-82c0-6b760abc7ce4}</destination>
             <destination>{91b9b37a-5725-441f-a05e-e22e8ad044fb}</destination>
         </relationship>
     </object>
@@ -170,6 +182,17 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{205cf63f-a0df-4358-a8fd-2e0b5513bdde}"/>
+    <object class="MixerSend" id="{b76a528f-fa64-44b9-82c0-6b760abc7ce4}">
+        <property name="level">
+            <value>-50</value>
+        </property>
+        <property name="inputFormat">
+            <value>1</value>
+        </property>
+        <relationship name="mixerReturn">
+            <destination>{346dd227-cd0a-4501-a546-b728e8b58e6f}</destination>
+        </relationship>
+    </object>
     <object class="MixerBusFader" id="{91b9b37a-5725-441f-a05e-e22e8ad044fb}"/>
     <object class="MixerBusFader" id="{4b4b7029-488e-407a-823f-a9451e760367}"/>
     <object class="MixerBusFader" id="{be6c8fe3-9312-43fc-8261-3643cb2bf8c5}"/>

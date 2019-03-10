@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4250226669693435819}
   - component: {fileID: 6513709081618569260}
   - component: {fileID: 7545457655002589656}
-  - component: {fileID: 2334880960930103221}
+  - component: {fileID: 6407012728320395052}
   m_Layer: 16
   m_Name: Rolling Rock
   m_TagString: Untagged
@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 573041003
   m_SortingLayer: 3
-  m_SortingOrder: 10
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300062, guid: 536c7a0a80a862448af7bb2edf89120f, type: 3}
   m_Color: {r: 0.6132076, g: 0.6132076, b: 0.6132076, a: 1}
   m_FlipX: 0
@@ -141,7 +141,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2334880960930103221
+--- !u!114 &6407012728320395052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,17 +150,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5098930209339483490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: 231a33772d347db4197ab26bc02aec0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: event:/rock_hit_or_tumble
-  PlayEvent: 9
-  StopEvent: 0
-  CollisionTag: 
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  HitEvent: event:/rock_hit_or_tumble
+  MinVelocity: 1
+  on: 0

@@ -3,7 +3,6 @@ using UnityEngine.Assertions;
 
 public class EnemyShooter : MonoBehaviour
 {
-	[SerializeField] private Transform player = null;
 	[SerializeField] private Transform spawnPoint = null;
 	[SerializeField] private Transform shootPoint = null;
 	[SerializeField] private GameObject flash = null;
@@ -16,13 +15,14 @@ public class EnemyShooter : MonoBehaviour
 	[SerializeField] private float shotWarningDistance = 6f;
 
 	private float timeToNextShot = 0;
+	private GameObject player = null;
 
 	void Start( )
 	{
-		if ( player == null )
-			player = GameObject.Find( "Player" ).transform;
+		if ( player == null && PlayerController.Instance != null )
+			player = PlayerController.Instance.gameObject;
 
-		Assert.IsNotNull( player );
+		//Assert.IsNotNull( player );
 		Assert.IsNotNull( spawnPoint );
 		Assert.IsNotNull( shootPoint );
 		Assert.IsNotNull( flash );
@@ -40,6 +40,11 @@ public class EnemyShooter : MonoBehaviour
 		gunColor.a = 1 - ( timeToNextShot / shotDelay );
 		gunSprite.color = gunColor;
 
+		if ( player == null && PlayerController.Instance != null )
+			player = PlayerController.Instance.gameObject;
+		if ( player == null || player.transform == null )
+			return;
+
 		TargetPlayer( );
 		bool canShoot = CanShoot( );
 		TryShoot( canShoot, timeToNextShot );
@@ -48,11 +53,11 @@ public class EnemyShooter : MonoBehaviour
 	private bool CanShoot( )
 	{
 		// Can't shoot if out of range
-		if ( Vector2.Distance( player.position, transform.position ) > shotDistance )
+		if ( Vector2.Distance( player.transform.position, transform.position ) > shotDistance )
 			return false;
 
 		// Can only shoot if has line of sight
-		RaycastHit2D hit = Physics2D.Raycast( shootPoint.position, player.position - shootPoint.position, 8 );
+		RaycastHit2D hit = Physics2D.Raycast( shootPoint.position, player.transform.position - shootPoint.position, 8 );
 
 		if ( hit.collider != null )
 		{
@@ -73,14 +78,14 @@ public class EnemyShooter : MonoBehaviour
 
 	private void TargetPlayer( )
 	{
-		if ( Vector2.Distance( player.position, transform.position ) > shotWarningDistance )
+		if ( Vector2.Distance( player.transform.position, transform.position ) > shotWarningDistance )
 		{
 			gunSprite.enabled = false;
 			return;
 		}
 
 		gunSprite.enabled = true;
-		Vector2 direction = player.position - transform.position;
+		Vector2 direction = player.transform.position - transform.position;
 		float angle = Mathf.Atan2( direction.y, direction.x ) * Mathf.Rad2Deg;
 		Quaternion rotation = Quaternion.AngleAxis( angle - 0, Vector3.forward );
 		transform.rotation = rotation;

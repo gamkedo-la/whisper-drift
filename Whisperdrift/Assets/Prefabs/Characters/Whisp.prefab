@@ -5069,7 +5069,6 @@ MonoBehaviour:
   fleeSpeed: 15
   playRadius: 1
   speedVariation: 0.25
-  riseDirection: {x: 0, y: 1, z: 0}
   riseAmount: 4
   freedomSound: {fileID: 8300000, guid: 74abf1c7d5c68f3498e1c5a6106921eb, type: 3}
   playSound: {fileID: 8300000, guid: e85095f6e28d5404fb04876808b80505, type: 3}
@@ -5084,7 +5083,8 @@ AudioSource:
   m_GameObject: {fileID: 7592066444540692698}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243142888949821702, guid: 3df012dda6018954cb0b284ec54c6ef0,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 8df4eb8f2a0d4c64e9813e2d0a3cb2aa, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.028

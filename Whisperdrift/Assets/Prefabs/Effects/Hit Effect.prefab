@@ -117,8 +117,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.2
-      minScalar: 0.2
+      scalar: 0.4
+      minScalar: 0.3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -286,7 +286,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.08
+      scalar: 0.2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4715,6 +4715,7 @@ MonoBehaviour:
   maxPitch: 1.2
   minVolume: 0.3
   maxVolume: 0.5
+  playOnStart: 1
 --- !u!199 &199150647531813230
 ParticleSystemRenderer:
   serializedVersion: 6

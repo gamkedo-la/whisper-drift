@@ -489,6 +489,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6475305939585875514}
   - component: {fileID: 6475305939585875515}
+  - component: {fileID: 18537848301245470}
   m_Layer: 16
   m_Name: Slide Door
   m_TagString: Untagged
@@ -531,6 +532,29 @@ MonoBehaviour:
   d2o: {x: -0.25, y: -2.53, z: 0}
   d2d: {x: -0.25, y: -6.2, z: 0}
   speed: 1
+--- !u!114 &18537848301245470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6475305939585875517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/player_collides_wall_or_platform
+  PlayEvent: 9
+  StopEvent: 0
+  CollisionTag: 
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &6475305939988656935
 GameObject:
   m_ObjectHideFlags: 0

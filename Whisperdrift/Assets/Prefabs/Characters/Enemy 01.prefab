@@ -1172,8 +1172,8 @@ RectTransform:
   m_Father: {fileID: 8847642913935826511}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1882,7 +1882,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8847642912973094472
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2494,20 +2494,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 8847642913097280022}
-  hpBar: {fileID: 8847642912973094474}
+  glowyParts:
+  - {fileID: 7145245510602333674}
+  - {fileID: 4167779588812529393}
+  - {fileID: 3708021038622791024}
+  - {fileID: 169555431819507791}
+  - {fileID: 8356290089224575922}
+  - {fileID: 2407110391292687474}
+  - {fileID: 4721242178950977344}
+  - {fileID: 4494370738211856712}
+  bigGlow: {fileID: 2100000, guid: 31edcb9b846fa3c438804eaf1e64a13e, type: 2}
+  glowMat: {fileID: 0}
   deathEffect: {fileID: 7111252694777043774, guid: 5859674f1a032c94a9cca1d3aca4ad94,
     type: 3}
   deathEffect2: {fileID: 7592066444540692698, guid: a6235b51dfabd9240bd48a6a86c74877,
     type: 3}
   enemyPart: {fileID: 8973251641233698188, guid: bda702e602bc120409478bec8eeff7fc,
     type: 3}
-  touchDamage: 20
+  touchDamage: 1
   eyes:
   - {fileID: 8847642912899569913}
   - {fileID: 8847642912591776501}
   blinkTime: 0.1
   blinkDelayMin: 3
   blinkDelayMax: 5
+  baseColor: {r: 1, g: 0, b: 0, a: 1}
+  glow: 10
+  glowMin: 1
+  pulseSpeed: 2
 --- !u!1 &8847642913421718536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2621,7 +2635,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2707,7 +2721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a1aaea342c2d643878409e0a9e4705, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   spawnPoint: {fileID: 8847642912899165133}
   shootPoint: {fileID: 8847642912754304029}
   flash: {fileID: 1027460674763238, guid: 87da0295fda60994bb1425fea11b1493, type: 3}

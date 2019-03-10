@@ -7,7 +7,7 @@ public class BossTailSpawner : MonoBehaviour
 	public static BossTailSpawner Instance { get; private set; }
 	public List<GameObject> Tails;
 
-	[SerializeField] private GameObject crystal = null;
+	[SerializeField] private HP hp = null;
 	[SerializeField] private GameObject explosion = null;
 	[SerializeField] private GameObject tail = null;
 	[SerializeField] private float spawnDelay = 1f;
@@ -31,31 +31,16 @@ public class BossTailSpawner : MonoBehaviour
 
 	private void OnDestroy( ) { if ( this == Instance ) { Instance = null; } }
 
-	public void Kill( )
-	{
-		Instantiate( crystal, transform.position, Quaternion.identity );
-		GameObject e = Instantiate( explosion, transform.position, Quaternion.identity );
-		e.transform.localScale = Vector3.one * 2;
-
-		for ( int i = Tails.Count -1; i >= 0; i-- )
-		{
-			Tails[i].GetComponent<BossTail>( ).DestroyMe( 0.1f * ( Tails.Count - i ) );
-		}
-	}
-
-	public void GotHit()
-	{
-		disapearCountCurrent--;
-		disapearTimeCurrent = disapearTime * disapearCurve.Evaluate( 1f - (float)disapearCountCurrent / disapearCount );
-	}
-
 	void Start ()
 	{
+		Assert.IsNotNull( hp );
 		Assert.IsNotNull( tail );
 
 		nextSpawnIn = spawnDelay;
 		disapearTimeCurrent = disapearTime;
 		disapearCountCurrent = disapearCount;
+
+		//Debug.Log( "D: " + disapearTimeCurrent + " %: " + disapearCurve.Evaluate( 1f - 1f - hp.CurrentHP / hp.MaxHP ) );
 	}
 
 	void Update ()
@@ -68,5 +53,26 @@ public class BossTailSpawner : MonoBehaviour
 			GameObject f = Instantiate( tail, transform.position, Quaternion.identity );
 			f.GetComponent<BossTail>( ).SetDisapearTime( disapearTimeCurrent );
 		}
+	}
+
+	public void GotHit( )
+	{
+		disapearTimeCurrent = disapearTime * disapearCurve.Evaluate( 1f - hp.CurrentHP / hp.MaxHP );
+		//Debug.Log( "D: " + disapearTimeCurrent + " %: " + disapearCurve.Evaluate( 1f - hp.CurrentHP / hp.MaxHP ));
+	}
+
+	public void Kill( )
+	{
+		LevelManger.Instance.ShowCrystal( transform.position );
+
+		GameObject e = Instantiate( explosion, transform.position, Quaternion.identity );
+		e.transform.localScale = Vector3.one * 2;
+
+		for ( int i = Tails.Count -1; i >= 0; i-- )
+		{
+			Tails[i].GetComponent<BossTail>( ).DestroyMe( 0.1f * ( Tails.Count - i ) );
+		}
+
+		FindObjectOfType<MusicEnd>( ).enabled = true;
 	}
 }

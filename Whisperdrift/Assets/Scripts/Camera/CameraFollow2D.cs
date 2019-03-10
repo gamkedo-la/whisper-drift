@@ -17,6 +17,9 @@ public class CameraFollow2D : MonoBehaviour
 
 	void FixedUpdate( )
 	{
+		if ( !target )
+			return;
+
 		float x = Mathf.SmoothStep( transform.position.x, target.position.x + offset.x, smoothSpeed );
 		float y = Mathf.SmoothStep( transform.position.y, target.position.y + offset.y, smoothSpeed );
 

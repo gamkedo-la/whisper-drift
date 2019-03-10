@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class DarkWhisp : MonoBehaviour
 {
 	[SerializeField] private GameObject spittlePrefab = null;
-	[SerializeField] private AudioClip spittleSound = null;
+	[SerializeField] private PlaySound spittleASound = null;
 	private Vector3 waypoint = Vector3.zero;
 	private const float PATH_DISTANCE = 11f;
 	private const float ARRIVAL_DISTANCE = 1f;
@@ -18,22 +18,24 @@ public class DarkWhisp : MonoBehaviour
 	private const float ANGLE_HANDLING_AMT = 1f;
 	private const float ROTATION_SPEED = 0.002f;
 	private const float DRIFT_SPEED = 1f;
-	private const float ATTACK_RANGE = 3f;
-	private const float ATTACK_DAMAGE = 20f;
+	private const float ATTACK_RANGE = 2f;
+	private const float ATTACK_DAMAGE = 1f;
 	private const float ATTACK_SHOTS = 6f;
 	private float attackTimer = 0f;
 	private Vector2 forwardDirection = Vector2.up;
 	///private float huntSpeed = 1.2f;
 	private Rigidbody2D rb;
 	int layermask = 0;
-	Transform player;
+	GameObject player;
 
 	private void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
 		waypoint = GenerateNewWaypoint();
 		SetLayerMask();
-		player = FindObjectOfType<PlayerController>().transform;
+
+		if ( player == null || player.transform == null )
+			player = FindObjectOfType<PlayerController>( ) ? FindObjectOfType<PlayerController>( ).gameObject : null;
 	}
 
 	private void SetLayerMask()
@@ -52,10 +54,15 @@ public class DarkWhisp : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		if ( player == null || player.transform == null )
+			player = FindObjectOfType<PlayerController>( ) ? FindObjectOfType<PlayerController>( ).gameObject : null;
+		if ( player == null || player.transform == null )
+			return;
+
 		if (attackTimer > 0) { attackTimer = attackTimer - Time.deltaTime; }
-		
-		if (player // FIXME it is often null here, but should never be
-			&& Vector2.Distance((Vector2)transform.position, (Vector2)player.position) < ATTACK_RANGE
+
+		if (player
+			&& Vector2.Distance((Vector2)transform.position, (Vector2)player.transform.position) < ATTACK_RANGE
 			&& attackTimer <= 0f)
 		{
 			Attack();
@@ -175,17 +182,17 @@ public class DarkWhisp : MonoBehaviour
 		{
 			float xRand = Random.Range(-3f, 3f);
 			float yRand = Random.Range(-3f, 3f);
-			Vector2 newLoc = new Vector2(player.position.x + xRand, player.position.y + yRand);
+			Vector2 newLoc = new Vector2(player.transform.position.x + xRand, player.transform.position.y + yRand);
 
 			targets.Add(newLoc);
-			AudioSource.PlayClipAtPoint(spittleSound, (Vector2)transform.position);
+			spittleASound.Play( );
 		}
 
 		foreach (Vector2 target in targets)
 		{
 			GameObject spittle = Instantiate(spittlePrefab, transform.position, Quaternion.identity);
 			spittle.GetComponent<MoveEffect>().SetDestination(target);
-			AudioSource.PlayClipAtPoint(spittleSound, (Vector2)transform.position);
+			spittleASound.Play( );
 		}
 		player.GetComponent<HP>().ChangeHP(-ATTACK_DAMAGE);
 	}

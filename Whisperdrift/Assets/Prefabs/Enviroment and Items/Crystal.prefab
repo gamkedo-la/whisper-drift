@@ -144,13 +144,14 @@ MonoBehaviour:
   - {fileID: 3303382054938154264}
   - {fileID: 3303382054585498230}
   baseColor: {r: 1, g: 0.40652508, b: 0, a: 1}
-  glow: 3
-  lightInt: 0.6
+  glow: 7
+  glowMin: 1
   hp: 2
   parts:
   - {fileID: 8133385114605483244, guid: 169d3e4df430f484bad76272612dc2f9, type: 3}
   - {fileID: 8341005390312485924, guid: ef628480b7e2fb04d85211bb74bbc60b, type: 3}
   - {fileID: 2926497842919063369, guid: bf953b0d7ac674b4e96a1220a1735986, type: 3}
+  speed: 1
 --- !u!50 &3303382054726150428
 Rigidbody2D:
   serializedVersion: 4

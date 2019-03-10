@@ -26,7 +26,18 @@ public class ScaleOnMouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExi
 	}
 
 	void Update () {
-		transform.localScale = doScale ? newScale : previousScale;
+		
+		if(doScale)
+		{
+			if(transform.localScale.x < newScale.x && transform.localScale.y < newScale.y)
+				transform.localScale = Vector3.Lerp(transform.localScale, newScale, Time.unscaledDeltaTime * 10f);
+		}
+		else
+		{
+			if(transform.localScale.x > previousScale.x && transform.localScale.y > previousScale.y)
+				transform.localScale = Vector3.Lerp(transform.localScale, previousScale, Time.unscaledDeltaTime * 10f);
+		}
+		
 		doScale = usingWorldSpaceCanvas ? false : doScale;
 	}
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{4b5874d9-171f-4726-8fdb-3aaad19c7658}">
+        <property name="assetPath">
+            <value>wind_howls_3.mp3</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>7.1053061224489795</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{132dca7e-93a0-449c-91b2-46e3e43a0468}</destination>
+        </relationship>
+    </object>
+</objects>

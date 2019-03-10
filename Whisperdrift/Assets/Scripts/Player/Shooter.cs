@@ -11,6 +11,7 @@ public class Shooter : MonoBehaviour
 	[SerializeField] private GameObject projectile = null;
 	[SerializeField] private float shotDelay = 0.5f;
 	[SerializeField] private float shotSpreed = 5f;
+	[SerializeField] private bool ignoreUI = true;
 
 	private float timeToNextShot = 0;
 
@@ -40,7 +41,8 @@ public class Shooter : MonoBehaviour
 
 	private void TryToShoot( )
 	{
-		if ( timeToNextShot > 0 || !Input.GetMouseButton( 0 ) || EventSystem.current.IsPointerOverGameObject( ) )
+		if ( timeToNextShot > 0 || !Input.GetMouseButton( 0 ) ||
+			 ( EventSystem.current.IsPointerOverGameObject( ) && ignoreUI ) )
 			return;
 
 		timeToNextShot = shotDelay;

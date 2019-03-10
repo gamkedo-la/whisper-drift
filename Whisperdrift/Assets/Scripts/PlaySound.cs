@@ -12,6 +12,7 @@ public class PlaySound : MonoBehaviour
 	[SerializeField] private float maxPitch = 1.2f;
 	[SerializeField] private float minVolume = 0.9f;
 	[SerializeField] private float maxVolume = 1.0f;
+	[SerializeField] private bool playOnStart = true;
 
 	private AudioSource audioSource;
 
@@ -23,10 +24,11 @@ public class PlaySound : MonoBehaviour
 		Assert.IsNotNull( sounds );
 		Assert.AreNotEqual( sounds.Length, 0, "You have to add at least one sound clip to " + name );
 
-		Play( );
+		if ( playOnStart )
+			Play( );
 	}
 
-	private void Play( )
+	public void Play( )
 	{
 		audioSource.clip = sounds[Random.Range( 0, sounds.Length )];
 		audioSource.pitch = Random.Range( minPitch, maxPitch );

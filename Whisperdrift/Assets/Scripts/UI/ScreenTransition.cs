@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class ScreenTransition : MonoBehaviour
 {
 	[SerializeField] CanvasGroup canvas = null;
-	[SerializeField] float duration = 1f;
+	[SerializeField] float speed = 1f;
 	[SerializeField] bool startOnEnable = false;
 	[SerializeField] bool fadeToColor = true;
 	[SerializeField] UnityEvent onDone = null;
@@ -37,13 +37,13 @@ public class ScreenTransition : MonoBehaviour
 	IEnumerator Fade( )
 	{
 		if ( fadeToColor )
-			for ( float a = 0; a <= 1; a += Time.deltaTime )
+			for ( float a = 0; a <= 1; a += Time.deltaTime * speed )
 			{
 				canvas.alpha = a;
 				yield return null;
 			}
 		else
-			for ( float a = 1; a > 0; a -= Time.deltaTime )
+			for ( float a = 1; a > 0; a -= Time.deltaTime * speed )
 			{
 				canvas.alpha = a;
 				yield return null;
