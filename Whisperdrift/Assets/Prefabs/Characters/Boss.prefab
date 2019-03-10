@@ -1209,6 +1209,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  soundEvent: event:/boss_hit
 --- !u!1 &6047778213675657010
 GameObject:
   m_ObjectHideFlags: 0
@@ -2773,7 +2774,7 @@ MonoBehaviour:
   smallExp: {fileID: 5447721591636416765, guid: a033c5fea5e9fd4458ea07b32a8165bd,
     type: 3}
   hp: {fileID: 6047778214294979421}
-  soundEvent: event:/enemy_hit
+  soundEvent: event:/boss_hit
   damagePerWhisp: 10
   onFirstHit:
     m_PersistentCalls:

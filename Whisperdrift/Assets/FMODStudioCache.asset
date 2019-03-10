@@ -42,6 +42,7 @@ MonoBehaviour:
   - {fileID: 114088515727584950}
   - {fileID: 114204890225657392}
   - {fileID: 114408680384571876}
+  - {fileID: 114084542277794278}
   MasterBanks:
   - {fileID: 114410818254001308}
   - {fileID: 114794530094233314}
@@ -50,7 +51,7 @@ MonoBehaviour:
   - {fileID: 114317415625826152}
   StringsBanks:
   - {fileID: 114484437926960446}
-  stringsBankWriteTime: 636876305307435909
+  stringsBankWriteTime: 636878414640490297
   cacheVersion: 3
 --- !u!114 &114011359072275328
 MonoBehaviour:
@@ -112,11 +113,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\!\Unity\Whisperdrift\Whisperdrift\Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master
     Bank.bank
-  lastModified: 636877255856314317
+  lastModified: 636878414640450398
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1547424
+    Value: 1621888
   Exists: 1
 --- !u!114 &114031112678319004
 MonoBehaviour:
@@ -158,6 +159,29 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1200992
   Exists: 0
+--- !u!114 &114084542277794278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/boss_hit
+  guid: 5a8cc407ab29cd40a30888cebb3b2de6
+  Banks:
+  - {fileID: 114021503535299148}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1358
 --- !u!114 &114088515727584950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -775,11 +799,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: Assets\Audio\Temp Sounds\whisperdrift_fmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636876305307435909
+  lastModified: 636878414640490297
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2024
+    Value: 2062
   Exists: 1
 --- !u!114 &114514194178957664
 MonoBehaviour:

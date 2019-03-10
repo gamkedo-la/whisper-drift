@@ -14,10 +14,12 @@ public class BossTailSpawner : MonoBehaviour
 	[SerializeField] private float disapearTime = 6f;
 	[SerializeField] private int disapearCount = 10;
 	[SerializeField] private AnimationCurve disapearCurve = new AnimationCurve();
+	[FMODUnity.EventRef, SerializeField] private string soundEvent = null;
 
 	private float nextSpawnIn = 0;
 	private float disapearTimeCurrent = 0;
 	private int disapearCountCurrent = 0;
+	private FMOD.Studio.EventInstance sound;
 
 	private void Awake( )
 	{
@@ -39,6 +41,8 @@ public class BossTailSpawner : MonoBehaviour
 		nextSpawnIn = spawnDelay;
 		disapearTimeCurrent = disapearTime;
 		disapearCountCurrent = disapearCount;
+
+		sound = FMODUnity.RuntimeManager.CreateInstance( soundEvent );
 
 		//Debug.Log( "D: " + disapearTimeCurrent + " %: " + disapearCurve.Evaluate( 1f - 1f - hp.CurrentHP / hp.MaxHP ) );
 	}
@@ -64,6 +68,8 @@ public class BossTailSpawner : MonoBehaviour
 	public void Kill( )
 	{
 		LevelManger.Instance.ShowCrystal( transform.position );
+
+		sound.start( );
 
 		GameObject e = Instantiate( explosion, transform.position, Quaternion.identity );
 		e.transform.localScale = Vector3.one * 2;
