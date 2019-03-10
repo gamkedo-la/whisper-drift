@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eef8d824ea7b63742966aaa0e94ac383, type: 3}
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
-  HasSourceProject: 0
+  HasSourceProject: 1
   HasPlatforms: 1
   sourceProjectPath: Assets/Audio/Temp Sounds/whisperdrift_fmod/whisperdrift_fmod.fspro
   SourceProjectPathUnformatted: Assets/Audio/Temp Sounds/whisperdrift_fmod/whisperdrift_fmod.fspro
@@ -37,7 +37,7 @@ MonoBehaviour:
     Value: 0
   OverlaySettings:
   - Platform: 1
-    Value: 1
+    Value: 0
   - Platform: 2
     Value: 0
   LoggingSettings:
@@ -61,4 +61,9 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master Bank
-  Banks: []
+  - Master Bank
+  - Master Bank
+  - Master Bank
+  - Master Bank
+  Banks:
+  - Master Bank

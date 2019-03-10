@@ -2,6 +2,7 @@
 
 static public class Tags
 {
+	static public string Boss = "Boss";
 	static public string Destructible = "Destructible";
 	static public string Enemy = "Enemy";
 	static public string Player = "Player";
