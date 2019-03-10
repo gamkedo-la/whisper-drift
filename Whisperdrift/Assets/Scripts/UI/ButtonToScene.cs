@@ -30,6 +30,11 @@ public class ButtonToScene : MonoBehaviour, IPointerClickHandler
 			Time.timeScale = 1f;
 			SceneManager.LoadScene( gameObject.scene.name );
 		}
+		else if ( sceneName == "Main Menu" )
+		{
+			Time.timeScale = 1f;
+			SceneManager.LoadScene( "Main Menu" );
+		}
 		else
 		{
 			Time.timeScale = 1f;
