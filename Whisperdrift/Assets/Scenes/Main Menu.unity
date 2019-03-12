@@ -8202,7 +8202,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-  m_SpriteShape: {fileID: 0}
+  m_SpriteShape: {fileID: 11400000, guid: de386de6b44d6654c931584cf3bba219, type: 2}
   m_SplineDetail: 16
   m_AdaptiveUV: 1
   m_UpdateCollider: 0
@@ -19412,7 +19412,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-  m_SpriteShape: {fileID: 0}
+  m_SpriteShape: {fileID: 11400000, guid: de386de6b44d6654c931584cf3bba219, type: 2}
   m_SplineDetail: 16
   m_AdaptiveUV: 1
   m_UpdateCollider: 0
@@ -19458,8 +19458,16 @@ SpriteShapeRenderer:
   m_SortingOrder: -1
   m_Color: {r: 0.16037738, g: 0.16037738, b: 0.10666609, a: 0.5254902}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 0}
-  m_Sprites: []
+  m_ShapeTexture: {fileID: 2800000, guid: 3fa8b68a0a352834786e7f465fa33f64, type: 3}
+  m_Sprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_LocalAABB:
     m_Center: {x: 0.65699124, y: -0.069538936, z: 0}
     m_Extent: {x: 1.438787, y: 0.55672973, z: 0}
@@ -39842,7 +39850,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-  m_SpriteShape: {fileID: 0}
+  m_SpriteShape: {fileID: 11400000, guid: de386de6b44d6654c931584cf3bba219, type: 2}
   m_SplineDetail: 16
   m_AdaptiveUV: 1
   m_UpdateCollider: 0
@@ -39888,8 +39896,16 @@ SpriteShapeRenderer:
   m_SortingOrder: -1
   m_Color: {r: 0.16037738, g: 0.16037738, b: 0.10666609, a: 0.5254902}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 0}
-  m_Sprites: []
+  m_ShapeTexture: {fileID: 2800000, guid: 3fa8b68a0a352834786e7f465fa33f64, type: 3}
+  m_Sprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_LocalAABB:
     m_Center: {x: 0.690177, y: 0.005470097, z: 0}
     m_Extent: {x: 1.6412458, y: 0.4985525, z: 0}
