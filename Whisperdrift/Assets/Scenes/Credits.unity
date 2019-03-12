@@ -25173,7 +25173,7 @@ MonoBehaviour:
       bevelSize: 0
       spriteIndex: 0
       corner: 0
-  m_SpriteShape: {fileID: 0}
+  m_SpriteShape: {fileID: 11400000, guid: de386de6b44d6654c931584cf3bba219, type: 2}
   m_SplineDetail: 16
   m_AdaptiveUV: 1
   m_UpdateCollider: 0
@@ -25219,8 +25219,16 @@ SpriteShapeRenderer:
   m_SortingOrder: -1
   m_Color: {r: 0.15686275, g: 0.15686275, b: 0.05882353, a: 0.39215687}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 0}
-  m_Sprites: []
+  m_ShapeTexture: {fileID: 2800000, guid: 3fa8b68a0a352834786e7f465fa33f64, type: 3}
+  m_Sprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   m_LocalAABB:
     m_Center: {x: 0.03913945, y: -0.058422193, z: 0}
     m_Extent: {x: 0.83881843, y: 0.5244685, z: 0}
