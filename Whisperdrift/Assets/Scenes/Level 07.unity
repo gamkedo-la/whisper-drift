@@ -7510,22 +7510,22 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7640663671797052966, guid: e7a723c15e41dd549ba8a59f4982752e,
+    - target: {fileID: 1723622866149457616, guid: e7a723c15e41dd549ba8a59f4982752e,
         type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7640663671797052966, guid: e7a723c15e41dd549ba8a59f4982752e,
+    - target: {fileID: 1723622866149457616, guid: e7a723c15e41dd549ba8a59f4982752e,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1723622866149457616, guid: e7a723c15e41dd549ba8a59f4982752e,
+    - target: {fileID: 7640663671797052966, guid: e7a723c15e41dd549ba8a59f4982752e,
         type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1723622866149457616, guid: e7a723c15e41dd549ba8a59f4982752e,
+    - target: {fileID: 7640663671797052966, guid: e7a723c15e41dd549ba8a59f4982752e,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
@@ -62874,6 +62874,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3633091259916004119 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3633091257975818324, guid: 8d7eacae04450e5459ecd38486e01ee7,
+    type: 3}
+  m_PrefabInstance: {fileID: 3633091259916004116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3633091259916004120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3633091259916004119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: 0
 --- !u!1001 &4084073704001684151
 PrefabInstance:
   m_ObjectHideFlags: 0
