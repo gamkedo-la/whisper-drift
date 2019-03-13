@@ -8,7 +8,7 @@ public class VolumeControl : MonoBehaviour
 	[SerializeField] private AudioMixer audioMixer = null;
 	[SerializeField] private Slider volumeSlider = null;
 	[SerializeField] private string exposedPropertyName = "Volume";
-	
+
     FMOD.Studio.Bus SoundEffectsBus;
 
 	void Start( )
@@ -17,8 +17,9 @@ public class VolumeControl : MonoBehaviour
 		Assert.IsNotNull( volumeSlider );
 
 		volumeSlider.value = PlayerPrefs.GetFloat( exposedPropertyName, 1f );
-
         SoundEffectsBus = FMODUnity.RuntimeManager.GetBus("bus:/sound_effects");
+
+		SetVolume( volumeSlider.value );
 	}
 
 	public void SetVolume( float value )
