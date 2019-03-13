@@ -101,7 +101,7 @@ namespace FMODUnity
                                 UnityEngine.Debug.LogWarning("[FMOD] Cannot initialize Java wrapper");
                             }
                         }
-                        
+
                         #endif
 
                         RuntimeUtils.EnforceLibraryOrder();
@@ -125,7 +125,7 @@ namespace FMODUnity
 
                 return instance;
             }
-       
+
         }
 
         public static FMOD.Studio.System StudioSystem
@@ -151,7 +151,7 @@ namespace FMODUnity
             public FMOD.Studio.Bank Bank;
             public int RefCount;
         }
-        
+
         Dictionary<string, LoadedBank> loadedBanks = new Dictionary<string, LoadedBank>();
         Dictionary<string, uint> loadedPlugins = new Dictionary<string, uint>();
 
@@ -253,7 +253,10 @@ retry:
             result = lowlevelSystem.setAdvancedSettings(ref advancedSettings);
             CheckInitResult(result, "FMOD.System.setAdvancedSettings");
 
-            result = studioSystem.initialize(virtualChannels, studioInitFlags, FMOD.INITFLAGS.NORMAL, IntPtr.Zero);
+			result = lowlevelSystem.setDSPBufferSize( 2048, 2 );
+			CheckInitResult( result, "FMOD.System.setDSPBufferSize" );
+
+			result = studioSystem.initialize(virtualChannels, studioInitFlags, FMOD.INITFLAGS.NORMAL, IntPtr.Zero);
             if (result != FMOD.RESULT.OK && initResult == FMOD.RESULT.OK)
             {
                 initResult = result; // Save this to throw at the end (we'll attempt NO SOUND to shield ourselves from unexpected device failures)
@@ -287,7 +290,7 @@ retry:
 
             return initResult;
         }
-        
+
         class AttachedInstance
         {
             public FMOD.Studio.EventInstance instance;
@@ -340,7 +343,7 @@ retry:
                 {
                     FMOD.Studio.PLAYBACK_STATE playbackState = FMOD.Studio.PLAYBACK_STATE.STOPPED;
                     attachedInstances[i].instance.getPlaybackState(out playbackState);
-                    if (!attachedInstances[i].instance.isValid() || 
+                    if (!attachedInstances[i].instance.isValid() ||
                         playbackState == FMOD.Studio.PLAYBACK_STATE.STOPPED ||
                         attachedInstances[i].transform == null // destroyed game object
                         )
@@ -615,7 +618,7 @@ retry:
         {
             byte[] loadWebResult;
             FMOD.RESULT loadResult;
-            
+
             UnityEngine.Networking.UnityWebRequest www = UnityEngine.Networking.UnityWebRequest.Get(bankPath);
             yield return www.SendWebRequest();
             loadWebResult = www.downloadHandler.data;
@@ -925,7 +928,7 @@ retry:
         {
             Instance.studioSystem.setListenerAttributes(0, RuntimeUtils.To3DAttributes(gameObject, rigidBody));
         }
-        
+
         public static void SetListenerLocation(GameObject gameObject, Rigidbody2D rigidBody2D)
         {
             Instance.studioSystem.setListenerAttributes(0, RuntimeUtils.To3DAttributes(gameObject, rigidBody2D));
@@ -940,7 +943,7 @@ retry:
         {
             Instance.studioSystem.setListenerAttributes(listenerIndex, RuntimeUtils.To3DAttributes(gameObject, rigidBody));
         }
-        
+
         public static void SetListenerLocation(int listenerIndex, GameObject gameObject, Rigidbody2D rigidBody2D)
         {
             Instance.studioSystem.setListenerAttributes(listenerIndex, RuntimeUtils.To3DAttributes(gameObject, rigidBody2D));
@@ -1008,7 +1011,7 @@ retry:
         {
             get
             {
-                return Instance.loadedBanks.Count > 1; 
+                return Instance.loadedBanks.Count > 1;
             }
         }
 
